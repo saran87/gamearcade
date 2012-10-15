@@ -13,6 +13,7 @@
 	 * @param	object	object that needs to converted to an array
 	 * @return	array	converted object as an array
 	 */
+	 
 	function toArray($object){
 		foreach($object as $key=>$value){
 			$array[] = $value;
@@ -60,11 +61,11 @@
 
 	function getAction(){
 		//get the action from the GET request
-		$action = isset($_GET["action"]) ? $_GET["action"] : '';
+		$action = isset($_GET["action"]) ? $_GET["action"] : 'index';
 		
 		//if action is not set then get it from post
 		if( $action == '' ){
-			$action = isset($_POST["action"]) ? $_POST["action"] : '';
+			$action = isset($_POST["action"]) ? $_POST["action"] : 'index';
 		}
 		
 		return $action;
@@ -118,9 +119,13 @@
 	function redirectPage($option){
 		
 		if( $option == PAGE_NOT_FOUND){
-		
 			header('Location:' . PAGE_404); 
+			exit();
+		}
+		else if ( $option == LOGIN){
 		
+			header('Location:' . LOGIN_PAGE); 
+			exit();
 		}
 	
 	}

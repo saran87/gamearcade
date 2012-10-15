@@ -25,7 +25,7 @@
     <![endif]-->
 
     <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="http://twitter.github.com/bootstrap/assets/ico/favicon.ico">
+  <!--  <link rel="shortcut icon" href="http://twitter.github.com/bootstrap/assets/ico/favicon.ico"> -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-72-precomposed.png">
@@ -44,7 +44,11 @@
           <a class="brand" href="#">Connect4</a>
           <div class="nav-collapse collapse">
             <p class="navbar-text pull-right">
-              Logged in as <a href="#" class="navbar-link">Username</a>
+             <?php if(isset($_SESSION['username'])):?>
+				Logged in as <a href="#" class="navbar-link">Username</a>
+			 <?php else :?>
+				 <button type="button" class="btn">Login</button>
+			<?php endif; ?>
             </p>
             <ul class="nav">
               <li class="active"><a href="#">Home</a></li>

@@ -51,7 +51,7 @@
 				$error = false;
 				
 				//include all of the files with .inc extension in section folder
-				foreach(glob(CONTROLLER_PATH.$this->section."/*.inc") as $filename){
+				foreach(glob(CONTROLLER_PATH.$this->section."/*.php") as $filename){
 					require_once($filename);
 				}
 				
@@ -91,7 +91,7 @@
 				}
 				
 				if($error)
-					redirectPage(PAGE_NOT_FOUND);				
+					ErrorHandler::HandleError(PAGE_NOT_FOUND);				
 			}
 		}
 		// -------------------------------------------------------------
@@ -103,16 +103,22 @@
 		 */
 		private function RenderFrontPage(){
 		
-			$isIncluded  = false;
-			//include all of the files in front page folder
-			foreach(glob(VIEW_PATH . FRONT_PAGE) as $filename){
-				$isIncluded = true;
-				include $filename;
-			}	
+			$authorizer = new Authorizer;
 			
+			$isIncluded  = false;
+			if($authorizer->VerifyToken()){
+				//include all of the files in front page folder
+				foreach(glob(VIEW_PATH . FRONT_PAGE) as $filename){
+					$isIncluded = true;
+					include $filename;
+				}	
+			}
+			else{
+				ErrorHandler::HandleError(LOGIN);
+			}
 			//if the file is not included redirect to NOT FOUND page
 			if(!$isIncluded){
-				redirectPage(PAGE_NOT_FOUND);	
+				ErrorHandler::HandleError(PAGE_NOT_FOUND);	
 			}
 			
 		}

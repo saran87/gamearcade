@@ -7,7 +7,7 @@
 	 *
 	 */
 	require('settings.inc'); 
-	require('controller/main.inc'); 
+	require('controller/main.php'); 
 	//Handle the request to the controller
 	//Initalize site by calling this method in main.inc
 	Intialize();

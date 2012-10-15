@@ -24,11 +24,19 @@ define('HOST',$_SERVER["HTTP_HOST"]);
 * Front page Configuration
 ********************************************************************************* */
 define('FRONT_PAGE', 'home/index.php');
+define('LOGIN_PAGE', 'index.php?s=login');
 
 //Error Indicators
 define('PAGE_NOT_FOUND', '404');
+define('LOGIN', 'Login');
 
 //Error page
 define('PAGE_404','404.html');
+
+/* ****************************************************************************** 
+* Error Handler Configuration
+********************************************************************************* */
+define('IS_LOG_ENABLED', true);
+define('ERROR_LOG_FILE', ROOT_PATH . '/logs/error.log');
 
 ?>

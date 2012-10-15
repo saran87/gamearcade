@@ -25,7 +25,12 @@
 			$title = "Connect4 - login";
 			$this->setViewData('title',$title);
 		}
-	
+		
+		public function index(){
+		
+			$title = "Connect4 - login";
+			$this->setViewData('title',$title);
+		}
 	}
 	
 ?>

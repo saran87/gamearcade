@@ -1,7 +1,7 @@
 <?php
-include(VIEW_TEMPLATE_PATH . 'head.tmpl');
+include(VIEW_TEMPLATE_PATH . 'head.php');
 ?>
 
 <?php
-include(VIEW_TEMPLATE_PATH . 'footer.tmpl');
+include(VIEW_TEMPLATE_PATH . 'footer.php');
 ?>

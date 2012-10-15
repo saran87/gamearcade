@@ -25,11 +25,14 @@
 	}
 	
 	function IncludeRequiredClasses(){
-		//include common utility file
-		require_once('common.inc');
+		require_once('common/ErrorHandler.php');
 		//include main controller file
-		require_once('controller.inc');
-		require_once('lib/BaseController.inc');
+		require_once('controller.php');
+		//include common utility file
+		require_once('common/common.php');
+		require_once('common/BaseController.php');
+		require_once('common/Authorizer.php');
+		
 	}
 
 ?>
