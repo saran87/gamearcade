@@ -6,20 +6,9 @@
  <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="view/js/jquery.js"></script>
-    <script src="view/js//bootstrap-transition.js"></script>
-    <script src="view/js//bootstrap-alert.js"></script>
-    <script src="view/js//bootstrap-modal.js"></script>
-    <script src="view/js//bootstrap-dropdown.js"></script>
-    <script src="view/js//bootstrap-scrollspy.js"></script>
-    <script src="view/js//bootstrap-tab.js"></script>
-    <script src="view/js//bootstrap-tooltip.js"></script>
-    <script src="view/js//bootstrap-popover.js"></script>
-    <script src="view/js//bootstrap-button.js"></script>
-    <script src="view/js//bootstrap-collapse.js"></script>
-    <script src="view/js//bootstrap-carousel.js"></script>
-    <script src="view/js//bootstrap-typeahead.js"></script>
-
-  
-
+	<!-- dont change the order bootstrap needs jquery -->
+	<script src="view/js/jquery-1.8.2.min.js"></script>
+    <script src="view/js/bootstrap.min.js"></script>
+    <script src="view/js/login.js"></script>
+    <script src="view/js/site.js"></script>
 </body></html>

@@ -1,7 +1,7 @@
 <?php
 //Database configuration settings
-define('DB_SERVER','saravananadar.com');
-define('DB_USER','saravan1_ateam');
-define('DB_PASS','a-team@rit');
-define('DB_DATABASE','saravan1_ateam');
+define('DB_SERVER','localhost');
+define('DB_USER','root');
+define('DB_PASS','');
+define('DB_DATABASE','mydb');
 ?>

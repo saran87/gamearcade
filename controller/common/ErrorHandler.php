@@ -15,21 +15,24 @@ class ErrorHandler{
 	*                based on the configuration in settings file.
 	* @param error string 
 	*/
-	static public function HandleError($error){		
+	static public function HandleError($error,$message=""){		
 	
 		if(IS_LOG_ENABLED){
-			error_log(self::GetRequestDetail(),3,ERROR_LOG_FILE);
+			error_log(self::GetRequestDetail($error,$message),3,ERROR_LOG_FILE);
 		}	
 		redirectPage( $error);
 	}
 	
-	static public function GetRequestDetail() {
+	static public function GetRequestDetail($error, $message) {
         
 		$startLog = "\n==========================================================================================================\n";
-		$userDetail = "From : " . $_SERVER["SERVER_ADDR"] . "\n Requested URL: " . $_SERVER['REQUEST_URI'] . "\n Request Method: " . $_SERVER['REQUEST_METHOD'] . "\n Access Time: " . $_SERVER[REQUEST_TIME] . "\n";
-		$callStack = self::GetCallTrace();
+		$userDetail = "From : " . $_SERVER["SERVER_ADDR"] . "\nRequested URL: " . $_SERVER['REQUEST_URI'] . "\nRequest Method: " . $_SERVER['REQUEST_METHOD'] . "\nAccess Time: " . $_SERVER[REQUEST_TIME] . "\n";
+		$callStack = self::GetCallTrace() . "\n";
+		$requestDetail =  "Request :" . http_build_query($_REQUEST) . "\n";
+		$errorType = "Error Type :" . $error . "\n";
+		$errorMessage = "Message :" . $message;
 		$endLog =  "\n==========================================================================================================\n";
-		$logStr = $startLog . $userDetail . $callStack . $endLog;
+		$logStr =  $startLog . $userDetail . $requestDetail . $errorType . $errorMessage . $callStack . $endLog;
 		return $logStr;
     }
 	

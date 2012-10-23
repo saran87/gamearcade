@@ -27,7 +27,7 @@
 	function IncludeRequiredClasses(){
 		require_once('common/ErrorHandler.php');
 		//include main controller file
-		require_once('controller.php');
+		require_once('common/controller.php');
 		//include common utility file
 		require_once('common/common.php');
 		require_once('common/BaseController.php');

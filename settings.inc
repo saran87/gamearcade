@@ -3,7 +3,6 @@
 // Getting the root excution  path
 define('ROOT_PATH',getcwd());
 
-define('DATA_PATH',ROOT_PATH . '/data/');
 //banner file info constant
 define('BANNER_PATH',ROOT_PATH . '/banner/');
 //Modules file path
@@ -28,6 +27,7 @@ define('LOGIN_PAGE', 'index.php?s=login');
 
 //Error Indicators
 define('PAGE_NOT_FOUND', '404');
+define('DB_ERROR', 'DB Error');
 define('LOGIN', 'Login');
 
 //Error page

@@ -18,19 +18,111 @@
 	 *
 	 * @author	Saravana Kumar
 	 */
+	 
 	class Login extends BaseController{
 	
+		private $title = "Game Arcade";
+		
+		function __construct(){
+		
+			require_once(ROOT_PATH . "/dataAccess/users.php");
+		
+		}
 		public function test(){
 		
-			$title = "Connect4 - login";
-			$this->setViewData('title',$title);
+			$this->setViewData('title',$this->title);
 		}
 		
 		public function index(){
 		
-			$title = "Connect4 - login";
-			$this->setViewData('title',$title);
+			
+			$this->setViewData('title',$this->title);
 		}
+		
+		public function register(){
+		
+			$data = array();
+			$this->setViewData('title',$this->title);
+			$data = $this->createNewAccount();
+			$this->setViewData('data',$data);
+		}
+		
+		/**** private methods ****/
+		/*
+		* Create a new account for user
+		*
+		*/
+		
+		private function createNewAccount(){
+		
+			$name     = isset($_POST['name']) ? $_POST['name'] : '';
+			$email    = isset($_POST['email']) ? $_POST['email'] : '';
+			$password = isset($_POST['password']) ? $_POST['password'] : '';
+			
+			
+			if($password != '' && $email != '' && $name != ''){
+				
+				if(validateEmail($email)){
+				
+					if($this->validateName($name)){
+					
+						if($this->validatePassword($password)){
+						
+							$userAccess = new Users();
+							$data	 	= $userAccess->createNewUser($name,$email,$password);
+						
+						}	
+						else{
+							$data['error'] = "Length of password should be greater or equal to 8";
+						}
+					}
+					else{
+						$data['error'] = "Only alphabets are allowed in name field";
+					}
+				}
+				else{
+					$data['error'] = "Not a valid email address";
+				}
+			}
+			
+			return $data;
+		}
+		
+	
+		
+		/*
+		* Validate name entered in the registration form
+		* Checks if it contains only alpha characters
+		* Returns true if name is valid and false if not
+		*/
+		
+		private function validateName($name){
+		
+			$isValid = false;
+
+			$nameReg = "/^[a-zA-Z]+\s*[a-zA-Z]*$/i";
+			$isValid = preg_match($nameReg,$name);
+			
+			return $isValid;		
+		}
+		
+		/*
+		* Validate email address
+		*
+		*/
+		
+		private function validatePassword($password){
+			
+			$isValid = false;
+		
+			if(strlen($password)>=8){
+			
+				$isValid = true;
+			}
+			
+			return $isValid;
+		}
+		
 	}
 	
 ?>

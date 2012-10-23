@@ -1,399 +1,77 @@
 
 ==========================================================================================================
 From : ::1
- Requested URL: /connect4/
- Request Method: GET
-#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:29]
-#0  ErrorHandler::GetRequestDetail() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError() called at [C:\xampp\htdocs\connect4\controller\common\common.php:122]
-#2  redirectPage(404) called at [C:\xampp\htdocs\connect4\controller\controller.php:115]
-#3  Controller->RenderFrontPage() called at [C:\xampp\htdocs\connect4\controller\controller.php:47]
-#4  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:20]
-#5  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
+Requested URL: /connect4/index.php?s=login&action=register
+Request Method: POST
+Access Time: 1350974686
+Request :s=login&action=register&name=Saravana+Kumar&email=saran87%40gmail.com&password=Sar123mur
+Error Type :DB Error
+Message :Duplicate entry 'saran87@gmail.com' for key 'email'#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
+#0  ErrorHandler::GetRequestDetail(DB Error, Duplicate entry 'saran87@gmail.com' for key 'email') called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
+#1  ErrorHandler::HandleError(DB Error, Duplicate entry 'saran87@gmail.com' for key 'email') called at [C:\xampp\htdocs\connect4\dataAccess\users.php:33]
+#2  Users->createNewUser(Saravana Kumar, saran87@gmail.com, Sar123mur) called at [C:\xampp\htdocs\connect4\controller\Login\login.php:72]
+#3  Login->createNewAccount() called at [C:\xampp\htdocs\connect4\controller\Login\login.php:46]
+#4  Login->register(::1, )
+#5  call_user_func(Array ([0] => Login Object ([] => Game Arcade,[viewVars] => Array ([title] => Game Arcade)),[1] => register), ::1, ) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:69]
+#6  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:20]
+#7  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
+
 
 ==========================================================================================================
 
 ==========================================================================================================
 From : ::1
- Requested URL: /connect4/
- Request Method: GET
-#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:29]
-#0  ErrorHandler::GetRequestDetail() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(404) called at [C:\xampp\htdocs\connect4\controller\common\common.php:122]
-#2  redirectPage(404) called at [C:\xampp\htdocs\connect4\controller\controller.php:115]
-#3  Controller->RenderFrontPage() called at [C:\xampp\htdocs\connect4\controller\controller.php:47]
-#4  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:20]
-#5  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
+Requested URL: /connect4/index.php?s=login&action=register
+Request Method: POST
+Access Time: 1350976701
+Request :s=login&action=register&name=Saravana+Kumar&email=saran87%40gmail.com&password=asd3e2wdwsd
+Error Type :DB Error
+Message :Duplicate entry 'saran87@gmail.com' for key 'email'#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
+#0  ErrorHandler::GetRequestDetail(DB Error, Duplicate entry 'saran87@gmail.com' for key 'email') called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
+#1  ErrorHandler::HandleError(DB Error, Duplicate entry 'saran87@gmail.com' for key 'email') called at [C:\xampp\htdocs\connect4\dataAccess\users.php:33]
+#2  Users->createNewUser(Saravana Kumar, saran87@gmail.com, asd3e2wdwsd) called at [C:\xampp\htdocs\connect4\controller\Login\login.php:72]
+#3  Login->createNewAccount() called at [C:\xampp\htdocs\connect4\controller\Login\login.php:46]
+#4  Login->register(::1, )
+#5  call_user_func(Array ([0] => Login Object ([] => Game Arcade,[viewVars] => Array ([title] => Game Arcade)),[1] => register), ::1, ) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:69]
+#6  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:20]
+#7  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
+
 
 ==========================================================================================================
 
 ==========================================================================================================
 From : ::1
- Requested URL: /connect4/
- Request Method: GET
-#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:32]
-#0  ErrorHandler::GetRequestDetail() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(404) called at [C:\xampp\htdocs\connect4\controller\controller.php:115]
-#2  Controller->RenderFrontPage() called at [C:\xampp\htdocs\connect4\controller\controller.php:47]
+Requested URL: /connect4/index.php?name=Saravana+Kumar&email=saran87%40gmail.com&password=Sar123mur
+Request Method: GET
+Access Time: 1350983288
+Request :name=Saravana+Kumar&email=saran87%40gmail.com&password=Sar123mur
+Error Type :Login
+Message :#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
+#0  ErrorHandler::GetRequestDetail(Login, ) called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
+#1  ErrorHandler::HandleError(Login) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:117]
+#2  Controller->RenderFrontPage() called at [C:\xampp\htdocs\connect4\controller\common\controller.php:47]
 #3  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:20]
 #4  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
 
-==========================================================================================================
-
-==========================================================================================================
-From : ::1
- Requested URL: /connect4/
- Request Method: GET
-#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:32]
-#0  ErrorHandler::GetRequestDetail() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(404) called at [C:\xampp\htdocs\connect4\controller\controller.php:115]
-#2  Controller->RenderFrontPage() called at [C:\xampp\htdocs\connect4\controller\controller.php:47]
-#3  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:20]
-#4  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
 
 ==========================================================================================================
 
 ==========================================================================================================
 From : ::1
- Requested URL: /connect4/index.php?s=login&action=tes
- Request Method: GET
- Access Time: 1350080328
-#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:32]
-#0  ErrorHandler::GetRequestDetail() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(404) called at [C:\xampp\htdocs\connect4\controller\controller.php:94]
-#2  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:20]
-#3  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
+Requested URL: /connect4/index.php?s=login&action=register
+Request Method: POST
+Access Time: 1350983746
+Request :s=login&action=register&name=Saravana+Kumar&email=saran87%40gmail.com&password=Sar123mur
+Error Type :DB Error
+Message :Duplicate entry 'saran87@gmail.com' for key 'email'#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
+#0  ErrorHandler::GetRequestDetail(DB Error, Duplicate entry 'saran87@gmail.com' for key 'email') called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
+#1  ErrorHandler::HandleError(DB Error, Duplicate entry 'saran87@gmail.com' for key 'email') called at [C:\xampp\htdocs\connect4\dataAccess\users.php:33]
+#2  Users->createNewUser(Saravana Kumar, saran87@gmail.com, Sar123mur) called at [C:\xampp\htdocs\connect4\controller\Login\login.php:72]
+#3  Login->createNewAccount() called at [C:\xampp\htdocs\connect4\controller\Login\login.php:46]
+#4  Login->register(::1, )
+#5  call_user_func(Array ([0] => Login Object ([] => Game Arcade,[viewVars] => Array ([title] => Game Arcade)),[1] => register), ::1, ) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:69]
+#6  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:20]
+#7  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
 
-==========================================================================================================
-
-==========================================================================================================
-From : ::1
- Requested URL: /connect4/
- Request Method: GET
- Access Time: 1350283427
-#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:32]
-#0  ErrorHandler::GetRequestDetail() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(404) called at [C:\xampp\htdocs\connect4\controller\controller.php:118]
-#2  Controller->RenderFrontPage() called at [C:\xampp\htdocs\connect4\controller\controller.php:47]
-#3  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:20]
-#4  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
-
-==========================================================================================================
-
-==========================================================================================================
-From : ::1
- Requested URL: /connect4/index.php?s=login
- Request Method: GET
- Access Time: 1350284416
-#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:32]
-#0  ErrorHandler::GetRequestDetail() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(404) called at [C:\xampp\htdocs\connect4\controller\controller.php:94]
-#2  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:20]
-#3  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
-
-==========================================================================================================
-
-==========================================================================================================
-From : ::1
- Requested URL: /connect4/index.php?s=login
- Request Method: GET
- Access Time: 1350284424
-#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:32]
-#0  ErrorHandler::GetRequestDetail() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(404) called at [C:\xampp\htdocs\connect4\controller\controller.php:94]
-#2  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:20]
-#3  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
-
-==========================================================================================================
-
-==========================================================================================================
-From : ::1
- Requested URL: /connect4/index.php?s=login
- Request Method: GET
- Access Time: 1350284477
-#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:32]
-#0  ErrorHandler::GetRequestDetail() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(404) called at [C:\xampp\htdocs\connect4\controller\controller.php:94]
-#2  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:20]
-#3  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
-
-==========================================================================================================
-
-==========================================================================================================
-From : ::1
- Requested URL: /connect4/index.php?s=home
- Request Method: GET
- Access Time: 1350284502
-#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:32]
-#0  ErrorHandler::GetRequestDetail() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(404) called at [C:\xampp\htdocs\connect4\controller\controller.php:94]
-#2  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:20]
-#3  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
-
-==========================================================================================================
-
-==========================================================================================================
-From : ::1
- Requested URL: /connect4/
- Request Method: GET
- Access Time: 1350285390
-#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:32]
-#0  ErrorHandler::GetRequestDetail() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(Login) called at [C:\xampp\htdocs\connect4\controller\controller.php:117]
-#2  Controller->RenderFrontPage() called at [C:\xampp\htdocs\connect4\controller\controller.php:47]
-#3  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:20]
-#4  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
-
-==========================================================================================================
-
-==========================================================================================================
-From : ::1
- Requested URL: /connect4/
- Request Method: GET
- Access Time: 1350285390
-#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:32]
-#0  ErrorHandler::GetRequestDetail() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(404) called at [C:\xampp\htdocs\connect4\controller\controller.php:121]
-#2  Controller->RenderFrontPage() called at [C:\xampp\htdocs\connect4\controller\controller.php:47]
-#3  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:20]
-#4  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
-
-==========================================================================================================
-
-==========================================================================================================
-From : ::1
- Requested URL: /connect4/index.php?
- Request Method: GET
- Access Time: 1350287960
-#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:32]
-#0  ErrorHandler::GetRequestDetail() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(Login) called at [C:\xampp\htdocs\connect4\controller\controller.php:117]
-#2  Controller->RenderFrontPage() called at [C:\xampp\htdocs\connect4\controller\controller.php:47]
-#3  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:20]
-#4  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
-
-==========================================================================================================
-
-==========================================================================================================
-From : ::1
- Requested URL: /connect4/index.php?
- Request Method: GET
- Access Time: 1350287960
-#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:32]
-#0  ErrorHandler::GetRequestDetail() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(404) called at [C:\xampp\htdocs\connect4\controller\controller.php:121]
-#2  Controller->RenderFrontPage() called at [C:\xampp\htdocs\connect4\controller\controller.php:47]
-#3  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:20]
-#4  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
-
-==========================================================================================================
-
-==========================================================================================================
-From : ::1
- Requested URL: /connect4/
- Request Method: GET
- Access Time: 1350335665
-#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:32]
-#0  ErrorHandler::GetRequestDetail() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(Login) called at [C:\xampp\htdocs\connect4\controller\controller.php:117]
-#2  Controller->RenderFrontPage() called at [C:\xampp\htdocs\connect4\controller\controller.php:47]
-#3  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:20]
-#4  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
-
-==========================================================================================================
-
-==========================================================================================================
-From : ::1
- Requested URL: /connect4/
- Request Method: GET
- Access Time: 1350335665
-#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:32]
-#0  ErrorHandler::GetRequestDetail() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(404) called at [C:\xampp\htdocs\connect4\controller\controller.php:121]
-#2  Controller->RenderFrontPage() called at [C:\xampp\htdocs\connect4\controller\controller.php:47]
-#3  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:20]
-#4  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
-
-==========================================================================================================
-
-==========================================================================================================
-From : ::1
- Requested URL: /connect4/
- Request Method: GET
- Access Time: 1350335670
-#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:32]
-#0  ErrorHandler::GetRequestDetail() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(Login) called at [C:\xampp\htdocs\connect4\controller\controller.php:117]
-#2  Controller->RenderFrontPage() called at [C:\xampp\htdocs\connect4\controller\controller.php:47]
-#3  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:20]
-#4  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
-
-==========================================================================================================
-
-==========================================================================================================
-From : ::1
- Requested URL: /connect4/
- Request Method: GET
- Access Time: 1350335670
-#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:32]
-#0  ErrorHandler::GetRequestDetail() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(404) called at [C:\xampp\htdocs\connect4\controller\controller.php:121]
-#2  Controller->RenderFrontPage() called at [C:\xampp\htdocs\connect4\controller\controller.php:47]
-#3  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:20]
-#4  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
-
-==========================================================================================================
-
-==========================================================================================================
-From : ::1
- Requested URL: /connect4/
- Request Method: GET
- Access Time: 1350336174
-#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
-#0  ErrorHandler::GetRequestDetail() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(Login) called at [C:\xampp\htdocs\connect4\controller\controller.php:117]
-#2  Controller->RenderFrontPage() called at [C:\xampp\htdocs\connect4\controller\controller.php:47]
-#3  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:20]
-#4  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
-
-==========================================================================================================
-
-==========================================================================================================
-From : ::1
- Requested URL: /connect4/
- Request Method: GET
- Access Time: 1350336174
-#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
-#0  ErrorHandler::GetRequestDetail() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(404) called at [C:\xampp\htdocs\connect4\controller\controller.php:121]
-#2  Controller->RenderFrontPage() called at [C:\xampp\htdocs\connect4\controller\controller.php:47]
-#3  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:20]
-#4  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
-
-==========================================================================================================
-
-==========================================================================================================
-From : ::1
- Requested URL: /connect4/
- Request Method: GET
- Access Time: 1350336227
-#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
-#0  ErrorHandler::GetRequestDetail() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(Login) called at [C:\xampp\htdocs\connect4\controller\controller.php:117]
-#2  Controller->RenderFrontPage() called at [C:\xampp\htdocs\connect4\controller\controller.php:47]
-#3  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:20]
-#4  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
-
-==========================================================================================================
-
-==========================================================================================================
-From : ::1
- Requested URL: /connect4/
- Request Method: GET
- Access Time: 1350336235
-#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
-#0  ErrorHandler::GetRequestDetail() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(Login) called at [C:\xampp\htdocs\connect4\controller\controller.php:117]
-#2  Controller->RenderFrontPage() called at [C:\xampp\htdocs\connect4\controller\controller.php:47]
-#3  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:20]
-#4  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
-
-==========================================================================================================
-
-==========================================================================================================
-From : ::1
- Requested URL: /connect4/
- Request Method: GET
- Access Time: 1350336235
-#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
-#0  ErrorHandler::GetRequestDetail() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(Login) called at [C:\xampp\htdocs\connect4\controller\controller.php:117]
-#2  Controller->RenderFrontPage() called at [C:\xampp\htdocs\connect4\controller\controller.php:47]
-#3  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:20]
-#4  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
-
-==========================================================================================================
-
-==========================================================================================================
-From : ::1
- Requested URL: /connect4/
- Request Method: GET
- Access Time: 1350336284
-#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
-#0  ErrorHandler::GetRequestDetail() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(Login) called at [C:\xampp\htdocs\connect4\controller\controller.php:117]
-#2  Controller->RenderFrontPage() called at [C:\xampp\htdocs\connect4\controller\controller.php:47]
-#3  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:20]
-#4  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
-
-==========================================================================================================
-
-==========================================================================================================
-From : ::1
- Requested URL: /connect4/index.php?
- Request Method: GET
- Access Time: 1350336424
-#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
-#0  ErrorHandler::GetRequestDetail() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(Login) called at [C:\xampp\htdocs\connect4\controller\controller.php:117]
-#2  Controller->RenderFrontPage() called at [C:\xampp\htdocs\connect4\controller\controller.php:47]
-#3  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:20]
-#4  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
-
-==========================================================================================================
-
-==========================================================================================================
-From : ::1
- Requested URL: /connect4/index.php?
- Request Method: GET
- Access Time: 1350336425
-#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
-#0  ErrorHandler::GetRequestDetail() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(Login) called at [C:\xampp\htdocs\connect4\controller\controller.php:117]
-#2  Controller->RenderFrontPage() called at [C:\xampp\htdocs\connect4\controller\controller.php:47]
-#3  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:20]
-#4  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
-
-==========================================================================================================
-
-==========================================================================================================
-From : ::1
- Requested URL: /connect4/index.php?
- Request Method: GET
- Access Time: 1350336433
-#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
-#0  ErrorHandler::GetRequestDetail() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(Login) called at [C:\xampp\htdocs\connect4\controller\controller.php:117]
-#2  Controller->RenderFrontPage() called at [C:\xampp\htdocs\connect4\controller\controller.php:47]
-#3  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:20]
-#4  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
-
-==========================================================================================================
-
-==========================================================================================================
-From : ::1
- Requested URL: /connect4/index.php?
- Request Method: GET
- Access Time: 1350336546
-#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
-#0  ErrorHandler::GetRequestDetail() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(Login) called at [C:\xampp\htdocs\connect4\controller\controller.php:117]
-#2  Controller->RenderFrontPage() called at [C:\xampp\htdocs\connect4\controller\controller.php:47]
-#3  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:20]
-#4  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
-
-==========================================================================================================
-
-==========================================================================================================
-From : ::1
- Requested URL: /connect4/index.php?
- Request Method: GET
- Access Time: 1350337041
-#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
-#0  ErrorHandler::GetRequestDetail() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(Login) called at [C:\xampp\htdocs\connect4\controller\controller.php:117]
-#2  Controller->RenderFrontPage() called at [C:\xampp\htdocs\connect4\controller\controller.php:47]
-#3  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:20]
-#4  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
 
 ==========================================================================================================
