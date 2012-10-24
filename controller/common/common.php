@@ -200,5 +200,24 @@
 		   }
 		   return $isValid;
 		}
+		/**
+		 * ouputJson
+		 * 			output json to response
+		 * @param $data array of data with key/value to be ouput as json
+		 * @return void
+		 */
+
+	function ouputJson ($data){
+		
+		header("Expires: Mon, 26 Jul 2017 05:00:00 GMT");
+		header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
+		header("Cache-Control: no-store, no-cache, must-revalidate");
+		header("Cache-Control: post-check=0, pre-check=0", false);
+		header("Pragma: no-cache");
+		//MUST change the content-type
+		header("Content-Type:application/json");
+		// This will become the response value for the XMLHttpRequest object
+		echo json_encode($data);
+	}
 	
 ?>

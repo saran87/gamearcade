@@ -45,13 +45,27 @@
           </a>
           <a class="brand" href="#">Game Arcade</a>
           <div class="nav-collapse collapse">
-            <p class="navbar-text pull-right">
-             <?php if(isset($_SESSION['username'])):?>
-				Logged in as <a href="#" class="navbar-link">Username</a>
-			 <?php else :?>
-				 <button type="button" class="btn btn-link" data-toggle="modal" data-target="#loginModal">Login</button>
-			<?php endif; ?>
-            </p>
+            <div class="navbar-text pull-right">
+				<?php if(isset($_SESSION['name'])):?>
+					<div class="btn-group">
+					<button class="btn"><?php echo $_SESSION['name'] ?></button>
+				<?php else :?>
+					<div class="btn-group hide">
+					<button class="btn btn-info" id="userName"></button>
+				 <?php endif; ?>
+				  <button class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+					<span class="caret"></span>
+				  </button>
+				  <ul class="dropdown-menu">
+					<!-- dropdown menu links -->
+					<li class="divider"></li>
+					<li><a tabindex="-1" href="logout.php" >Log out</a></li>
+				  </ul>
+				</div>
+				<div id="loginButton" class="<?php if(isset($_SESSION['name'])) { echo "hide";} ?>">
+				 <button type="button" class="btn btn-link" onClick="showLoginModal()">Login</button>
+				</div>
+            </div>
           </div><!--/.nav-collapse -->
         </div>
       </div>
@@ -67,23 +81,25 @@
 	  <div id="login_message" class="alert alert-error hide">
 	  </div>
 	  <div id="login">
-		<form class="form-horizontal">
+		<form class="form-horizontal" id="login_form">
 		  <div class="control-group">
 			<label class="control-label" for="inputEmail">Email</label>
 			<div class="controls">
-			  <input type="text" id="inputEmail" placeholder="Email">
+			  <input type="text" id="inputEmail" class="email" name="email" placeholder="Email">
+			  <span  class="label  label-important hide">Enter proper email address</span>
 			</div>
 		  </div>
 		  <div class="control-group">
 			<label class="control-label" for="inputPassword">Password</label>
 			<div class="controls">
-			  <input type="password" id="inputPassword" placeholder="Password">
+			  <input type="password" id="inputPassword" class="password" name="password" placeholder="Password">
+			  <span  class="label  label-important hide">Password should have minimum of 8 characters</span>
 			</div>
 		  </div>
 		  <div class="control-group">
 			<div class="controls">
 			  <button type="submit" class="btn">Sign in</button>
-			  <a href="#" onclick=" showRegisterForm()">Create New Account </a>
+			   <a href="#" onclick="showRegisterForm()">Create New Account </a>
 			</div>
 		  </div>
 		</form>

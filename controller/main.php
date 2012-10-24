@@ -12,7 +12,8 @@
 	function Intialize(){
 
 	try{
-	
+			//Start the session
+			session_start();
 			//Include required class files for further processing
 			IncludeRequiredClasses();
 			//Intialize the controller object and start rendering the page

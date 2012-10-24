@@ -102,20 +102,22 @@
 		 * @return	void
 		 */
 		private function RenderFrontPage(){
-		
-			$authorizer = new Authorizer;
-			
+					
 			$isIncluded  = false;
-			if($authorizer->VerifyToken()){
-				//include all of the files in front page folder
-				foreach(glob(VIEW_PATH . FRONT_PAGE) as $filename){
-					$isIncluded = true;
-					include $filename;
-				}	
+			
+			//include all of the files with .inc extension in section folder
+			foreach(glob(CONTROLLER_PATH."home"."/*.php") as $filename){
+				require_once($filename);
 			}
-			else{
-				ErrorHandler::HandleError(LOGIN);
+			$home = new Home();
+			$home->index();
+			
+			//include all of the files in front page folder
+			foreach(glob(VIEW_PATH . FRONT_PAGE) as $filename){
+				$isIncluded = true;
+				$home->renderView($filename);
 			}
+			
 			//if the file is not included redirect to NOT FOUND page
 			if(!$isIncluded){
 				ErrorHandler::HandleError(PAGE_NOT_FOUND);	

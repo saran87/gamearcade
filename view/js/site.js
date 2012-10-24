@@ -24,11 +24,14 @@ function Site(){
 		this.baseURL = "http://localhost/connect4/";
 		
 		this.registerUserURL = this.baseURL + "index.php?s=login&action=register";
+		this.loginURL = this.baseURL + "index.php?s=login";
 };
 	
 Site.prototype = {
 
-	//function to create user account
+	/*
+	* function to create user account
+	*/
 	createUserAccount:function(formObj){
 		
 		if( this.validateRegisterForm(formObj) ){
@@ -38,46 +41,21 @@ Site.prototype = {
 			 $('#ajaxProgress').removeClass('hide');
 			 $(formToProcess).addClass('hide');
 			
-			 this.makeAjaxCall({
-							   type: "POST",
-							   path: this.registerUserURL,
-							   message: formObj.serialize(), // serializes the form's elements.
-							   success: function(data)
-							   {
-								   console.log(data); // show response from the php script.
-								   $('#ajaxProgress').addClass('hide');	
-								   $(formToProcess).removeClass('hide');
-								   //if call success
-								   if(data){
-									   if(data.error){
-											//error occured in server, display the message to the user
-											$('#login_message').text(data.error).removeClass('hide');
-											
-									   }else{
-											//on success
-											
-										}
-									}
-									else{
-										//error occured in server, display the message to the user
-											$('#login_message').text("Server error occurred").removeClass('hide');
-									}
-							   },
-							   error:function(jqXHR, textStatus, errorThrown)
-							   {
-									//what to do while error occurred making ajax call
-									$('#ajaxProgress').addClass('hide');	
-									$(processForm).removeClass('hide');
-									$('#login_message').text(jqXHR.statusText).removeClass('hide');
-							   }
-					});
+			 this.makeAjaxCall(getLoginData(formToProcess,formObj,this.registerUserURL));
 		}
-
 	},
 	//function to login the user
 	login:function(formObj){
-
-
+		
+		if( this.validateLogin(formObj) ){
+			
+			var formToProcess = "#login";
+			
+			 $('#ajaxProgress').removeClass('hide');
+			 $(formToProcess).addClass('hide');
+			
+			 this.makeAjaxCall(getLoginData(formToProcess,formObj,this.loginURL));
+		}
 	},
 	//validate to validate login form
 	validateLogin:function(formObj){
@@ -181,7 +159,7 @@ Site.prototype = {
 	//function to make ajax call
 	makeAjaxCall:function(data){
 		
-		errorHandler = (data.error === 'undefined') ? data.error: this.errorHandler;
+		var errorCallBack = (data.error) ? data.error: this.errorHandler;
 
 		$.ajax({
 			type:data.type,
@@ -191,13 +169,14 @@ Site.prototype = {
 			url:data.path,
 			dataType:'json',
 			success:data.success,
-			error:errorHandler
+			error:errorCallBack
 		});
 	},
 	//function to handle error for the whole site
 	errorHandler:function(jqXHR, textStatus, errorThrown){	
-
+			//Initialize error to default message
 			var errorMessage = "error";
+			
 			if( typeof jqXHR === 'undefined'){
 				
 				if(textStatus){

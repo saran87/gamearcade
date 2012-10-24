@@ -16,16 +16,15 @@ class Authorizer{
 	private $cipherConstant = 80456;
 	private $tokenSeperator = "0xaea";
 	private $lengthSepartor = "-";
-	
+	private $timeOut = 3600 ; //one hour
 	
 	/**
 	* GenerateToken - This method generates a token using an encryption technique
 	*
 	*
 	*/
-	public function GenerateToken(){
+	public function GenerateToken($userId){
 		
-		$userId = 2;
 		$ipAddress = $_SERVER["SERVER_ADDR"];
 		
 		$date = new DateTime();
@@ -85,6 +84,14 @@ class Authorizer{
 		}
 		
 		return $isVerified;
+	}
+	/**
+	* send Token to Client - set the user token to cookie
+	*
+	*/
+	public function SendTokenToClient($token){
+		
+		setcookie("token", $token, time() + 3600);
 	}
 	
 	private function Encrypt($userId,$ipAddress,$timeStamp){
