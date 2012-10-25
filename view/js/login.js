@@ -89,7 +89,6 @@ function getLoginData(formToProcess,formObj, url){
 								   console.log(data); // show response from the php script.
 								   $('#ajaxProgress').addClass('hide');	
 								   $(formToProcess).removeClass('hide');
-								      console.log(data);
 								   //if call success
 								   if(data){
 								
@@ -99,7 +98,10 @@ function getLoginData(formToProcess,formObj, url){
 											
 									   }else{
 											//on success
-											$('#userName').text(data.name);
+											$('.userName').each( function(){
+													console.log(this);	
+																	$(this).text(data.name);
+																});
 											$('#userName').parent().removeClass('hide');
 											$('#loginButton').addClass('hide');
 											 $("#loginModal").modal("hide");

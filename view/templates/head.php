@@ -51,7 +51,7 @@
 					<button class="btn"><?php echo $_SESSION['name'] ?></button>
 				<?php else :?>
 					<div class="btn-group hide">
-					<button class="btn btn-info" id="userName"></button>
+					<button class="btn btn-info userName" id="userName"></button>
 				 <?php endif; ?>
 				  <button class="btn btn-info dropdown-toggle" data-toggle="dropdown">
 					<span class="caret"></span>
