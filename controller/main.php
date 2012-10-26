@@ -31,8 +31,9 @@
 		require_once('common/controller.php');
 		//include common utility file
 		require_once('common/common.php');
-		require_once('common/BaseController.php');
 		require_once('common/Authorizer.php');
+		require_once('common/BaseController.php');
+		
 		
 	}
 

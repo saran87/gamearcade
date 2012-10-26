@@ -77,4 +77,22 @@
 			return $isDone;			
 		}
 	}
+	
+	/**
+	 * Authenticate user
+	 * Validates the user token using authorizer
+	 *
+	 * @param void
+	 * @return	bool if user is authenticated or not
+	 */
+	public function authenticate() {
+		
+		$isAuth = false;
+			
+		$authorizer = new Authorizer();
+
+		return $authorizer->VerifyToken();
+	
+	}
+	
 }

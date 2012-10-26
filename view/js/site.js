@@ -25,6 +25,7 @@ function Site(){
 		
 		this.registerUserURL = this.baseURL + "index.php?s=login&action=register";
 		this.loginURL = this.baseURL + "index.php?s=login";
+		this.userListURL =  this.baseURL + "index.php?s=chat&action=getUserList";
 };
 	
 Site.prototype = {
@@ -155,6 +156,12 @@ Site.prototype = {
 		var emailReq = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
 
 		return emailReq.test(email);
+	},
+	//get user list execpt for online users
+	getUserList:function(callBack){
+		this.makeAjaxCall({ type: "GET",
+							   path: this.userListURL,
+								 success:callBack});
 	},
 	//function to make ajax call
 	makeAjaxCall:function(data){

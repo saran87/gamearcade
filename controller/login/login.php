@@ -1,7 +1,8 @@
 <?php
 
 	/**
-	 * The login.inc is where all the request are handled and dispatched to appropriate methods .
+	 * The login.php is where all the request for login and account creating 
+	 * are handled and dispatched to appropriate methods .
 	 *
 	 * The routines here dispatch control to the controller, which then directs 
 	 * the controll to appropriate sections

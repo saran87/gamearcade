@@ -93,6 +93,44 @@ class Users extends DataAccess{
 	
 		return $data;
 	}
+	
+	
+	/*
+	* Get users online list 
+	*
+	*/
+	public function getUserList($status = "offline"){
+	
+	
+		//array to hold the data retrieved
+		$data = array();
+		
+		//query to insert user details into the users table
+		$query = "SELECT `id_users`,`name`, `email`,`cur_game_id`, `online_status` FROM users WHERE `online_status` != ? and `id_users` != ?" ; 
+		
+		
+		//build the vaariables array which holds the data to bind to the prepare statement.
+		$vars = array($status,$_SESSION['id']);
+		
+		//specify the types of data to be binded 
+		$types = array("s","i");
+	
+		//excute the query 
+		$err = $this->database->doQuery($query,$vars,$types);
+		
+		//check if any error occurred 
+		if(empty($err)){
+
+			$data = $this->database->fetch_all_array();
+			
+		}else{
+				
+				ErrorHandler::HandleError(DB_ERROR,$err);
+				$data['error'] = "Server error ocurred";
+		}		
+	
+		return $data;
+	}
 }
 
 

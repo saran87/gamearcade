@@ -83,7 +83,7 @@ function getLoginData(formToProcess,formObj, url){
 			var data	=	{
 							   type: "POST",
 							   path: url,
-							   message: formObj.serialize(), // serializes the form's elements.
+							   message: formObj.serialize(),// serializes the form's elements.
 							   success: function(data)
 							   {
 								   console.log(data); // show response from the php script.
@@ -99,12 +99,12 @@ function getLoginData(formToProcess,formObj, url){
 									   }else{
 											//on success
 											$('.userName').each( function(){
-													console.log(this);	
 																	$(this).text(data.name);
 																});
 											$('#userName').parent().removeClass('hide');
 											$('#loginButton').addClass('hide');
-											 $("#loginModal").modal("hide");
+											$("#loginModal").modal("hide");
+											 chat.updateChatPanel();
 										}
 									}
 									else{
