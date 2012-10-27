@@ -3,7 +3,7 @@
     This script is a helper class for using the databases specific to Project 3 A for 4002-539
 */
 
-require("config.inc.php");
+require_once("config.inc.php");
 
 class Database {
 

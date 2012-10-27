@@ -21,7 +21,7 @@
 
 		private $section; 
 		private $action;
-		
+		private $type;
 		
 		/**
 		 * Intialize
@@ -30,8 +30,13 @@
 		 * @return void
 		 */
 		 function __construct() {
-			$this->section = getSection();
-			$this->action = getAction();
+			$this->section = getQueryString("s");
+			$this->action = getQueryString("action");
+			if( $this->action == ""){
+				//to render index page if none is specified
+				$this->action = "index";
+			}
+			$this->type = getQueryString("type");
 		 }
 		
 		
@@ -55,10 +60,9 @@
 					require_once($filename);
 				}
 				
-				
 				//Check if the controller class exists
 				if (class_exists($this->section)){
-					
+					//create object for particular section
 					$obj = new $this->section();
 					
 					if(method_exists($obj,$this->action)){
@@ -69,13 +73,16 @@
 						$result=@call_user_func($method,$_SERVER['REMOTE_ADDR'],$_COOKIE['token']);
 						if(method_exists($obj,'renderView')){
 							
-							$method = array($obj, 'renderView');
-							$viewPage = VIEW_PATH . $this->section . "/" . $this->action . ".php";
+							if($this->type != "json"){
+								
+								$method = array($obj, 'renderView');
+								$viewPage = VIEW_PATH . $this->section . "/" . $this->action . ".php";
 							
-							//start rendering view
-							$isDone = @call_user_func($method,$viewPage);
-							if(!$isDone){
-								$error = true;
+								//start rendering view
+								$isDone = @call_user_func($method,$viewPage);
+								if(!$isDone){
+									$error = true;
+								}
 							}
 						}
 						else{

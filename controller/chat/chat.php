@@ -25,7 +25,7 @@
 		
 		function __construct(){
 		
-			//require_once(ROOT_PATH . "/dataAccess/chat.php");
+			require_once(ROOT_PATH . "/dataAccess/chatDataAccess.php");
 			require_once(ROOT_PATH . "/dataAccess/users.php");
 		
 		}
@@ -57,9 +57,30 @@
 		
 		/**** private methods ****/
 		/*
-		* Create a new account for user
+		* Create a new room for chat
 		*
 		*/
+		
+		public function initChat(){
+		
+
+			$data = array();
+			
+			if($this->authenticate()){
+				
+				$userId = $_SESSION['id'];
+				$partnerId = getQueryString("partner");
+		
+				$chatDataAccess = new ChatDataAccess();
+				
+				$data["data"]	 = $chatDataAccess->intializeChat($userId,$partnerId);
+			}
+			else{
+				$data['error']['isLoginRequired'] = true;
+			}
+			ouputJson($data);
+	
+		}
 		
 	}
 	

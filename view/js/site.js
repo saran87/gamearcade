@@ -184,13 +184,11 @@ Site.prototype = {
 			//Initialize error to default message
 			var errorMessage = "error";
 			
-			if( typeof jqXHR === 'undefined'){
-				
-				if(textStatus){
+			if(textStatus){
 					errorMessage = textStatus;
-				}
 			}
 			else{
+				
 				errorMessage = jqXHR.statusText;
 			}
 			$("#error_message").text(errorMessage);

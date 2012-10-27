@@ -59,30 +59,19 @@
 		}
 	}
 
-	function getAction(){
+	function getQueryString($type){
+	
 		//get the action from the GET request
-		$action = isset($_GET["action"]) ? $_GET["action"] : 'index';
-		
-		//if action is not set then get it from post
-		if( $action == '' ){
-			$action = isset($_POST["action"]) ? $_POST["action"] : 'index';
-		}
-		
-		return $action;
-	}
-
-	function getSection(){
-		//get the action from the GET request
-		$section = isset($_GET["s"]) ? $_GET["s"] : '';
+		$section = isset($_GET[$type]) ? $_GET[$type] : '';
 		
 		//if action is not set then get it from post
 		if( $section == '' ){
-			$section = isset($_POST["s"]) ? $_POST["s"] : '';
+			$section = isset($_POST[$type]) ? $_POST[$type] : '';
 		}
 		
 		return $section;
+	
 	}
-
 	
 
 	function santizeInput($value){

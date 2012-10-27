@@ -14,7 +14,6 @@
     <script src="view/js/login.js"></script>
     <script src="view/js/site.js"></script>
     <script src="view/js/chat.js"></script>
-	<?php if(isset($_SESSION['name'])):?>
 		<script>
 		function onload () {
 		  chat.updateChatPanel();
@@ -34,6 +33,5 @@
 		}
 		window.addEventListener('DOMContentLoaded', onload);
 		</script>
-	 <?php endif; ?>
 	
 </body></html>

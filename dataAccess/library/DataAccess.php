@@ -5,7 +5,7 @@
 	gets the reference of database singleton isntance and stores in a variable
 	$database is the singleton object to query the database
 */
-require("Database.class.php");
+require_once("Database.class.php");
 
 
 class DataAccess{

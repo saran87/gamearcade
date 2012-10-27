@@ -1,5 +1,5 @@
 <?php
-include("library/DataAccess.php");
+require_once("library/DataAccess.php");
 
 //Class to hold and Perform  Activities
 class Users extends DataAccess{
