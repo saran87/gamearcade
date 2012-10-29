@@ -9,6 +9,11 @@ class ChatDataAccess extends DataAccess{
 		parent::__construct();
 	}
 	
+	/*
+	* Intialize chat 
+	*			Creates chat id and creates new room for chat
+	*
+	*/
 	public function intializeChat($userId,$partnerId,$message){
 		
 		//array to hold the data retrieved
@@ -25,6 +30,8 @@ class ChatDataAccess extends DataAccess{
 			$data['participant1'] = $this->addParticipant($roomId,$userId);
 			if(!isset($data['error'])){
 				$data['participant2'] = $this->addParticipant($roomId,$partnerId);
+				$data['chatId'] = $chatId;
+				$data['chatWindowId'] = $partnerId;
 			}
 		}
 		return $data;
@@ -93,7 +100,7 @@ class ChatDataAccess extends DataAccess{
 		//check if any error occurred 
 		if(empty($err)){
 			
-			$data[$this->database->getInsertId()] = $participant;
+			$data = $participant;
 			
 		}else{
 			ErrorHandler::HandleError(DB_ERROR,$err);
@@ -132,7 +139,7 @@ class ChatDataAccess extends DataAccess{
 			$data["deleted"] = $participant;
 			
 		}else{
-			ErrorHandler::HandleError(DB_ERROR,$err);
+				ErrorHandler::HandleError(DB_ERROR,$err);
 		
 				$data['error'] = "Not able to remove participant";
 		}
@@ -150,29 +157,37 @@ class ChatDataAccess extends DataAccess{
 		//array to hold the data retrieved
 		$data = array();
 		
-		//query to insert user details into the users table
-		$query = "INSERT INTO `chat_messages`(`message_id`, `chat_id`, `message`, `user_id`, `timestamp`) VALUES (?,?,?,?,?)";
+		$users = new Users();
+		$data = $users->getUserName();
+		if(!isset($data['error'])){
 		
-		//build the vaariables array which holds the data to bind to the prepare statement.
-		$vars = array(NULL,$chatId,$message,$userId,time());
-		
-		//specify the types of data to be binded 
-		$types = array("s","i","s","i","s");
-	
-		//excute the query 
-		$err = $this->database->doQuery($query,$vars,$types);
-		
-		//check if any error occurred 
-		if(empty($err)){
+			$userName = $data['name'];
+			//query to insert user details into the users table
+			$query = "INSERT INTO `chat_messages`(`message_id`, `chat_id`, `message`, `user_id`, `user_name`, `timestamp`) VALUES (?,?,?,?,?,?)";
+			$timeStamp =date('Y-m-d H:i:s', time()) ;
 			
-			$data["messageId"] = $this->database->getInsertId();
+			//build the vaariables array which holds the data to bind to the prepare statement.
+			$vars = array(NULL,$chatId,$message,$userId,$userName,$timeStamp);
 			
-		}else{
-			ErrorHandler::HandleError(DB_ERROR,$err);
+			//specify the types of data to be binded 
+			$types = array("s","i","s","i","s","s");
 		
+			//excute the query 
+			$err = $this->database->doQuery($query,$vars,$types);
+			
+			//check if any error occurred 
+			if(empty($err)){
+				
+				$data["messageId"] = $this->database->getInsertId();
+				$data["chatId"]	   = $chatId;
+				$data["message"]   = $message;
+				$data["timestamp"] = $timeStamp;
+				
+			}else{
+				ErrorHandler::HandleError(DB_ERROR,$err);
 				$data['error'] = "Not able to send the message, Try again";
+			}
 		}
-		
 		return $data;
 	}
 	
@@ -313,11 +328,6 @@ class ChatDataAccess extends DataAccess{
 			return $data;
 	}
 	
-	public function getRoomIdForChatId(){
-		
-		
-		
-	}
 	
 }
 

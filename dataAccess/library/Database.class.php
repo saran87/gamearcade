@@ -15,8 +15,8 @@ private $user     = ""; //database login name
 private $pass     = ""; //database login password
 private $database = ""; //database name
 private $pre      = ""; //table prefix
-private  $mysqli;  //mysqli object
-private  $error;    //error
+private $mysqli;  //mysqli object
+private $error;    //error
 
 //number of rows affected by SQL query
 private $affected_rows = 0;

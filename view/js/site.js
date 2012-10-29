@@ -26,6 +26,8 @@ function Site(){
 		this.registerUserURL = this.baseURL + "index.php?s=login&action=register";
 		this.loginURL = this.baseURL + "index.php?s=login";
 		this.userListURL =  this.baseURL + "index.php?s=chat&action=getUserList";
+		this.initChatURL =  this.baseURL + "index.php?s=chat&action=initChat&type=json";
+		this.sendMessageURL = this.baseURL + "index.php?s=chat&action=sendMessage&type=json";
 };
 	
 Site.prototype = {
@@ -162,6 +164,26 @@ Site.prototype = {
 		this.makeAjaxCall({ type: "GET",
 							   path: this.userListURL,
 								 success:callBack});
+	},
+	//initalize chat window
+	initChat:function(data,callBack){
+	
+		this.makeAjaxCall({ type: "POST",
+							path: this.initChatURL,
+							message:data,
+							success:callBack
+						 });
+		
+	},
+	//initalize chat window
+	sendMessage:function(data,callBack){
+	
+		this.makeAjaxCall({ type: "POST",
+							path: this.sendMessageURL,
+							message:data,
+							success:callBack
+						 });
+		
 	},
 	//function to make ajax call
 	makeAjaxCall:function(data){

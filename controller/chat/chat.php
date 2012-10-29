@@ -55,9 +55,9 @@
 			$this->setViewData('data',$data);
 		}
 		
-		/**** private methods ****/
 		/*
-		* Create a new room for chat
+		* Create a new room for chat and returns the chat id and room id
+		* with participants
 		*
 		*/
 		
@@ -69,11 +69,14 @@
 			if($this->authenticate()){
 				
 				$userId = $_SESSION['id'];
-				$partnerId = getQueryString("partner");
-		
-				$chatDataAccess = new ChatDataAccess();
-				
-				$data["data"]	 = $chatDataAccess->intializeChat($userId,$partnerId);
+				$partnerId = getQueryString("partnerId");
+				if( $partnerId != "" ){	
+					$chatDataAccess = new ChatDataAccess();
+					$data["data"]	 = $chatDataAccess->intializeChat($userId,$partnerId);
+				}
+				else{
+					$data["error"]  = "missing required field partnerId";
+				}
 			}
 			else{
 				$data['error']['isLoginRequired'] = true;
@@ -82,6 +85,38 @@
 	
 		}
 		
+		/*
+		* sendMessage
+		* Update the message sedn by the user to database
+		*
+		*/
+		
+		public function sendMessage(){
+		
+
+			$data = array();
+			
+			if($this->authenticate()){
+				
+				$userId = $_SESSION['id'];
+				$chatId = getQueryString("chatid");
+				$message = getQueryString("message");
+
+				if($chatId != "" && $message != ""){
+					$chatDataAccess = new ChatDataAccess();
+					
+					$data["data"]	 = $chatDataAccess->addMessage($chatId,$userId,$message);
+				}
+				else{
+					$data['error']  = "Missing fields chatid and message";
+				}
+			}
+			else{
+				$data['error']['isLoginRequired'] = true;
+			}
+			ouputJson($data);
+	
+		}
 	}
 	
 ?>

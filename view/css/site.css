@@ -173,7 +173,7 @@ font-size:12px;
 }
 
 .chatbox {
-    display:block;
+     
 	float:left;
 	margin-top:20px;
 	margin-left:10px;
@@ -216,6 +216,7 @@ font-size:12px;
 	height:100px;
 	overflow-x:hidden;
 	overflow-y:auto;
+	padding:10px;
 
 }
 
@@ -229,6 +230,11 @@ font-size:12px;
 
 	height:40px;
 
+}
+
+form{
+
+	clear:both;
 }
 
 #chat_area{

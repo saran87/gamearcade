@@ -138,7 +138,9 @@
 								$_SESSION['name'] = $data['name'];
 								$_SESSION['id']   = $data['id_users'];
 							}
-						
+							else{
+								$data['error'] = "Entered username and password doesn't match";
+							}						
 						}	
 						else{
 							$data['error'] = "Length of password should be greater or equal to 8";

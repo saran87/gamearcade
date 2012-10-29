@@ -48,10 +48,10 @@
             <div class="navbar-text pull-right">
 				<?php if(isset($_SESSION['name'])):?>
 					<div class="btn-group">
-					<button class="btn"><?php echo $_SESSION['name'] ?></button>
+					<button class="btn"><i class="icon-user"></i><?php echo $_SESSION['name'] ?></button>
 				<?php else :?>
 					<div class="btn-group hide">
-					<button class="btn userName" id="userName"></button>
+					<button class="btn userName" id="userName"><i class="icon-user"></i></button>
 				 <?php endif; ?>
 				  <button class="btn dropdown-toggle" data-toggle="dropdown">
 					<span class="caret"></span>

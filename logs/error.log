@@ -711,3 +711,118 @@ Message :Duplicate entry '71_chat_72' for key 'chat_id'#-1  ErrorHandler::GetCal
 
 
 ==========================================================================================================
+
+==========================================================================================================
+From : ::1
+Requested URL: /connect4/index.php?s=chat&action=sendMessage
+Request Method: GET
+Access Time: 1351358187
+Request :s=chat&action=sendMessage
+Error Type :404
+Message :#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
+#0  ErrorHandler::GetRequestDetail(404, ) called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
+#1  ErrorHandler::HandleError(404) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:101]
+#2  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
+#3  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
+
+
+==========================================================================================================
+
+==========================================================================================================
+From : ::1
+Requested URL: /connect4/index.php?s=chat&action=sendMessage&type=json&chatid=1&message=asdas
+Request Method: GET
+Access Time: 1351380927
+Request :s=chat&action=sendMessage&type=json&chatid=1&message=asdas
+Error Type :DB Error
+Message :Unknown column 'name' in 'field list'#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
+#0  ErrorHandler::GetRequestDetail(DB Error, Unknown column 'name' in 'field list') called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
+#1  ErrorHandler::HandleError(DB Error, Unknown column 'name' in 'field list') called at [C:\xampp\htdocs\connect4\dataAccess\chatDataAccess.php:186]
+#2  ChatDataAccess->addMessage(1, 71, asdas) called at [C:\xampp\htdocs\connect4\controller\chat\chat.php:105]
+#3  Chat->sendMessage(::1, 5d80508aa90daed221028-6b05f0xaea13a4903a38270ad2e4bf8a81f90xaea23d400h5)
+#4  call_user_func(Array ([0] => Chat Object ([] => Game Arcade,[viewVars] => Array ()),[1] => sendMessage), ::1, 5d80508aa90daed221028-6b05f0xaea13a4903a38270ad2e4bf8a81f90xaea23d400h5) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:73]
+#5  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
+#6  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
+
+
+==========================================================================================================
+
+==========================================================================================================
+From : ::1
+Requested URL: /connect4/index.php?s=chat&action=initChat
+Request Method: POST
+Access Time: 1351409038
+Request :s=chat&action=initChat&message=asdsa
+Error Type :404
+Message :#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
+#0  ErrorHandler::GetRequestDetail(404, ) called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
+#1  ErrorHandler::HandleError(404) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:101]
+#2  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
+#3  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
+
+
+==========================================================================================================
+
+==========================================================================================================
+From : ::1
+Requested URL: /connect4/index.php?s=chat&action=initChat
+Request Method: POST
+Access Time: 1351409127
+Request :s=chat&action=initChat&message=asdsaasdas
+Error Type :404
+Message :#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
+#0  ErrorHandler::GetRequestDetail(404, ) called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
+#1  ErrorHandler::HandleError(404) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:101]
+#2  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
+#3  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
+
+
+==========================================================================================================
+
+==========================================================================================================
+From : ::1
+Requested URL: /connect4/index.php?s=chat&action=initChat
+Request Method: GET
+Access Time: 1351409161
+Request :s=chat&action=initChat
+Error Type :404
+Message :#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
+#0  ErrorHandler::GetRequestDetail(404, ) called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
+#1  ErrorHandler::HandleError(404) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:101]
+#2  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
+#3  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
+
+
+==========================================================================================================
+
+==========================================================================================================
+From : ::1
+Requested URL: /connect4/index.php?s=chat&action=sendMessage
+Request Method: GET
+Access Time: 1351409269
+Request :s=chat&action=sendMessage
+Error Type :404
+Message :#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
+#0  ErrorHandler::GetRequestDetail(404, ) called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
+#1  ErrorHandler::HandleError(404) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:101]
+#2  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
+#3  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
+
+
+==========================================================================================================
+
+==========================================================================================================
+From : ::1
+Requested URL: /connect4/index.php?s=chat&action=sendmessage
+Request Method: GET
+Access Time: 1351409270
+Request :s=chat&action=sendmessage
+Error Type :404
+Message :#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
+#0  ErrorHandler::GetRequestDetail(404, ) called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
+#1  ErrorHandler::HandleError(404) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:101]
+#2  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
+#3  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
+
+
+==========================================================================================================
