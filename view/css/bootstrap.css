@@ -143,11 +143,13 @@ textarea {
 }
 body {
   margin: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', Segoe UI, Tahoma,Helvetica,sans-serif;
   font-size: 14px;
+  /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;*/
   line-height: 20px;
-  color: #333333;
-  background-color: #ffffff;
+  color: #000;
+  background-color: rgba(180, 180, 180, 0.2);
 }
 a {
   color: #0088cc;
