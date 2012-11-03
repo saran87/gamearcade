@@ -28,7 +28,7 @@
   display: block;
   *width: 190px;
   margin: 0 0 -1px;
-  padding: 8px 14px;
+  padding: 60px 14px;
   border: 1px solid #e5e5e5;
 }
 .sidenav > li:first-child > a {
@@ -233,6 +233,11 @@ display:inline-block;
 	height:40px;
 
 }
+.chat_header_buttons{
+
+	margin-left:30%;
+}
+
 
 form{
 
@@ -246,7 +251,17 @@ form{
 	right:250px;
 
 }
+.publicbox{
 
+	width:90%;
+}
+.publicbox .message{
+
+	width:90%;
+}
+.publicbox  .chat_messages{
+	height:320px;
+}
 /*** user status styles ***/
 .online{
 

@@ -87,7 +87,7 @@
 		
 		/*
 		* sendMessage
-		* Update the message sedn by the user to database
+		* Update the message send by the user to database
 		*
 		*/
 		
@@ -117,6 +117,38 @@
 			ouputJson($data);
 	
 		}
+		/*
+		* getMessage
+		* get the message sent to the user from database
+		*
+		*/
+		
+		public function getMessages(){
+		
+
+			$data = array();
+			
+			if($this->authenticate()){
+				
+				$userId = $_SESSION['id'];
+
+				if(isset($userId) && $userId != ""){
+					$chatDataAccess = new ChatDataAccess();
+					
+					$data["data"]	 = $chatDataAccess->getMessages($userId);
+				}
+				else{
+					$data['error']['isLoginRequired']  = true;
+				}
+			}
+			else{
+				$data['error']['isLoginRequired'] = true;
+			}
+			
+			ouputJson($data);
+	
+		}
+		
 	}
 	
 ?>

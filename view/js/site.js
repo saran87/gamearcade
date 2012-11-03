@@ -22,12 +22,12 @@
     
 function Site(){
 		this.baseURL = "http://localhost/connect4/";
-		
 		this.registerUserURL = this.baseURL + "index.php?s=login&action=register";
 		this.loginURL = this.baseURL + "index.php?s=login";
 		this.userListURL =  this.baseURL + "index.php?s=chat&action=getUserList";
 		this.initChatURL =  this.baseURL + "index.php?s=chat&action=initChat&type=json";
 		this.sendMessageURL = this.baseURL + "index.php?s=chat&action=sendMessage&type=json";
+		this.getMessagesURL = this.baseURL + "index.php?s=chat&action=getMessages&type=json";
 };
 	
 Site.prototype = {
@@ -184,6 +184,15 @@ Site.prototype = {
 							success:callBack
 						 });
 		
+	},
+	//get latest message
+	getMessages:function(callBack){
+		
+		this.makeAjaxCall({ type: "POST",
+							path: this.getMessagesURL,
+							message:"",
+							success:callBack
+						 });
 	},
 	//function to make ajax call
 	makeAjaxCall:function(data){

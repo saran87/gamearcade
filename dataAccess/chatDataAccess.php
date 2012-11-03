@@ -20,18 +20,29 @@ class ChatDataAccess extends DataAccess{
 		$data = array();
 		
 		$chatId = $userId . "_chat_" . $partnerId ;
+		//another combination of chat Id
+		$alternateId  =   $partnerId . "_chat_" . $userId; 
 		
-		$data = $this->createChatRoom($chatId);
+		$data = $this->isChatIdExists($chatId , $alternateId);
 		
-		if(!isset($data['error'])){
-		
-			$roomId = $data['roomId'];
-		
-			$data['participant1'] = $this->addParticipant($roomId,$userId);
+		if(isset($data)){
+			//print_r($data);
+			$data['participant1'] = $userId;
+			$data['participant2'] = $partnerId;
+			$data['chatWindowId'] = $partnerId;
+		}
+		else{
+			$data = $this->createChatRoom($chatId , $alternateId);
 			if(!isset($data['error'])){
-				$data['participant2'] = $this->addParticipant($roomId,$partnerId);
-				$data['chatId'] = $chatId;
-				$data['chatWindowId'] = $partnerId;
+	
+				$roomId = $data['roomId'];
+			
+				$data['participant1'] = $this->addParticipant($roomId,$userId);
+				if(!isset($data['error'])){
+					$data['participant2'] = $this->addParticipant($roomId,$partnerId);
+					$data['chat_id'] = $chatId;
+					$data['chatWindowId'] = $partnerId;
+				}
 			}
 		}
 		return $data;
@@ -170,7 +181,7 @@ class ChatDataAccess extends DataAccess{
 			$vars = array(NULL,$chatId,$message,$userId,$userName,$timeStamp);
 			
 			//specify the types of data to be binded 
-			$types = array("s","i","s","i","s","s");
+			$types = array("s","s","s","i","s","s");
 		
 			//excute the query 
 			$err = $this->database->doQuery($query,$vars,$types);
@@ -178,7 +189,8 @@ class ChatDataAccess extends DataAccess{
 			//check if any error occurred 
 			if(empty($err)){
 				
-				$data["messageId"] = $this->database->getInsertId();
+				$data["message_id"] = $this->database->getInsertId();
+				$data["user_name"] = $data["name"];
 				$data["chatId"]	   = $chatId;
 				$data["message"]   = $message;
 				$data["timestamp"] = $timeStamp;
@@ -202,13 +214,20 @@ class ChatDataAccess extends DataAccess{
 		$data = array();
 		
 		//query to insert user details into the users table
-		$query = "INSERT INTO `chat_messages`(`message_id`, `chat_id`, `message`, `user_id`, `timestamp`) VALUES (?,?,?,?,?)";
+		$query = "SELECT  A.`message_id` ,  A.`chat_id` , A. `message` ,  A.`user_id` , A. `user_name` ,  A.`timestamp` 
+					FROM  `chat_messages` A , `chat_rooms` B, `chat_participants` C
+					WHERE  A.`timestamp` > ?
+					AND  A.`chat_id` = B.`chat_id` AND B.`room_id` = C.`room_id` AND C.`participant_id` = ?";
+					
 		
+		
+		//intialize timestamp to before 30 seconds
+		$timeStamp =date('Y-m-d H:i:s', time() - 30) ;
 		//build the vaariables array which holds the data to bind to the prepare statement.
-		$vars = array(NULL,$chatId,$message,$userId,time());
+		$vars = array($timeStamp,$userId);
 		
 		//specify the types of data to be binded 
-		$types = array("s","i","s","i","s");
+		$types = array("s","i");
 	
 		//excute the query 
 		$err = $this->database->doQuery($query,$vars,$types);
@@ -216,12 +235,12 @@ class ChatDataAccess extends DataAccess{
 		//check if any error occurred 
 		if(empty($err)){
 			
-			$data["messageId"] = $this->database->getInsertId();
+			$data = $this->database->fetch_all_array();
 			
 		}else{
 			ErrorHandler::HandleError(DB_ERROR,$err);
 		
-				$data['error'] = "Not able to send the message, Try again";
+				$data['error'] = "Not able get messages, Try again";
 		}
 		
 		return $data;
@@ -326,6 +345,53 @@ class ChatDataAccess extends DataAccess{
 					$data['error'] = "Not able to send the message, Try again";
 			}
 			return $data;
+	}
+	
+	/**
+	* Is chat Id exists 
+	*
+	*
+	*
+	*/
+	private function isChatIdExists($chatId, $alternateId){
+		
+		//array to hold the data retrieved
+		$data = array();
+		
+		//query to insert user details into the users table
+		$query = "SELECT chat_id, room_id
+									FROM  `chat_rooms` 
+									WHERE chat_id =  ?
+									OR chat_id =  ?
+									GROUP BY chat_id
+									LIMIT 0 , 1";
+		
+		//build the vaariables array which holds the data to bind to the prepare statement.
+		$vars = array($chatId, $alternateId);
+		
+		//specify the types of data to be binded 
+		$types = array("s","s");
+	
+		//excute the query 
+		$err = $this->database->doQuery($query,$vars,$types);
+		
+		//check if any error occurred 
+		if(empty($err)){
+			
+			$data = $this->database->fetch_array();
+			
+			if(isset($data)){
+				
+			}
+			
+		}else{
+				ErrorHandler::HandleError(DB_ERROR,$err);
+		
+				$data['error'] = "Not able to send the message, Try again";
+		}
+		
+		return $data;
+	
 	}
 	
 	
