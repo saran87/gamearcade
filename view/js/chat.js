@@ -221,13 +221,13 @@
 			chatWindow = $('#chat_template').clone().attr('id',userId).removeClass("hide").prependTo('#chat_area');
 			chatWindow.find("#chatName").text(name);
 			chatWindow.find(".chat_header").toggle(function() {
-							  $(this).parent(".chatbox:first").animate({
+							  $(this).parent().animate({
 													height: "20"
 												}, 500, function() {
 													console.log(this);
 												});
 							}, function() {
-							   $(this).parent(".chatbox:first").animate({
+							   $(this).parent().animate({
 													height: "250"
 												}, 500, function() {
 													// Animation complete.
