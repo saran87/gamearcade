@@ -9,12 +9,13 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
 	<!-- dont change the order bootstrap needs jquery -->
-	<script src="view/js/jquery-1.8.2.min.js"></script>
-    <script src="view/js/bootstrap.min.js"></script>
-    <script src="view/js/login.js"></script>
-    <script src="view/js/site.js"></script>
-    <script src="view/js/chat.js"></script>
-		<script>
+	<script src="view/js/jquery-1.8.2.min.js" type="application/javascript"></script>
+    <script src="view/js/bootstrap.min.js" type="application/javascript"></script>
+    <script src="view/js/login.js" type="application/javascript"></script>
+    <script src="view/js/site.js" type="application/javascript"></script>
+    <script src="view/js/chat.js" type="application/javascript"></script>
+    <script src="view/js/game.js" type="application/javascript"></script>
+		<script type="application/javascript">
 		function onload () {
 			
 		//start updating the chat panel
@@ -46,6 +47,21 @@
 					targetSection.slideDown("slow");
 				}
 			});
+			
+			//title javascript
+			$("#game_list").find(".tile").click(function(){
+				game.displayUserList();
+				});
+				
+				$("#closeUserList").click(function(){
+				
+					$("#online_users").addClass("hide");
+					$("#game_list").animate({
+						left:"20%"
+					},500);
+				
+				});
+			
 		}
 		
 		window.addEventListener('DOMContentLoaded', onload);

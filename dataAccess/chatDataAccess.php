@@ -103,7 +103,7 @@ class ChatDataAccess extends DataAccess{
 		$vars = array($roomId,$participant,$type);
 		
 		//specify the types of data to be binded 
-		$types = array("i","s","s");
+		$types = array("i","i","s");
 	
 		//excute the query 
 		$err = $this->database->doQuery($query,$vars,$types);

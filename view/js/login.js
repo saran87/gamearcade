@@ -99,11 +99,20 @@ function getLoginData(formToProcess,formObj, url){
 									   }else{
 											//on success
 											$('.userName').each( function(){
-																	$(this).text(data.name);
+																	if($(this).find("i")){
+																		$(this).append(data.name);
+																	}
+																	else{
+																		$(this).text(data.name);
+																	}
 																});
 											$('#userName').parent().removeClass('hide');
 											$('#loginButton').addClass('hide');
 											$("#loginModal").modal("hide");
+										
+											 //start getting the messages for the user
+											 chat.getMessages();
+											 //start updating online users
 											 chat.updateChatPanel();
 										}
 									}

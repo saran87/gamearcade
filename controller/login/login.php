@@ -25,7 +25,7 @@
 		private $title = "Game Arcade";
 		
 		function __construct(){
-		
+			require_once(ROOT_PATH . "/dataAccess/chatDataAccess.php");
 			require_once(ROOT_PATH . "/dataAccess/users.php");
 		
 		}
@@ -77,6 +77,9 @@
 							
 							//if user account is created successfully
 							if(isset($data['id_users'])){
+								//add new users to public chat room
+								$chatDataAccess = new ChatDataAccess();
+								$chatDataAccess->addParticipant(70,$data['id_users']);
 								
 								$authorizer = new Authorizer();
 								//generate the token

@@ -1677,3 +1677,158 @@ Message :Wrong number of parameters for query#-1  ErrorHandler::GetCallTrace() c
 
 
 ==========================================================================================================
+
+==========================================================================================================
+From : ::1
+Requested URL: /connect4/index.php?s=login&action=register
+Request Method: POST
+Access Time: 1352144737
+Request :s=login&action=register&name=admin&email=admin%40gmail.com&password=Sar123mur
+Error Type :DB Error
+Message :Duplicate entry 'admin@gmail.com' for key 'email'#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
+#0  ErrorHandler::GetRequestDetail(DB Error, Duplicate entry 'admin@gmail.com' for key 'email') called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
+#1  ErrorHandler::HandleError(DB Error, Duplicate entry 'admin@gmail.com' for key 'email') called at [C:\xampp\htdocs\connect4\dataAccess\users.php:49]
+#2  Users->createNewUser(admin, admin@gmail.com, Sar123mur) called at [C:\xampp\htdocs\connect4\controller\login\login.php:76]
+#3  Login->createNewAccount() called at [C:\xampp\htdocs\connect4\controller\login\login.php:50]
+#4  Login->register(::1, )
+#5  call_user_func(Array ([0] => Login Object ([] => Game Arcade,[viewVars] => Array ([title] => Game Arcade)),[1] => register), ::1, ) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:73]
+#6  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
+#7  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
+
+
+==========================================================================================================
+
+==========================================================================================================
+From : ::1
+Requested URL: /connect4/index.php?s=login&action=register
+Request Method: POST
+Access Time: 1352145170
+Request :s=login&action=register&name=admin&email=admin%40gmail.com&password=Sar123mur
+Error Type :DB Error
+Message :Duplicate entry 'admin@gmail.com' for key 'email'#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
+#0  ErrorHandler::GetRequestDetail(DB Error, Duplicate entry 'admin@gmail.com' for key 'email') called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
+#1  ErrorHandler::HandleError(DB Error, Duplicate entry 'admin@gmail.com' for key 'email') called at [C:\xampp\htdocs\connect4\dataAccess\users.php:49]
+#2  Users->createNewUser(admin, admin@gmail.com, Sar123mur) called at [C:\xampp\htdocs\connect4\controller\login\login.php:76]
+#3  Login->createNewAccount() called at [C:\xampp\htdocs\connect4\controller\login\login.php:50]
+#4  Login->register(::1, )
+#5  call_user_func(Array ([0] => Login Object ([] => Game Arcade,[viewVars] => Array ([title] => Game Arcade)),[1] => register), ::1, ) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:73]
+#6  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
+#7  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
+
+
+==========================================================================================================
+
+==========================================================================================================
+From : ::1
+Requested URL: /connect4/index.php?s=login&action=register
+Request Method: POST
+Access Time: 1352145309
+Request :s=login&action=register&name=admin&email=admin%40gmail.com&password=Sar123mur
+Error Type :DB Error
+Message :Duplicate entry 'admin@gmail.com' for key 'email'#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
+#0  ErrorHandler::GetRequestDetail(DB Error, Duplicate entry 'admin@gmail.com' for key 'email') called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
+#1  ErrorHandler::HandleError(DB Error, Duplicate entry 'admin@gmail.com' for key 'email') called at [C:\xampp\htdocs\connect4\dataAccess\users.php:49]
+#2  Users->createNewUser(admin, admin@gmail.com, Sar123mur) called at [C:\xampp\htdocs\connect4\controller\login\login.php:76]
+#3  Login->createNewAccount() called at [C:\xampp\htdocs\connect4\controller\login\login.php:50]
+#4  Login->register(::1, )
+#5  call_user_func(Array ([0] => Login Object ([] => Game Arcade,[viewVars] => Array ([title] => Game Arcade)),[1] => register), ::1, ) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:73]
+#6  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
+#7  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
+
+
+==========================================================================================================
+
+==========================================================================================================
+From : ::1
+Requested URL: /connect4/index.php?s=Challenge&action=acceptChallenge&type=json&challengeId=2
+Request Method: GET
+Access Time: 1352176467
+Request :s=Challenge&action=acceptChallenge&type=json&challengeId=2
+Error Type :DB Error
+Message :Wrong number of parameters for query#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
+#0  ErrorHandler::GetRequestDetail(DB Error, Wrong number of parameters for query) called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
+#1  ErrorHandler::HandleError(DB Error, Wrong number of parameters for query) called at [C:\xampp\htdocs\connect4\dataAccess\challenges.php:162]
+#2  Challenges->updateChallenge(71, accepted) called at [C:\xampp\htdocs\connect4\controller\challenge\challenge.php:98]
+#3  Challenge->acceptChallenge(::1, a875e155d8912c0c65128-6b05f0xaea13a439f87a9d2583bf3e2f42990xaea23dba818)
+#4  call_user_func(Array ([0] => Challenge Object ([] => Game Arcade,[viewVars] => Array ()),[1] => acceptChallenge), ::1, a875e155d8912c0c65128-6b05f0xaea13a439f87a9d2583bf3e2f42990xaea23dba818) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:73]
+#5  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
+#6  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
+
+
+==========================================================================================================
+
+==========================================================================================================
+From : ::1
+Requested URL: /connect4/index.php?s=Challenge&action=acceptChallenge&type=json&challengeId=2
+Request Method: GET
+Access Time: 1352176468
+Request :s=Challenge&action=acceptChallenge&type=json&challengeId=2
+Error Type :DB Error
+Message :Wrong number of parameters for query#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
+#0  ErrorHandler::GetRequestDetail(DB Error, Wrong number of parameters for query) called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
+#1  ErrorHandler::HandleError(DB Error, Wrong number of parameters for query) called at [C:\xampp\htdocs\connect4\dataAccess\challenges.php:162]
+#2  Challenges->updateChallenge(71, accepted) called at [C:\xampp\htdocs\connect4\controller\challenge\challenge.php:98]
+#3  Challenge->acceptChallenge(::1, a875e155d8912c0c65128-6b05f0xaea13a439f87a9d2583bf3e2f42990xaea23dba818)
+#4  call_user_func(Array ([0] => Challenge Object ([] => Game Arcade,[viewVars] => Array ()),[1] => acceptChallenge), ::1, a875e155d8912c0c65128-6b05f0xaea13a439f87a9d2583bf3e2f42990xaea23dba818) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:73]
+#5  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
+#6  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
+
+
+==========================================================================================================
+
+==========================================================================================================
+From : ::1
+Requested URL: /connect4/index.php?s=Challenge&action=acceptChallenge&type=json&challengeId=2
+Request Method: GET
+Access Time: 1352176511
+Request :s=Challenge&action=acceptChallenge&type=json&challengeId=2
+Error Type :DB Error
+Message :Wrong number of parameters for query#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
+#0  ErrorHandler::GetRequestDetail(DB Error, Wrong number of parameters for query) called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
+#1  ErrorHandler::HandleError(DB Error, Wrong number of parameters for query) called at [C:\xampp\htdocs\connect4\dataAccess\challenges.php:162]
+#2  Challenges->updateChallenge(71, accepted) called at [C:\xampp\htdocs\connect4\controller\challenge\challenge.php:98]
+#3  Challenge->acceptChallenge(::1, a875e155d8912c0c65128-6b05f0xaea13a439f87a9d2583bf3e2f42990xaea23dba818)
+#4  call_user_func(Array ([0] => Challenge Object ([] => Game Arcade,[viewVars] => Array ()),[1] => acceptChallenge), ::1, a875e155d8912c0c65128-6b05f0xaea13a439f87a9d2583bf3e2f42990xaea23dba818) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:73]
+#5  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
+#6  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
+
+
+==========================================================================================================
+
+==========================================================================================================
+From : ::1
+Requested URL: /connect4/index.php?s=Challenge&action=acceptChallenge&type=json&challengeId=2
+Request Method: GET
+Access Time: 1352176563
+Request :s=Challenge&action=acceptChallenge&type=json&challengeId=2
+Error Type :DB Error
+Message :Wrong number of parameters for query#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
+#0  ErrorHandler::GetRequestDetail(DB Error, Wrong number of parameters for query) called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
+#1  ErrorHandler::HandleError(DB Error, Wrong number of parameters for query) called at [C:\xampp\htdocs\connect4\dataAccess\challenges.php:162]
+#2  Challenges->updateChallenge(71, accepted) called at [C:\xampp\htdocs\connect4\controller\challenge\challenge.php:98]
+#3  Challenge->acceptChallenge(::1, a875e155d8912c0c65128-6b05f0xaea13a439f87a9d2583bf3e2f42990xaea23dba818)
+#4  call_user_func(Array ([0] => Challenge Object ([] => Game Arcade,[viewVars] => Array ()),[1] => acceptChallenge), ::1, a875e155d8912c0c65128-6b05f0xaea13a439f87a9d2583bf3e2f42990xaea23dba818) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:73]
+#5  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
+#6  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
+
+
+==========================================================================================================
+
+==========================================================================================================
+From : ::1
+Requested URL: /connect4/index.php?s=Challenge&action=acceptChallenge&type=json&challengeId=1
+Request Method: GET
+Access Time: 1352176567
+Request :s=Challenge&action=acceptChallenge&type=json&challengeId=1
+Error Type :DB Error
+Message :Wrong number of parameters for query#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
+#0  ErrorHandler::GetRequestDetail(DB Error, Wrong number of parameters for query) called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
+#1  ErrorHandler::HandleError(DB Error, Wrong number of parameters for query) called at [C:\xampp\htdocs\connect4\dataAccess\challenges.php:162]
+#2  Challenges->updateChallenge(71, accepted) called at [C:\xampp\htdocs\connect4\controller\challenge\challenge.php:98]
+#3  Challenge->acceptChallenge(::1, a875e155d8912c0c65128-6b05f0xaea13a439f87a9d2583bf3e2f42990xaea23dba818)
+#4  call_user_func(Array ([0] => Challenge Object ([] => Game Arcade,[viewVars] => Array ()),[1] => acceptChallenge), ::1, a875e155d8912c0c65128-6b05f0xaea13a439f87a9d2583bf3e2f42990xaea23dba818) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:73]
+#5  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
+#6  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
+
+
+==========================================================================================================

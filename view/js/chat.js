@@ -21,15 +21,16 @@
 	chat.updateUsers = function (data){
 
 			var list = $("#chat_content").find("ul");
+			
 			list.find('.users').remove();
+			
 			if(data.data){
 				
 				$.each(data.data,function(index){
 					list.append(createListItem(this));
-				
 				});
 				//update chat panel every 20 secs
-				setTimeout(chat.updateChatPanel,userListInterval);
+				//setTimeout(chat.updateChatPanel,userListInterval);
 			}else if(data.error){
 			
 				if(data.error.isLoginRequired){
