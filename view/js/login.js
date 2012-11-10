@@ -86,7 +86,7 @@ function getLoginData(formToProcess,formObj, url){
 							   message: formObj.serialize(),// serializes the form's elements.
 							   success: function(data)
 							   {
-								   console.log(data); // show response from the php script.
+								 
 								   $('#ajaxProgress').addClass('hide');	
 								   $(formToProcess).removeClass('hide');
 								   //if call success
@@ -95,7 +95,6 @@ function getLoginData(formToProcess,formObj, url){
 									   if(data.error){
 											//error occured in server, display the message to the user
 											$('#login_message').text(data.error).removeClass('hide');
-											
 									   }else{
 											//on success
 											$('.userName').each( function(){
@@ -114,6 +113,8 @@ function getLoginData(formToProcess,formObj, url){
 											 chat.getMessages();
 											 //start updating online users
 											 chat.updateChatPanel();
+											 //start updating challenges
+											game.getChallenges();
 										}
 									}
 									else{

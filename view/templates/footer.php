@@ -43,14 +43,16 @@
 				if($(this).find('a').attr("targetSection")){
 					var section = $(this).find('a').attr("targetSection");
 					var targetSection = $(document.getElementById(section));
-					targetSection.parent().find('section').slideUp('slow');
+					targetSection.parent().find('section').slideUp('fast');
 					targetSection.slideDown("slow");
 				}
 			});
 			
 			//title javascript
 			$("#game_list").find(".tile").click(function(){
-				game.displayUserList();
+					var gameId = $(this).attr("gameId");
+					game.setGameId(gameId);
+					game.displayUserList();
 				});
 				
 				$("#closeUserList").click(function(){
@@ -61,6 +63,8 @@
 					},500);
 				
 				});
+			//start updating challenges
+			game.getChallenges();
 			
 		}
 		

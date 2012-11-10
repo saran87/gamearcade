@@ -59,7 +59,7 @@
 				  <ul class="dropdown-menu">
 					<!-- dropdown menu links -->
 					<li class="divider"></li>
-					<li><a tabindex="-1" href="logout.php" >Log out</a></li>
+					<li><a tabindex="-1" href="index.php?s=login&action=logout" >Log out</a></li>
 				  </ul>
 				</div>
 				<div id="loginButton" class="<?php if(isset($_SESSION['name'])) { echo "hide";} ?>">

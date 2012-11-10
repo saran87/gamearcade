@@ -28,6 +28,10 @@ function Site(){
 		this.initChatURL =  this.baseURL + "index.php?s=chat&action=initChat&type=json";
 		this.sendMessageURL = this.baseURL + "index.php?s=chat&action=sendMessage&type=json";
 		this.getMessagesURL = this.baseURL + "index.php?s=chat&action=getMessages&type=json";
+		this.challengeURL = this.baseURL + "index.php?s=Challenge&type=json";
+		this.challengeDetail = this.baseURL + "index.php?s=Challenge&action=getChallengeDetails&type=json"
+		this.cancelChallengeURL  = this.baseURL + "index.php?s=Challenge&action=cancelChallenge&type=json"
+		this.getChallengeStatusURL  = this.baseURL + "index.php?s=Challenge&action=getChallengeStatus&type=json"
 };
 	
 Site.prototype = {
@@ -194,6 +198,42 @@ Site.prototype = {
 							success:callBack
 						 });
 	},
+	//get latest message
+	challengePlayer:function(data,callBack){
+		
+		this.makeAjaxCall({ type: "POST",
+							path: this.challengeURL,
+							message:data,
+							success:callBack
+						 });
+	},
+	//get challenges for the users
+	getChallenges:function(data,callBack){
+		
+		this.makeAjaxCall({ type: "POST",
+							path: this.challengeDetail,
+							message:data,
+							success:callBack
+						 });
+	},
+	//cancel the challenge
+	cancelChallenge:function(data,callBack){
+		
+		this.makeAjaxCall({ type: "POST",
+							path: this.cancelChallengeURL,
+							message:data,
+							success:callBack
+						 });
+	},
+	//get the challenge status
+	getChallengeStatus:function(data,callBack){
+		
+		this.makeAjaxCall({ type: "POST",
+							path: this.getChallengeStatusURL,
+							message:data,
+							success:callBack
+						 });
+	},
 	//function to make ajax call
 	makeAjaxCall:function(data){
 		
@@ -210,6 +250,7 @@ Site.prototype = {
 			error:errorCallBack
 		});
 	},
+
 	//function to handle error for the whole site
 	errorHandler:function(jqXHR, textStatus, errorThrown){	
 			//Initialize error to default message
@@ -222,7 +263,14 @@ Site.prototype = {
 				
 				errorMessage = jqXHR.statusText;
 			}
-			$("#error_message").text(errorMessage);
-			$("#errorModal").modal('show');
-	}		
+			
+			this.showError(errorMessage);
+			
+	},
+	//Show error panel with the error message in it 
+	showError:function(errorMessage){
+		
+		$("#error_message").text(errorMessage);
+		$("#errorModal").modal('show');
+	}
 }

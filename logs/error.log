@@ -1832,3 +1832,225 @@ Message :Wrong number of parameters for query#-1  ErrorHandler::GetCallTrace() c
 
 
 ==========================================================================================================
+
+==========================================================================================================
+From : ::1
+Requested URL: /connect4/index.php?s=Challenge&type=json&partnerId=1&gameId=2
+Request Method: GET
+Access Time: 1352316817
+Request :s=Challenge&type=json&partnerId=1&gameId=2
+Error Type :DB Error
+Message :Column 'status' cannot be null#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
+#0  ErrorHandler::GetRequestDetail(DB Error, Column 'status' cannot be null) called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
+#1  ErrorHandler::HandleError(DB Error, Column 'status' cannot be null) called at [C:\xampp\htdocs\connect4\dataAccess\challenges.php:46]
+#2  Challenges->createChallenge(71, 1, 2) called at [C:\xampp\htdocs\connect4\controller\challenge\challenge.php:41]
+#3  Challenge->index(::1, fa5770cc6621bd8153928-6b05f0xaea13a4dca754326659a6ed23ab390xaea23dcg94g)
+#4  call_user_func(Array ([0] => Challenge Object ([] => Game Arcade,[viewVars] => Array ()),[1] => index), ::1, fa5770cc6621bd8153928-6b05f0xaea13a4dca754326659a6ed23ab390xaea23dcg94g) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:73]
+#5  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
+#6  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
+
+
+==========================================================================================================
+
+==========================================================================================================
+From : ::1
+Requested URL: /connect4/index.php?s=Challenge&type=json&partnerId=1&gameId=2
+Request Method: GET
+Access Time: 1352316820
+Request :s=Challenge&type=json&partnerId=1&gameId=2
+Error Type :DB Error
+Message :Column 'status' cannot be null#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
+#0  ErrorHandler::GetRequestDetail(DB Error, Column 'status' cannot be null) called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
+#1  ErrorHandler::HandleError(DB Error, Column 'status' cannot be null) called at [C:\xampp\htdocs\connect4\dataAccess\challenges.php:46]
+#2  Challenges->createChallenge(71, 1, 2) called at [C:\xampp\htdocs\connect4\controller\challenge\challenge.php:41]
+#3  Challenge->index(::1, fa5770cc6621bd8153928-6b05f0xaea13a4dca754326659a6ed23ab390xaea23dcg94g)
+#4  call_user_func(Array ([0] => Challenge Object ([] => Game Arcade,[viewVars] => Array ()),[1] => index), ::1, fa5770cc6621bd8153928-6b05f0xaea13a4dca754326659a6ed23ab390xaea23dcg94g) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:73]
+#5  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
+#6  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
+
+
+==========================================================================================================
+
+==========================================================================================================
+From : ::1
+Requested URL: /connect4/index.php?s=Challenge&type=json&partnerId=1&gameId=1
+Request Method: GET
+Access Time: 1352316829
+Request :s=Challenge&type=json&partnerId=1&gameId=1
+Error Type :DB Error
+Message :Column 'status' cannot be null#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
+#0  ErrorHandler::GetRequestDetail(DB Error, Column 'status' cannot be null) called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
+#1  ErrorHandler::HandleError(DB Error, Column 'status' cannot be null) called at [C:\xampp\htdocs\connect4\dataAccess\challenges.php:46]
+#2  Challenges->createChallenge(71, 1, 1) called at [C:\xampp\htdocs\connect4\controller\challenge\challenge.php:41]
+#3  Challenge->index(::1, fa5770cc6621bd8153928-6b05f0xaea13a4dca754326659a6ed23ab390xaea23dcg94g)
+#4  call_user_func(Array ([0] => Challenge Object ([] => Game Arcade,[viewVars] => Array ()),[1] => index), ::1, fa5770cc6621bd8153928-6b05f0xaea13a4dca754326659a6ed23ab390xaea23dcg94g) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:73]
+#5  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
+#6  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
+
+
+==========================================================================================================
+
+==========================================================================================================
+From : ::1
+Requested URL: /connect4/index.php?s=Challenge&type=json&partnerId=73&gameId=1
+Request Method: GET
+Access Time: 1352316834
+Request :s=Challenge&type=json&partnerId=73&gameId=1
+Error Type :DB Error
+Message :Column 'status' cannot be null#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
+#0  ErrorHandler::GetRequestDetail(DB Error, Column 'status' cannot be null) called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
+#1  ErrorHandler::HandleError(DB Error, Column 'status' cannot be null) called at [C:\xampp\htdocs\connect4\dataAccess\challenges.php:46]
+#2  Challenges->createChallenge(71, 73, 1) called at [C:\xampp\htdocs\connect4\controller\challenge\challenge.php:41]
+#3  Challenge->index(::1, fa5770cc6621bd8153928-6b05f0xaea13a4dca754326659a6ed23ab390xaea23dcg94g)
+#4  call_user_func(Array ([0] => Challenge Object ([] => Game Arcade,[viewVars] => Array ()),[1] => index), ::1, fa5770cc6621bd8153928-6b05f0xaea13a4dca754326659a6ed23ab390xaea23dcg94g) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:73]
+#5  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
+#6  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
+
+
+==========================================================================================================
+
+==========================================================================================================
+From : ::1
+Requested URL: /connect4/index.php?s=Challenge&type=json&partnerId=73&gameId=1
+Request Method: GET
+Access Time: 1352316837
+Request :s=Challenge&type=json&partnerId=73&gameId=1
+Error Type :DB Error
+Message :Column 'status' cannot be null#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
+#0  ErrorHandler::GetRequestDetail(DB Error, Column 'status' cannot be null) called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
+#1  ErrorHandler::HandleError(DB Error, Column 'status' cannot be null) called at [C:\xampp\htdocs\connect4\dataAccess\challenges.php:46]
+#2  Challenges->createChallenge(71, 73, 1) called at [C:\xampp\htdocs\connect4\controller\challenge\challenge.php:41]
+#3  Challenge->index(::1, fa5770cc6621bd8153928-6b05f0xaea13a4dca754326659a6ed23ab390xaea23dcg94g)
+#4  call_user_func(Array ([0] => Challenge Object ([] => Game Arcade,[viewVars] => Array ()),[1] => index), ::1, fa5770cc6621bd8153928-6b05f0xaea13a4dca754326659a6ed23ab390xaea23dcg94g) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:73]
+#5  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
+#6  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
+
+
+==========================================================================================================
+
+==========================================================================================================
+From : ::1
+Requested URL: /connect4/index.php?s=Challenge&type=json&partnerId=73&gameId=1
+Request Method: GET
+Access Time: 1352316933
+Request :s=Challenge&type=json&partnerId=73&gameId=1
+Error Type :DB Error
+Message :Column 'status' cannot be null#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
+#0  ErrorHandler::GetRequestDetail(DB Error, Column 'status' cannot be null) called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
+#1  ErrorHandler::HandleError(DB Error, Column 'status' cannot be null) called at [C:\xampp\htdocs\connect4\dataAccess\challenges.php:46]
+#2  Challenges->createChallenge(71, 73, 1) called at [C:\xampp\htdocs\connect4\controller\challenge\challenge.php:41]
+#3  Challenge->index(::1, fa5770cc6621bd8153928-6b05f0xaea13a4dca754326659a6ed23ab390xaea23dcg94g)
+#4  call_user_func(Array ([0] => Challenge Object ([] => Game Arcade,[viewVars] => Array ()),[1] => index), ::1, fa5770cc6621bd8153928-6b05f0xaea13a4dca754326659a6ed23ab390xaea23dcg94g) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:73]
+#5  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
+#6  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
+
+
+==========================================================================================================
+
+==========================================================================================================
+From : ::1
+Requested URL: /connect4/index.php?s=Challenge&type=json&partnerId=73&gameId=1
+Request Method: GET
+Access Time: 1352316987
+Request :s=Challenge&type=json&partnerId=73&gameId=1
+Error Type :DB Error
+Message :Column 'status' cannot be null#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
+#0  ErrorHandler::GetRequestDetail(DB Error, Column 'status' cannot be null) called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
+#1  ErrorHandler::HandleError(DB Error, Column 'status' cannot be null) called at [C:\xampp\htdocs\connect4\dataAccess\challenges.php:46]
+#2  Challenges->createChallenge(71, 73, 1) called at [C:\xampp\htdocs\connect4\controller\challenge\challenge.php:41]
+#3  Challenge->index(::1, fa5770cc6621bd8153928-6b05f0xaea13a4dca754326659a6ed23ab390xaea23dcg94g)
+#4  call_user_func(Array ([0] => Challenge Object ([] => Game Arcade,[viewVars] => Array ()),[1] => index), ::1, fa5770cc6621bd8153928-6b05f0xaea13a4dca754326659a6ed23ab390xaea23dcg94g) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:73]
+#5  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
+#6  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
+
+
+==========================================================================================================
+
+==========================================================================================================
+From : ::1
+Requested URL: /connect4/index.php?s=getChallengeStatus
+Request Method: GET
+Access Time: 1352511582
+Request :s=getChallengeStatus
+Error Type :404
+Message :#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
+#0  ErrorHandler::GetRequestDetail(404, ) called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
+#1  ErrorHandler::HandleError(404) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:101]
+#2  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
+#3  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
+
+
+==========================================================================================================
+
+==========================================================================================================
+From : ::1
+Requested URL: /connect4/index.php?s=getChallengeStatus&type=json
+Request Method: GET
+Access Time: 1352511601
+Request :s=getChallengeStatus&type=json
+Error Type :404
+Message :#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
+#0  ErrorHandler::GetRequestDetail(404, ) called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
+#1  ErrorHandler::HandleError(404) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:101]
+#2  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
+#3  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
+
+
+==========================================================================================================
+
+==========================================================================================================
+From : ::1
+Requested URL: /connect4/index.php?s=Challenge&action=cancelChallenge&type=json&challengeId=1
+Request Method: GET
+Access Time: 1352541984
+Request :s=Challenge&action=cancelChallenge&type=json&challengeId=1
+Error Type :DB Error
+Message :Wrong number of parameters for query#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
+#0  ErrorHandler::GetRequestDetail(DB Error, Wrong number of parameters for query) called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
+#1  ErrorHandler::HandleError(DB Error, Wrong number of parameters for query) called at [C:\xampp\htdocs\connect4\dataAccess\challenges.php:248]
+#2  Challenges->deleteChallenge(1, 71) called at [C:\xampp\htdocs\connect4\controller\challenge\challenge.php:127]
+#3  Challenge->cancelChallenge(::1, d3997b98c1ef552557e28-6b05f0xaea13a4eeec0d63d5d62c2ed1a9c90xaea23df0b13)
+#4  call_user_func(Array ([0] => Challenge Object ([] => Game Arcade,[viewVars] => Array ()),[1] => cancelChallenge), ::1, d3997b98c1ef552557e28-6b05f0xaea13a4eeec0d63d5d62c2ed1a9c90xaea23df0b13) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:73]
+#5  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
+#6  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
+
+
+==========================================================================================================
+
+==========================================================================================================
+From : ::1
+Requested URL: /connect4/index.php?s=Challenge&action=cancelChallenge&type=json&challengeId=2
+Request Method: GET
+Access Time: 1352541988
+Request :s=Challenge&action=cancelChallenge&type=json&challengeId=2
+Error Type :DB Error
+Message :Wrong number of parameters for query#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
+#0  ErrorHandler::GetRequestDetail(DB Error, Wrong number of parameters for query) called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
+#1  ErrorHandler::HandleError(DB Error, Wrong number of parameters for query) called at [C:\xampp\htdocs\connect4\dataAccess\challenges.php:248]
+#2  Challenges->deleteChallenge(2, 71) called at [C:\xampp\htdocs\connect4\controller\challenge\challenge.php:127]
+#3  Challenge->cancelChallenge(::1, d3997b98c1ef552557e28-6b05f0xaea13a4eeec0d63d5d62c2ed1a9c90xaea23df0b13)
+#4  call_user_func(Array ([0] => Challenge Object ([] => Game Arcade,[viewVars] => Array ()),[1] => cancelChallenge), ::1, d3997b98c1ef552557e28-6b05f0xaea13a4eeec0d63d5d62c2ed1a9c90xaea23df0b13) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:73]
+#5  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
+#6  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
+
+
+==========================================================================================================
+
+==========================================================================================================
+From : ::1
+Requested URL: /connect4/index.php?s=Challenge&action=cancelChallenge&type=json&challengeId=2
+Request Method: GET
+Access Time: 1352542023
+Request :s=Challenge&action=cancelChallenge&type=json&challengeId=2
+Error Type :DB Error
+Message :Wrong number of parameters for query#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
+#0  ErrorHandler::GetRequestDetail(DB Error, Wrong number of parameters for query) called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
+#1  ErrorHandler::HandleError(DB Error, Wrong number of parameters for query) called at [C:\xampp\htdocs\connect4\dataAccess\challenges.php:248]
+#2  Challenges->deleteChallenge(2, 71) called at [C:\xampp\htdocs\connect4\controller\challenge\challenge.php:127]
+#3  Challenge->cancelChallenge(::1, d3997b98c1ef552557e28-6b05f0xaea13a4eeec0d63d5d62c2ed1a9c90xaea23df0b13)
+#4  call_user_func(Array ([0] => Challenge Object ([] => Game Arcade,[viewVars] => Array ()),[1] => cancelChallenge), ::1, d3997b98c1ef552557e28-6b05f0xaea13a4eeec0d63d5d62c2ed1a9c90xaea23df0b13) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:73]
+#5  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
+#6  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
+
+
+==========================================================================================================

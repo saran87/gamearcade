@@ -140,6 +140,8 @@
 								//Set username and id to session
 								$_SESSION['name'] = $data['name'];
 								$_SESSION['id']   = $data['id_users'];
+								$status = "online";
+								$data["status_changed"] = $userAccess->updateStatus($status,$_SESSION['id']);
 							}
 							else{
 								$data['error'] = "Entered username and password doesn't match";
@@ -156,6 +158,34 @@
 			
 			return $data;
 		}
+		
+		
+		/*
+		* Logout user
+		*
+		*/
+		public function logout(){
+		
+			$status = "offline";
+			$userId = $_SESSION["id"];
+			$userAccess = new Users();
+			$data	 	= $userAccess->updateStatus($status,$userId);
+					
+			//if user status is modified successfully
+			if(isset($data)){
+				
+				if(isset($_SESSION['name']))
+						unset($_SESSION['name']);
+
+				//unset the cookie
+				setcookie("token", "", time()-3600);
+				$this->setViewData('message',"Successfully logged out");
+			}
+			else{
+				$this->setViewData('message',"Problem occurred while logging out");
+			}
+		}
+		
 		
 		/*
 		* Validate name entered in the registration form

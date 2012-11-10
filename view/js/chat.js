@@ -30,7 +30,7 @@
 					list.append(createListItem(this));
 				});
 				//update chat panel every 20 secs
-				//setTimeout(chat.updateChatPanel,userListInterval);
+				setTimeout(chat.updateChatPanel,userListInterval);
 			}else if(data.error){
 			
 				if(data.error.isLoginRequired){
@@ -70,7 +70,7 @@
 		if( !response.error && response.data){
 				//get the chat window from the dom
 				//updateChatPanel(response.data);
-				console.log(response);
+
 				$.each(response.data,function(){
 					
 					var chatMessageWindow = document.getElementById(this.chat_id);
@@ -103,7 +103,6 @@
 		if( !response.error && response.data){
 			//get the chat window from the dom
 				updateChatPanel(response.data,false);
-				console.log(response);
 		}else if(response.error){
 			if(response.error.isLoginRequired){
 				showLoginModal();

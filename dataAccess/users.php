@@ -94,6 +94,42 @@ class Users extends DataAccess{
 		return $data;
 	}
 	
+	/*
+	* Get user details 
+	*
+	*/
+	public function getUserStatus($userId){
+	
+	
+		//array to hold the data retrieved
+		$data = array();
+		
+		//query to insert user details into the users table
+		$query = "SELECT `id_users`,`name`, `email`,`cur_game_id`, `online_status` FROM users WHERE `id_users` = ?" ; 
+		
+		
+		//build the vaariables array which holds the data to bind to the prepare statement.
+		$vars = array($userId);
+		
+		//specify the types of data to be binded 
+		$types = array("i");
+	
+		//excute the query 
+		$err = $this->database->doQuery($query,$vars,$types);
+		
+		//check if any error occurred 
+		if(empty($err)){
+
+			$data = $this->database->fetch_array();
+			
+		}else{
+				
+			ErrorHandler::HandleError(DB_ERROR,$err);
+			$data['error'] = "Server error ocurred";
+		}		
+	
+		return $data;
+	}
 	
 	/*
 	* Get users online list 
@@ -163,6 +199,45 @@ class Users extends DataAccess{
 		if(empty($err)){
 
 			$data = $this->database->fetch_array();
+			
+		}else{
+				
+				ErrorHandler::HandleError(DB_ERROR,$err);
+				$data['error'] = "Not able to get userName";
+		}		
+	
+		return $data;
+	}
+	
+	
+	/*
+	* Update user online status
+	*
+	*/
+	
+	public function updateStatus($status,$userId){
+	
+
+		//array to hold the data retrieved
+		$data = array();
+		
+		//query to insert user details into the users table
+		$query = "UPDATE `users` SET `online_status`= ? WHERE `id_users` = ?" ; 
+		
+		
+		//build the vaariables array which holds the data to bind to the prepare statement.
+		$vars = array($status,$userId);
+		
+		//specify the types of data to be binded 
+		$types = array("s","i");
+	
+		//excute the query 
+		$err = $this->database->doQuery($query,$vars,$types);
+		
+		//check if any error occurred 
+		if(empty($err)){
+
+			$data = $this->database->getAffectedRows();
 			
 		}else{
 				

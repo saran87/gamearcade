@@ -369,3 +369,32 @@ display: inline-block;
 	font-size: 10px;
 	color:#FFF;
 }
+
+/*** game window design  ****/
+
+#gameWindow{
+
+	border: 1px #ccc solid;
+	height: 500px;
+}
+#gameLoader{
+
+	width: 30px;
+	height: 32px;
+	margin: auto;
+	margin-top:30%;
+	background-image: url("../img/loader.gif");
+	background-repeat:no-repeat;
+
+}
+
+/****  challengeWindow ***/
+
+#challengeWindow{
+	
+	border: 1px #ccc solid;
+	height: 500px;
+}
+#challenges tr td button{
+	margin-left: 2px;
+}
