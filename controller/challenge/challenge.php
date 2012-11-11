@@ -55,7 +55,7 @@
 			ouputJson($data);
 		}
 		//Get Challenge status gives current state of a challenge
-		public function getChallengeStatus(){
+		public function getChallengeStatus($isReturn = false){
 		
 			$data = array();
 			if($this->authenticate()){
@@ -87,7 +87,10 @@
 			else{
 				$data['error']['isLoginRequired'] = true;
 			}
-			ouputJson($data);
+			if(!$isReturn)
+				ouputJson($data);
+			else
+				return $data;
 		}
 		//Get Challenge details
 		public function getChallengeDetails(){
@@ -112,13 +115,14 @@
 					$userId = $_SESSION['id'];
 					$challengeId = getQueryString("challengeId");
 					if( $challengeId != ""){
-						$data = $this->getChallengeStatus();
+						$data = $this->getChallengeStatus(true);
 						if(!$data["data"]["error"]){
 							
 								$status = Challenges::$ACCEPTED;
 								
 								$challengeAccess = new Challenges();
-								$data["data"]	 = $challengeAccess->updateChallenge($userId,$challengeId,$status);
+								$data["data"]["update_status"]	 = $challengeAccess->updateChallenge($userId,$challengeId,$status);
+								$data["data"]["status"] = Challenges::$ACCEPTED;
 							}
 						}
 						else{

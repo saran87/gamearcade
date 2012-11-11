@@ -22,6 +22,15 @@ var game = (function() {
   game.provide('setGameId', function(id) {
     gameId = id;
   });
+  // create game.getGameId
+  game.provide('getChallengeId', function() {
+	return challengeId;
+  });
+	
+   // create game.setGameId
+  game.provide('setChallengeId', function(id) {
+    challengeId = id;
+  });
    // create game.sendInvite
   game.provide('sendInvite', function(item) {
 	
@@ -53,7 +62,7 @@ var game = (function() {
   game.provide('getStatus', function() {
 
 	var site = new Site();
-	var data = {"challengeId" : challengeId};
+	var data = {"challengeId" : game.getChallengeId()};
 	site.getChallengeStatus(data,processStatus);
 	
   });
@@ -240,8 +249,8 @@ var game = (function() {
 										},500,function(){
 								
 										});
-			
-			   game.getStatus();
+			  game.setChallengeId(response.data.challenge_id);
+			  game.getStatus();
 			}else if(response.error){
 			
 				if(response.error.isLoginRequired){
@@ -261,9 +270,20 @@ var game = (function() {
 		
 		console.log(response);
 		if(response.data){
-	
-			 //  game.getStatus();
-			}else if(response.error){
+			if( !response.data.error){
+				 //  game.getStatus();
+				 if( response.data.status != "accepted" )
+					setTimeout(game.getStatus,1000);
+				else{
+					game.start();
+				}
+			}
+			else{
+				var site = new Site();
+				site.showError(response.data.error);
+				site.restoreHome();
+			}
+		}else if(response.error){
 			
 				if(response.error.isLoginRequired){
 					showLoginModal();
@@ -271,7 +291,7 @@ var game = (function() {
 				else{
 					new Site().showError(response.error);
 				}
-			}
+		}
 	}
 	
 	

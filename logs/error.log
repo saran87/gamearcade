@@ -2054,3 +2054,60 @@ Message :Wrong number of parameters for query#-1  ErrorHandler::GetCallTrace() c
 
 
 ==========================================================================================================
+
+==========================================================================================================
+From : ::1
+Requested URL: /connect4/index.php?s=game&action=getGame&type=json&challengeId=13
+Request Method: GET
+Access Time: 1352611901
+Request :s=game&action=getGame&type=json&challengeId=13
+Error Type :DB Error
+Message :Duplicate entry '13' for key 'challenge_id'#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
+#0  ErrorHandler::GetRequestDetail(DB Error, Duplicate entry '13' for key 'challenge_id') called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
+#1  ErrorHandler::HandleError(DB Error, Duplicate entry '13' for key 'challenge_id') called at [C:\xampp\htdocs\connect4\dataAccess\boards.php:41]
+#2  Boards->createBoard(13, 71) called at [C:\xampp\htdocs\connect4\controller\game\game.php:82]
+#3  Game->getGame(::1, 14e887c66d3722c8ec228-6b05f0xaea13a47ecc93cc6942437919c6f90xaea23dfcb6a)
+#4  call_user_func(Array ([0] => Game Object ([] => Game Arcade,[viewVars] => Array ()),[1] => getGame), ::1, 14e887c66d3722c8ec228-6b05f0xaea13a47ecc93cc6942437919c6f90xaea23dfcb6a) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:73]
+#5  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
+#6  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
+
+
+==========================================================================================================
+
+==========================================================================================================
+From : ::1
+Requested URL: /connect4/index.php?s=game&action=getGame&type=json&challengeId=13
+Request Method: GET
+Access Time: 1352611905
+Request :s=game&action=getGame&type=json&challengeId=13
+Error Type :DB Error
+Message :Duplicate entry '13' for key 'challenge_id'#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
+#0  ErrorHandler::GetRequestDetail(DB Error, Duplicate entry '13' for key 'challenge_id') called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
+#1  ErrorHandler::HandleError(DB Error, Duplicate entry '13' for key 'challenge_id') called at [C:\xampp\htdocs\connect4\dataAccess\boards.php:41]
+#2  Boards->createBoard(13, 71) called at [C:\xampp\htdocs\connect4\controller\game\game.php:82]
+#3  Game->getGame(::1, 14e887c66d3722c8ec228-6b05f0xaea13a47ecc93cc6942437919c6f90xaea23dfcb6a)
+#4  call_user_func(Array ([0] => Game Object ([] => Game Arcade,[viewVars] => Array ()),[1] => getGame), ::1, 14e887c66d3722c8ec228-6b05f0xaea13a47ecc93cc6942437919c6f90xaea23dfcb6a) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:73]
+#5  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
+#6  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
+
+
+==========================================================================================================
+
+==========================================================================================================
+From : ::1
+Requested URL: /connect4/index.php?s=game&action=getGame&type=json&challengeId=13
+Request Method: GET
+Access Time: 1352611975
+Request :s=game&action=getGame&type=json&challengeId=13
+Error Type :DB Error
+Message :Duplicate entry '13' for key 'challenge_id'#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
+#0  ErrorHandler::GetRequestDetail(DB Error, Duplicate entry '13' for key 'challenge_id') called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
+#1  ErrorHandler::HandleError(DB Error, Duplicate entry '13' for key 'challenge_id') called at [C:\xampp\htdocs\connect4\dataAccess\boards.php:41]
+#2  Boards->createBoard(13, 71) called at [C:\xampp\htdocs\connect4\controller\game\game.php:82]
+#3  Game->getGame(::1, 14e887c66d3722c8ec228-6b05f0xaea13a47ecc93cc6942437919c6f90xaea23dfcb6a)
+#4  call_user_func(Array ([0] => Game Object ([] => Game Arcade,[viewVars] => Array ()),[1] => getGame), ::1, 14e887c66d3722c8ec228-6b05f0xaea13a47ecc93cc6942437919c6f90xaea23dfcb6a) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:73]
+#5  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
+#6  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
+
+
+==========================================================================================================

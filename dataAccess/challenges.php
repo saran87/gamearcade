@@ -80,7 +80,7 @@ class Challenges extends DataAccess{
 			
 			$data = $this->database->fetch_array();
 			if(!$data){
-				$data['error'] = "Invalid gameId";
+				$data['error'] = "Challenge Cancelled or deleted";
 			}
 			
 		}else{

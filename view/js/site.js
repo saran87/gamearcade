@@ -250,6 +250,20 @@ Site.prototype = {
 			error:errorCallBack
 		});
 	},
+	restoreHome:function(){
+				$("#gameWindow").addClass("hide");
+				$("#online_users").addClass("hide");
+				$("#game_list").removeClass("hide");
+				$("#game_list").animate({
+						left:"20%"
+					},500);
+					
+				$("#online_users").animate({
+											left: "20%"
+										},500,function(){
+								
+										});
+	},
 
 	//function to handle error for the whole site
 	errorHandler:function(jqXHR, textStatus, errorThrown){	
