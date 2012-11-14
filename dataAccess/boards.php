@@ -58,7 +58,7 @@ class Boards extends DataAccess{
 		$data = array();
 		
 		//query to insert user details into the users table
-		$query = "SELECT B.`board_id`, B.`challenge_id`, B.`current_turn`, B.`cur_state` FROM `boards` B , `challenges` C WHERE B.`board_id` = ? AND B.`challenge_id` = C.`challenge_id` AND (C.`player1_id` = ? OR C.`player2_id` = ?)";
+		$query = "SELECT B.`board_id`, B.`challenge_id`, B.`current_turn`, B.`cur_state`, C.`player1_id`, C.`player2_id` FROM `boards` B , `challenges` C WHERE B.`board_id` = ? AND B.`challenge_id` = C.`challenge_id` AND (C.`player1_id` = ? OR C.`player2_id` = ?)";
 		
 		//build the vaariables array which holds the data to bind to the prepare statement.
 		$vars = array($boardId,$userId,$userId);
@@ -121,6 +121,40 @@ class Boards extends DataAccess{
 		}
 		
 		return $data["board_id"];
+	}
+	
+	public function updateBoard($state,$playerId,$boardId){
+		
+		//array to hold the data retrieved
+		$data = array();
+	
+		$query = "UPDATE `boards` SET `current_turn`=?,`cur_state`=? WHERE `board_id`=?";
+	
+		//build the vaariables array which holds the data to bind to the prepare statement.
+		$vars = array( $playerId,$state,$boardId);
+		
+		//specify the types of data to be binded 
+		$types = array("i","s","i");
+	
+		//excute the query 
+		$err = $this->database->doQuery($query,$vars,$types);
+		
+		//check if any error occurred 
+		if(empty($err)){
+			
+			$val = $this->database->getAffectedRows();
+			if($val < 1){
+				$data['error'] = "No changes done to board";
+			}else{
+				$data["updated"] = "success";
+			}
+		}else{
+				ErrorHandler::HandleError(DB_ERROR,$err);
+				$data['error'] = "Server error occurred";
+		}
+		
+		return $data;
+	
 	}
 }
 

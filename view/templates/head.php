@@ -21,6 +21,15 @@
 		  }
 	  }
     </style>
+	<style type="text/css">
+		#background { fill: #666; stroke: black; stroke-width: 2px; }
+		.player1   {fill: #000; stroke: white; stroke-width: 1px; }
+		.player2 {fill: #B59EC7; stroke: red; stroke-width: 1px; }
+		.htmlBlock {position:absolute;top:200px;left:300px;width:200px;height:100px;background:#ffc;padding:10px;display:none;}
+
+		.name_black{fill:black;font-size:18px}
+		.name_orange{fill:orange;font-size:24px;}
+	</style>
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>

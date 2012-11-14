@@ -70,7 +70,7 @@
 						$method = array($obj, $this->action);
 						
 						//make the call to the method in the controller object
-						$result=@call_user_func($method,$_SERVER['REMOTE_ADDR'],$_COOKIE['token']);
+						$result=@call_user_func($method);
 						if(method_exists($obj,'renderView')){
 							
 							if($this->type != "json"){

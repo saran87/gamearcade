@@ -22,6 +22,7 @@
     
 function Site(){
 		this.baseURL = "http://localhost/connect4/";
+		
 		this.registerUserURL = this.baseURL + "index.php?s=login&action=register";
 		this.loginURL = this.baseURL + "index.php?s=login";
 		this.userListURL =  this.baseURL + "index.php?s=chat&action=getUserList";
@@ -29,9 +30,12 @@ function Site(){
 		this.sendMessageURL = this.baseURL + "index.php?s=chat&action=sendMessage&type=json";
 		this.getMessagesURL = this.baseURL + "index.php?s=chat&action=getMessages&type=json";
 		this.challengeURL = this.baseURL + "index.php?s=Challenge&type=json";
-		this.challengeDetail = this.baseURL + "index.php?s=Challenge&action=getChallengeDetails&type=json"
-		this.cancelChallengeURL  = this.baseURL + "index.php?s=Challenge&action=cancelChallenge&type=json"
-		this.getChallengeStatusURL  = this.baseURL + "index.php?s=Challenge&action=getChallengeStatus&type=json"
+		this.challengeDetail = this.baseURL + "index.php?s=Challenge&action=getChallengeDetails&type=json";
+		this.cancelChallengeURL  = this.baseURL + "index.php?s=Challenge&action=cancelChallenge&type=json";
+		this.getChallengeStatusURL  = this.baseURL + "index.php?s=Challenge&action=getChallengeStatus&type=json";
+		this.acceptChallengeURL  = this.baseURL + "index.php?s=Challenge&action=acceptChallenge&type=json";
+		this.getGameURL  = this.baseURL + "index.php?s=game&action=getGame&type=json";
+		this.getGameStatusURL =  this.baseURL + "index.php?s=game&type=json";
 };
 	
 Site.prototype = {
@@ -225,11 +229,37 @@ Site.prototype = {
 							success:callBack
 						 });
 	},
+	
 	//get the challenge status
 	getChallengeStatus:function(data,callBack){
 		
 		this.makeAjaxCall({ type: "POST",
 							path: this.getChallengeStatusURL,
+							message:data,
+							success:callBack
+						 });
+	},
+	acceptChallenge:function(data,callBack){
+	
+		this.makeAjaxCall({ type: "POST",
+							path: this.acceptChallengeURL,
+							message:data,
+							success:callBack
+						 });
+	},
+	//get the challenge status
+	getGame:function(data,callBack){
+		
+		this.makeAjaxCall({ type: "POST",
+							path: this.getGameURL,
+							message:data,
+							success:callBack
+						 });
+	},
+	getGameStatus:function(data, callBack){
+		
+		this.makeAjaxCall({ type: "POST",
+							path: this.getGameStatusURL,
 							message:data,
 							success:callBack
 						 });
@@ -264,7 +294,24 @@ Site.prototype = {
 								
 										});
 	},
-
+	showGameWindow:function(){
+				$("#gameWindow").removeClass("hide");
+				$("#online_users").addClass("hide");
+				$("#game_list").addClass("hide");
+				$("#game_list").animate({
+						left:"20%"
+					},500);
+					
+				$("#online_users").animate({
+											left: "20%"
+										},500,function(){
+										});
+			$("section").find("section").slideUp('fast');
+			$("#mainSection").slideDown('slow');
+			
+			$('.sidenav').find('.active').removeClass("active").end().find("li").first().addClass("active")
+			
+	},
 	//function to handle error for the whole site
 	errorHandler:function(jqXHR, textStatus, errorThrown){	
 			//Initialize error to default message
@@ -277,8 +324,8 @@ Site.prototype = {
 				
 				errorMessage = jqXHR.statusText;
 			}
-			
-			this.showError(errorMessage);
+			//scope changes when its called from different namespace
+			new Site().showError(errorMessage);
 			
 	},
 	//Show error panel with the error message in it 

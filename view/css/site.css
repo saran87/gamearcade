@@ -263,9 +263,11 @@ display:inline-block;
 }
 .chat_header_buttons{
 
-	margin-left:30%;
+	margin-left:-20%;
 }
-
+#closeUserList{
+	margin-left:-20%;
+}
 
 form{
 
@@ -375,7 +377,6 @@ display: inline-block;
 #gameWindow{
 
 	border: 1px #ccc solid;
-	height: 500px;
 }
 #gameLoader{
 

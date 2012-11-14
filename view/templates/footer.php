@@ -15,6 +15,9 @@
     <script src="view/js/site.js" type="application/javascript"></script>
     <script src="view/js/chat.js" type="application/javascript"></script>
     <script src="view/js/game.js" type="application/javascript"></script>
+    <script src="view/js/board.js" type="application/javascript"></script>
+	 <script src="view/js/Objects/Cell.js" type="application/javascript"></script>
+    <script src="view/js/Objects/Piece.js" type="application/javascript"></script>
 		<script type="application/javascript">
 		function onload () {
 			

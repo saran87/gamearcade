@@ -66,6 +66,24 @@ var game = (function() {
 	site.getChallengeStatus(data,processStatus);
 	
   });
+    // start playing game from challenge panel
+  game.provide('startGameFromChallenge', function(item) {
+
+	var challengeId = $(item).parent().parent().attr("challenge_id");
+	var site = new Site();
+	var data = {"challengeId" : challengeId};
+	game.setChallengeId(challengeId);
+	site.acceptChallenge(data,game.getStatus);
+	
+  });
+    // start game
+  game.provide('start', function() {
+
+	var site = new Site();
+	var data = {"challengeId" : game.getChallengeId()};
+	site.getGame(data,board.startPlaying);
+	
+  });
 	/****** private functions *****/
 	function getOnlineUserList(){
 		var site = new Site();
@@ -183,7 +201,7 @@ var game = (function() {
 				}else{
 					new Site().showError(response.error);
 				}				
-			}
+		}
 	}
 	//Get Challenge row
 	//getRow will create a row in table

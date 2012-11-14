@@ -65,6 +65,7 @@
 				if( $challengeId != ""){	
 						$challengeAccess = new Challenges();
 						$data["data"]	 = $challengeAccess->getChallengeStatus($challengeId);
+					
 						if(!$data["data"]["error"]){
 						$player1 = $data["data"]["player1_id"];
 						$player2 = $data["data"]["player2_id"];
@@ -87,6 +88,7 @@
 			else{
 				$data['error']['isLoginRequired'] = true;
 			}
+
 			if(!$isReturn)
 				ouputJson($data);
 			else
