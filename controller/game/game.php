@@ -27,7 +27,7 @@
 			require_once(ROOT_PATH . "/dataAccess/challenges.php");
 			require_once(ROOT_PATH . "/dataAccess/users.php");
 			require_once(ROOT_PATH . "/dataAccess/boards.php");
-		
+			require_once(ROOT_PATH . "/dataAccess/scoreBoardAccess.php");
 		}
 		
 		public function index(){
@@ -46,6 +46,16 @@
 					}
 					else{
 						$data["data"]["isMyTurn"] = false;
+					}
+					
+					if($data["data"]["winner_id"] !=0){
+						if($userId == $data["data"]["winner_id"]){
+								
+								$data["data"]["message"] = "you won the challenge";
+						}
+						else{
+								$data["data"]["message"] = "you lost the challenge";
+						}
 					}
 				}
 				else{
@@ -118,11 +128,12 @@
 				$challengeId = getQueryString("challengeId");
 				$boardId = getQueryString("boardId");
 				$column = getQueryString("column");
+				
 				if( $boardId != ""  && $challengeId != "" && $column != ""){
 					
 					$board = new Boards();
 					$data["data"] = $board->getDetails($boardId,$userId);
-					
+					$data["data"]["isMyTurn"] = true;
 					if($userId == $data["data"]["current_turn"]){
 						
 						$player1 = $data["data"]["player1_id"];
@@ -136,13 +147,41 @@
 							$newTurnId = $player1;
 						}
 						
-						$newState = $this->updateState($data["data"]["cur_state"],$column,$playerId);
+						$newState = $this->updateBoardState($data["data"]["cur_state"],$column,$playerId,$data);
 						if($newState != "error"){
+							
 							$data["data"]["updated"] = $board->updateBoard($newState,$newTurnId,$boardId);
+							if($data["data"]["isWon"]){
+							
+								$challenge = new Challenges();
+								$data["data"]["challengeUpdated"] = $challenge->updateWinner($challengeId,$userId);
+								
+								
+								$scoreBoard = new ScoreBoardAccess();
+								$score = $scoreBoard->getDetails($userId);	
+								if($score["error"]){
+									$scoreBoard->createRecord($userId);
+								}
+								
+								$currentscore = isset($score["score"]) ? $score["score"] : 0;
+								$totalGames = isset($score["total_games"]) ? $score["total_games"] : 0;
+								$num_wins = isset($score["num_wins"]) ? $score["num_wins"] : 0;
+								$time = isset($score["best_time"]) ? $score["best_time"] : time();
+								
+								$currentscore += 10;
+								$totalGames++;
+								$num_wins++;
+								
+								$scoreBoard->updateScoreBoard($userId,$currentscore,$totalGames,$num_wins,$time);
+								
+							}
 							$data["data"]["isMyTurn"] = false;
+							$data["data"]["cur_state"] = $newState;
 						}
 						else{
-						
+							if(!$data["data"]["error"]){
+								$data["error"] = "Error occurred while updating the board ";
+							}
 						}		
 					}
 					else{
@@ -160,33 +199,99 @@
 			ouputJson($data);
 		}
 		
-		private function updateState($state,$column){
+		/*
+		* Reset game 
+		*
+		*/
+		public function resetGame(){
+		
+			$data = array();
+			if($this->authenticate()){
+				
+				$userId = $_SESSION['id'];
+				$challengeId = getQueryString("challengeId");
+				$boardId = getQueryString("boardId");
+				if( $boardId != ""  && $challengeId != ""){
+					
+					$board = new Boards();
+					$data["data"] = $board->getDetails($boardId,$userId);
+					
+					if($data["data"]["current_turn"]){
+						
+						$player1 = $data["data"]["player1_id"];
+						$player2 = $data["data"]["player2_id"];
+						
+						if( $userId == $player1){
+							$playerId = 1;
+						}else{
+							$playerId = 2;
+						}
+						
+						$newState = $this->getBoardStateString($this->intializeBoard());
+						if($newState != "error"){
+							
+							$data["data"]["updated"] = $board->updateBoard($newState,$data["data"]["current_turn"],$boardId);
+							
+							if($data["data"]["current_turn"] != $userId){
+								$data["data"]["isMyTurn"] = false;
+							}else{
+								$data["data"]["isMyTurn"] = true;
+							}
+							
+							$data["data"]["cur_state"] = $newState;
+						}
+						else{
+							$data["error"] = "Error occurred while updating the board ";
+						}		
+					}
+					else{
+						$data["error"] = "Not your turn";
+					}
+				}
+				else{
+					$data["error"]  = "missing required field challengeId, boardId";
+				}
+			}
+			else{
+				$data['error']['isLoginRequired'] = true;
+			}
+			ouputJson($data);
+		
+		}
+		
+		private function updateBoardState($state,$column,$playerId,&$data){
 			
 			if(!$state){
 				$board 	= $this->intializeBoard();
 			
 			}else{
 			
-				$board 	=	$this->getBoardFromString($str);
+				$board 	=	$this->getBoardFromString($state);
 			}
 			
+			$isBoardSet = false;
 			for($i = count($board) - 1; $i >= 0; $i--){
 				if( $column < count($board[$i])){
 					if($board[$i][$column] == 0){
 						$board[$i][$column] = $playerId;	
+						$isBoardSet = true;
+						$data["data"]["isWon"] = $this->isWinningShot($board,$i,$column);
 						break;
 					}
 				}
 				else{
 						
-						
+						return "error";
 				}
 			}
 			
-			
-			
+			if(!$isBoardSet){
+				$data["data"]["error"] = "no more moves in the board";
+				return "error";
+			}
+						
 			$str 	= $this->getBoardStateString($board);	
-			print_r($board);
+			return $str;
 		}
 		
 		private function intializeBoard(){
@@ -213,7 +318,7 @@
 					$str .= implode($board[$i],"-");
 					$str .= "|";
 				}
-				echo $str;
+		
 				return $str;				
 		}
 		
@@ -232,6 +337,141 @@
 			}
 			
 			return $rowArray;
+		}
+		
+		private function isWinningShot($board,$row,$column){
+			
+			
+			$totalRow = count($board);
+			$totalColumn = count($board[$row]);
+			
+			$playerId = $board[$row][$column];
+			$tempRow = $row;
+			$total = 0;
+			//move downwards
+			while($tempRow < $totalRow ){
+				
+				if($playerId == $board[$tempRow][$column]){
+					
+					$total++;
+					$tempRow++;
+				}
+				else{
+					break;
+				}
+			}
+			
+			if($total>=4){
+				return true;
+			}
+			//see horizontally
+			$tempColumn = $column;
+			$total = 0;
+			//move rightwards
+			while($tempColumn < $totalColumn ){
+				
+				if($playerId == $board[$row][$tempColumn]){
+					
+					$total++;
+					$tempColumn++;
+				}
+				else{
+					break;
+				}
+			}
+			
+			//move downwards
+			$tempColumn = $column-1;
+			while($tempColumn > 0 ){
+				
+				if($playerId == $board[$row][$tempColumn]){
+					
+					$total++;
+					$tempColumn--;
+				}
+				else{
+					break;
+				}
+			}
+			
+			if($total>=4){
+				return true;
+			}
+			//Checking for 				-
+			//						-
+			//				 	-
+			//				-
+			//move diagonally downwards --->front
+			$tempRow = $row;
+			$tempColumn = $column;
+			$total = 0;
+			while($tempRow<$totalRow  && $tempColumn < $totalColumn){
+				
+				if($playerId == $board[$tempRow][$tempColumn]){
+					$total++;
+					$tempRow++;
+					$tempColumn++;
+				}
+				else{
+					break;
+				}
+			}
+			//move diagonally upwards  <---- back
+			$tempRow = $row - 1;
+			$tempColumn = $column - 1;
+			while($tempRow >= 0  && $tempColumn  >= 0 ){
+				
+				if($playerId == $board[$tempRow][$tempColumn]){
+					$total++;
+					$tempRow--;
+					$tempColumn--;
+				}
+				else{
+					break;
+				}
+			}
+			if($total>=4){
+				return true;
+			}
+			
+			//Checking for -
+			//				-
+			//				 -
+			//				  -
+			//move diagonally downwards ---> back
+			$tempRow = $row;
+			$tempColumn = $column;
+			$total = 0;
+			while($tempRow<$totalRow  && $tempColumn >= 0){
+				
+				if($playerId == $board[$tempRow][$tempColumn]){
+					$total++;
+					$tempRow++;
+					$tempColumn--;
+				}
+				else{
+					break;
+				}
+			}
+			//move diagonally upwards infront
+			$tempRow = $row - 1;
+			$tempColumn = $column + 1;
+			while($tempRow >= 0  && $tempColumn  < $totalColumn ){
+				
+				if($playerId == $board[$tempRow][$tempColumn]){
+					$total++;
+					$tempRow--;
+					$tempColumn++;
+				}
+				else{
+					break;
+				}
+			}
+			if($total>=4){
+				return true;
+			}
+			
+			return false;
 		}
 	}
 	

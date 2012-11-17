@@ -82,7 +82,7 @@ var board = (function() {
 	board.getStatus = function(){
 	
 		var site = new Site();
-		var data = {"boardId" : this.boardId};
+		var data = {"boardId" : board.getId()};
 		site.getGameStatus(data,processBoard);
 	};
 	
@@ -93,18 +93,21 @@ var board = (function() {
 			 
 			 if(id[1]){
 				var column = id[1];
-				for(var i=BOARDHEIGHT-1;i>=0;i--){
+				
+				for(var i = BOARDHEIGHT-1; i>=0; i--){
 					
 					var piece = pieceArr[i][column]; 
-					console.log(piece)
+					console.log(piece.isCaptured);
 					if(!piece.isCaptured){
 						console.log(piece);
 						piece.occupy(board.getPlayerId());
-						piece.isCaptured = true;
 						break;
 					}
 				}
-				board.setMyTurn(false);
+				var data = {"boardId" : board.getId(),"challengeId" : game.getChallengeId(),"column":column}
+				var site = new Site();
+				site.updateGame(data,processBoard);
+				board.setMyTurn(false);	
 			}
 		}
 		else{
@@ -114,7 +117,7 @@ var board = (function() {
 	};
 	
 	
-	//private methods
+	//private methods	
 	
 	function initBoard(){
 	
@@ -124,7 +127,7 @@ var board = (function() {
 		gEle.setAttributeNS(null,'transform','translate('+BOARDX+','+BOARDY+')');
 		gEle.setAttributeNS(null,'id',gameId);
 		//stick g on board
-		document.getElementsByTagName('svg')[0].insertBefore(gEle,document.getElementsByTagName('svg')[0].childNodes[5]);
+		document.getElementsByTagName('svg')[0].insertBefore(gEle,document.getElementsByTagName('svg')[0].childNodes[7]);
 		//create the board...
 		//var x = new Cell(document.getElementById('someIDsetByTheServer'),'cell_00',75,0,0);
 		for(var i=0;i<BOARDHEIGHT;i++){
@@ -170,21 +173,34 @@ var board = (function() {
 			
 			if(response.data.error){
 				new Site().showError(response.data.error);
+				if(response.data.isMyTurn){
+					var turn = response.data.isMyTurn;
+					board.setMyTurn(turn);
+				}
 			}else{
 			
 				var turn = response.data.isMyTurn;
 				board.setMyTurn(turn);
-				if(board.isMyTurn){
-					console.log(response);	
-					if(response.data.cur_state){
-						console.log("null");
-					}
-					else{
-						console.log("asd");
-					}
-				}else{
-
-
+				
+				if(response.data.cur_state){
+						var boardArray = getBoardArray(response.data.cur_state);
+						updatePieces(boardArray);
+						console.log(boardArray);
+				}
+				if(response.data.winner_id !=0 ){
+				
+					new Site().showError(response.data.message);
+				}
+				else{
+					if(board.isMyTurn){
+							$("#youPlayer").attr("display","block");
+							$("#nyt").attr("display","none");
+						
+					}else{
+						$("#youPlayer").attr("display","none");
+							$("#nyt").attr("display","block");
+						setTimeout(board.getStatus,2000);
+					}	
 				}				
 			}		
 		}else if(response.error){
@@ -196,6 +212,42 @@ var board = (function() {
 			}				
 		}
 	};
+	//Update the pieces with recieved board array
+	function updatePieces(boardArray){
+	
+		for(var row = 0; row < boardArray.length; row++){
+		
+			for( var col = 0; col < boardArray[row].length; col++){
+				
+				var piece = pieceArr[row][col];
+				
+				if(boardArray[row][col] == 0){
+				
+					piece.deOccupy(boardArray[row][col]);
+				}
+				else if(!piece.isCaptured){
+					piece.occupy(boardArray[row][col]);
+				}
+			}
+		
+		}
+	
+	}
+	
+	//get board array from the currentstate of board
+	function getBoardArray(state){
+	
+		var boardArray = state.split("|");
+		
+		for(var i = 0; i<boardArray.length; i++){
+			if(boardArray[i])
+				boardArray[i] = boardArray[i].split("-");
+			else
+				boardArray.splice(i,1);
+		}
+		
+		return boardArray;
+	}
 	
 	////releaseMove/////
 	//	clear the id of the thing I'm moving...

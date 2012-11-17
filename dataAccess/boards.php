@@ -58,7 +58,7 @@ class Boards extends DataAccess{
 		$data = array();
 		
 		//query to insert user details into the users table
-		$query = "SELECT B.`board_id`, B.`challenge_id`, B.`current_turn`, B.`cur_state`, C.`player1_id`, C.`player2_id` FROM `boards` B , `challenges` C WHERE B.`board_id` = ? AND B.`challenge_id` = C.`challenge_id` AND (C.`player1_id` = ? OR C.`player2_id` = ?)";
+		$query = "SELECT B.`board_id`, B.`challenge_id`, B.`current_turn`, B.`cur_state`, C.`player1_id`, C.`player2_id`,C.`winner_id` FROM `boards` B , `challenges` C WHERE B.`board_id` = ? AND B.`challenge_id` = C.`challenge_id` AND (C.`player1_id` = ? OR C.`player2_id` = ?)";
 		
 		//build the vaariables array which holds the data to bind to the prepare statement.
 		$vars = array($boardId,$userId,$userId);

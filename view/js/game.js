@@ -84,6 +84,18 @@ var game = (function() {
 	site.getGame(data,board.startPlaying);
 	
   });
+  game.provide("getScore",function(){
+	
+	var site = new Site();
+	site.getScore({},processScore);
+	
+  });
+  game.provide("reset",function(){
+	
+	var site = new Site();
+	site.resetGame({"boardId":board.getId(),"challengeId":game.getChallengeId()},board.processBoard);
+	
+  });
 	/****** private functions *****/
 	function getOnlineUserList(){
 		var site = new Site();
@@ -116,6 +128,27 @@ var game = (function() {
 					showLoginModal();
 				}			
 			}
+	}
+	//Process score 
+	function processScore(response){
+	
+		if(response.data){
+					var table = $("#score");
+					table.empty();
+				$.each(response.data,function(index){
+						//	table.append(getChallengeRow(this));
+						var row = getChallengeRow(this);
+		
+						document.getElementById("score").appendChild(row);
+					});
+					setTimeout(game.getScore,2000);
+				}
+			else if(response.error){
+		
+			if(response.error.isLoginRequired){
+				showLoginModal();
+			}			
+		}
 	}
 	//populate User list call back function from ajax call
 	function updateChallenges(response){

@@ -26,7 +26,7 @@ function Piece(boardId,player,cellRow,cellCol,type,num){
 	this.object=new window[type](this);				// based on the piece type, you need to create the more specific piece object (Checker, Pawn, Rook, etc.)
 	this.piece = this.object.piece;					// a shortcut to the actual svg piece object
 	this.setAtt("id",this.id);						// make sure the SVG object has the correct id value (make sure it can be dragged)
-	
+	this.setAtt("class","piece");
 	/*if(this.player == playerId){
 		this.piece.addEventListener('mousedown',function(){ setMove(this.id);},false);	// add a mousedown event listener to your piece so that it can be dragged.
 	}else{
@@ -60,6 +60,10 @@ Piece.prototype={
 	occupy:function(id){
 		this.isCaptured = true;
 		document.getElementById(this.id+'K').setAttributeNS(null,"class",'player' + id);					// change the color according to player
+	},
+	deOccupy:function(id){
+		this.isCaptured = false;
+		document.getElementById(this.id+'K').setAttributeNS(null,"class",'player' + id);	
 	},
 	// function that allows a quick setting of an attribute of the specific piece object
 	setAtt:function(att,val){

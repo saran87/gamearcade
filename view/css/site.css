@@ -391,7 +391,7 @@ display: inline-block;
 
 /****  challengeWindow ***/
 
-#challengeWindow{
+#challengeWindow,#scoreWindow{
 	
 	border: 1px #ccc solid;
 	height: 500px;

@@ -68,6 +68,7 @@
 				});
 			//start updating challenges
 			game.getChallenges();
+			game.getScore();
 			
 		}
 		

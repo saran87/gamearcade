@@ -21,7 +21,7 @@
    
     
 function Site(){
-		this.baseURL = "http://localhost/connect4/";
+		this.baseURL = "http://saravananadar.com/gamearcade/";
 		
 		this.registerUserURL = this.baseURL + "index.php?s=login&action=register";
 		this.loginURL = this.baseURL + "index.php?s=login";
@@ -29,13 +29,16 @@ function Site(){
 		this.initChatURL =  this.baseURL + "index.php?s=chat&action=initChat&type=json";
 		this.sendMessageURL = this.baseURL + "index.php?s=chat&action=sendMessage&type=json";
 		this.getMessagesURL = this.baseURL + "index.php?s=chat&action=getMessages&type=json";
-		this.challengeURL = this.baseURL + "index.php?s=Challenge&type=json";
-		this.challengeDetail = this.baseURL + "index.php?s=Challenge&action=getChallengeDetails&type=json";
-		this.cancelChallengeURL  = this.baseURL + "index.php?s=Challenge&action=cancelChallenge&type=json";
-		this.getChallengeStatusURL  = this.baseURL + "index.php?s=Challenge&action=getChallengeStatus&type=json";
-		this.acceptChallengeURL  = this.baseURL + "index.php?s=Challenge&action=acceptChallenge&type=json";
+		this.challengeURL = this.baseURL + "index.php?s=challenge&type=json";
+		this.challengeDetail = this.baseURL + "index.php?s=challenge&action=getChallengeDetails&type=json";
+		this.cancelChallengeURL  = this.baseURL + "index.php?s=challenge&action=cancelChallenge&type=json";
+		this.getChallengeStatusURL  = this.baseURL + "index.php?s=challenge&action=getChallengeStatus&type=json";
+		this.acceptChallengeURL  = this.baseURL + "index.php?s=challenge&action=acceptChallenge&type=json";
 		this.getGameURL  = this.baseURL + "index.php?s=game&action=getGame&type=json";
 		this.getGameStatusURL =  this.baseURL + "index.php?s=game&type=json";
+		this.updateGameURL =  this.baseURL + "index.php?s=game&action=updateGame&type=json";
+		this.resetGameURL =  this.baseURL + "index.php?s=game&action=resetGame&type=json";
+		this.scoreURL =  this.baseURL + "index.php?s=score&type=json";
 };
 	
 Site.prototype = {
@@ -264,6 +267,31 @@ Site.prototype = {
 							success:callBack
 						 });
 	},
+	updateGame:function(data,callBack){
+		this.makeAjaxCall({ type: "POST",
+							path: this.updateGameURL,
+							message:data,
+							success:callBack
+						 });
+	},
+	resetGame:function(data,callBack){
+		
+		this.makeAjaxCall({ type: "POST",
+							path: this.resetGameURL,
+							message:data,
+							success:callBack
+						 });
+		
+	},
+	getScore:function(data,callBack){
+		this.makeAjaxCall({ type: "POST",
+							path: this.scoreURL,
+							message:data,
+							success:callBack
+						 });
+	
+	},
+	
 	//function to make ajax call
 	makeAjaxCall:function(data){
 		
@@ -287,7 +315,7 @@ Site.prototype = {
 				$("#game_list").animate({
 						left:"20%"
 					},500);
-					
+					$(".piece").empty();
 				$("#online_users").animate({
 											left: "20%"
 										},500,function(){
@@ -301,7 +329,7 @@ Site.prototype = {
 				$("#game_list").animate({
 						left:"20%"
 					},500);
-					
+				$(".piece").empty();
 				$("#online_users").animate({
 											left: "20%"
 										},500,function(){

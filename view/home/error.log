@@ -1679,562 +1679,273 @@ Message :Wrong number of parameters for query#-1  ErrorHandler::GetCallTrace() c
 ==========================================================================================================
 
 ==========================================================================================================
-From : ::1
-Requested URL: /connect4/index.php?s=login&action=register
+From : 66.147.240.176
+Requested URL: /gamearcade/index.php?s=Challenge&action=getChallengeDetails&type=json
 Request Method: POST
-Access Time: 1352144737
-Request :s=login&action=register&name=admin&email=admin%40gmail.com&password=Sar123mur
-Error Type :DB Error
-Message :Duplicate entry 'admin@gmail.com' for key 'email'#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
-#0  ErrorHandler::GetRequestDetail(DB Error, Duplicate entry 'admin@gmail.com' for key 'email') called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(DB Error, Duplicate entry 'admin@gmail.com' for key 'email') called at [C:\xampp\htdocs\connect4\dataAccess\users.php:49]
-#2  Users->createNewUser(admin, admin@gmail.com, Sar123mur) called at [C:\xampp\htdocs\connect4\controller\login\login.php:76]
-#3  Login->createNewAccount() called at [C:\xampp\htdocs\connect4\controller\login\login.php:50]
-#4  Login->register(::1, )
-#5  call_user_func(Array ([0] => Login Object ([] => Game Arcade,[viewVars] => Array ([title] => Game Arcade)),[1] => register), ::1, ) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:73]
-#6  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
-#7  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
+Access Time: 1352984794
+Request :s=Challenge&action=getChallengeDetails&type=json&__utma=129833870.934527589.1351945831.1352346805.1352636776.7&__utmz=129833870.1351945831.1.1.utmcsr%3D%28direct%29%7Cutmccn%3D%28direct%29%7Cutmcmd%3D%28none%29&PHPSESSID=n18vhtsd4esue67va829m8sof1
+Error Type :404
+Message :#-1  ErrorHandler::GetCallTrace() called at [/home7/saravan1/public_html/gamearcade/controller/common/ErrorHandler.php:30]
+#0  ErrorHandler::GetRequestDetail(404, ) called at [/home7/saravan1/public_html/gamearcade/controller/common/ErrorHandler.php:21]
+#1  ErrorHandler::HandleError(404) called at [/home7/saravan1/public_html/gamearcade/controller/common/controller.php:101]
+#2  Controller->RenderPage() called at [/home7/saravan1/public_html/gamearcade/controller/main.php:21]
+#3  Intialize() called at [/home7/saravan1/public_html/gamearcade/index.php:13]
 
 
 ==========================================================================================================
 
 ==========================================================================================================
-From : ::1
-Requested URL: /connect4/index.php?s=login&action=register
+From : 66.147.240.176
+Requested URL: /gamearcade/index.php?s=Challenge&action=getChallengeDetails&type=json
 Request Method: POST
-Access Time: 1352145170
-Request :s=login&action=register&name=admin&email=admin%40gmail.com&password=Sar123mur
-Error Type :DB Error
-Message :Duplicate entry 'admin@gmail.com' for key 'email'#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
-#0  ErrorHandler::GetRequestDetail(DB Error, Duplicate entry 'admin@gmail.com' for key 'email') called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(DB Error, Duplicate entry 'admin@gmail.com' for key 'email') called at [C:\xampp\htdocs\connect4\dataAccess\users.php:49]
-#2  Users->createNewUser(admin, admin@gmail.com, Sar123mur) called at [C:\xampp\htdocs\connect4\controller\login\login.php:76]
-#3  Login->createNewAccount() called at [C:\xampp\htdocs\connect4\controller\login\login.php:50]
-#4  Login->register(::1, )
-#5  call_user_func(Array ([0] => Login Object ([] => Game Arcade,[viewVars] => Array ([title] => Game Arcade)),[1] => register), ::1, ) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:73]
-#6  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
-#7  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
+Access Time: 1352984801
+Request :s=Challenge&action=getChallengeDetails&type=json&token=87082fbfa8aa987441b30-6b05f0xaea4ccaba810e1beac033fb887664a30xaea23e15161&__utma=129833870.934527589.1351945831.1352346805.1352636776.7&__utmz=129833870.1351945831.1.1.utmcsr%3D%28direct%29%7Cutmccn%3D%28direct%29%7Cutmcmd%3D%28none%29&PHPSESSID=n18vhtsd4esue67va829m8sof1
+Error Type :404
+Message :#-1  ErrorHandler::GetCallTrace() called at [/home7/saravan1/public_html/gamearcade/controller/common/ErrorHandler.php:30]
+#0  ErrorHandler::GetRequestDetail(404, ) called at [/home7/saravan1/public_html/gamearcade/controller/common/ErrorHandler.php:21]
+#1  ErrorHandler::HandleError(404) called at [/home7/saravan1/public_html/gamearcade/controller/common/controller.php:101]
+#2  Controller->RenderPage() called at [/home7/saravan1/public_html/gamearcade/controller/main.php:21]
+#3  Intialize() called at [/home7/saravan1/public_html/gamearcade/index.php:13]
 
 
 ==========================================================================================================
 
 ==========================================================================================================
-From : ::1
-Requested URL: /connect4/index.php?s=login&action=register
+From : 66.147.240.176
+Requested URL: /gamearcade/index.php?s=Challenge&action=getChallengeDetails&type=json
 Request Method: POST
-Access Time: 1352145309
-Request :s=login&action=register&name=admin&email=admin%40gmail.com&password=Sar123mur
-Error Type :DB Error
-Message :Duplicate entry 'admin@gmail.com' for key 'email'#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
-#0  ErrorHandler::GetRequestDetail(DB Error, Duplicate entry 'admin@gmail.com' for key 'email') called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(DB Error, Duplicate entry 'admin@gmail.com' for key 'email') called at [C:\xampp\htdocs\connect4\dataAccess\users.php:49]
-#2  Users->createNewUser(admin, admin@gmail.com, Sar123mur) called at [C:\xampp\htdocs\connect4\controller\login\login.php:76]
-#3  Login->createNewAccount() called at [C:\xampp\htdocs\connect4\controller\login\login.php:50]
-#4  Login->register(::1, )
-#5  call_user_func(Array ([0] => Login Object ([] => Game Arcade,[viewVars] => Array ([title] => Game Arcade)),[1] => register), ::1, ) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:73]
-#6  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
-#7  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
-
-
-==========================================================================================================
-
-==========================================================================================================
-From : ::1
-Requested URL: /connect4/index.php?s=Challenge&action=acceptChallenge&type=json&challengeId=2
-Request Method: GET
-Access Time: 1352176467
-Request :s=Challenge&action=acceptChallenge&type=json&challengeId=2
-Error Type :DB Error
-Message :Wrong number of parameters for query#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
-#0  ErrorHandler::GetRequestDetail(DB Error, Wrong number of parameters for query) called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(DB Error, Wrong number of parameters for query) called at [C:\xampp\htdocs\connect4\dataAccess\challenges.php:162]
-#2  Challenges->updateChallenge(71, accepted) called at [C:\xampp\htdocs\connect4\controller\challenge\challenge.php:98]
-#3  Challenge->acceptChallenge(::1, a875e155d8912c0c65128-6b05f0xaea13a439f87a9d2583bf3e2f42990xaea23dba818)
-#4  call_user_func(Array ([0] => Challenge Object ([] => Game Arcade,[viewVars] => Array ()),[1] => acceptChallenge), ::1, a875e155d8912c0c65128-6b05f0xaea13a439f87a9d2583bf3e2f42990xaea23dba818) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:73]
-#5  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
-#6  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
-
-
-==========================================================================================================
-
-==========================================================================================================
-From : ::1
-Requested URL: /connect4/index.php?s=Challenge&action=acceptChallenge&type=json&challengeId=2
-Request Method: GET
-Access Time: 1352176468
-Request :s=Challenge&action=acceptChallenge&type=json&challengeId=2
-Error Type :DB Error
-Message :Wrong number of parameters for query#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
-#0  ErrorHandler::GetRequestDetail(DB Error, Wrong number of parameters for query) called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(DB Error, Wrong number of parameters for query) called at [C:\xampp\htdocs\connect4\dataAccess\challenges.php:162]
-#2  Challenges->updateChallenge(71, accepted) called at [C:\xampp\htdocs\connect4\controller\challenge\challenge.php:98]
-#3  Challenge->acceptChallenge(::1, a875e155d8912c0c65128-6b05f0xaea13a439f87a9d2583bf3e2f42990xaea23dba818)
-#4  call_user_func(Array ([0] => Challenge Object ([] => Game Arcade,[viewVars] => Array ()),[1] => acceptChallenge), ::1, a875e155d8912c0c65128-6b05f0xaea13a439f87a9d2583bf3e2f42990xaea23dba818) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:73]
-#5  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
-#6  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
-
-
-==========================================================================================================
-
-==========================================================================================================
-From : ::1
-Requested URL: /connect4/index.php?s=Challenge&action=acceptChallenge&type=json&challengeId=2
-Request Method: GET
-Access Time: 1352176511
-Request :s=Challenge&action=acceptChallenge&type=json&challengeId=2
-Error Type :DB Error
-Message :Wrong number of parameters for query#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
-#0  ErrorHandler::GetRequestDetail(DB Error, Wrong number of parameters for query) called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(DB Error, Wrong number of parameters for query) called at [C:\xampp\htdocs\connect4\dataAccess\challenges.php:162]
-#2  Challenges->updateChallenge(71, accepted) called at [C:\xampp\htdocs\connect4\controller\challenge\challenge.php:98]
-#3  Challenge->acceptChallenge(::1, a875e155d8912c0c65128-6b05f0xaea13a439f87a9d2583bf3e2f42990xaea23dba818)
-#4  call_user_func(Array ([0] => Challenge Object ([] => Game Arcade,[viewVars] => Array ()),[1] => acceptChallenge), ::1, a875e155d8912c0c65128-6b05f0xaea13a439f87a9d2583bf3e2f42990xaea23dba818) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:73]
-#5  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
-#6  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
-
-
-==========================================================================================================
-
-==========================================================================================================
-From : ::1
-Requested URL: /connect4/index.php?s=Challenge&action=acceptChallenge&type=json&challengeId=2
-Request Method: GET
-Access Time: 1352176563
-Request :s=Challenge&action=acceptChallenge&type=json&challengeId=2
-Error Type :DB Error
-Message :Wrong number of parameters for query#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
-#0  ErrorHandler::GetRequestDetail(DB Error, Wrong number of parameters for query) called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(DB Error, Wrong number of parameters for query) called at [C:\xampp\htdocs\connect4\dataAccess\challenges.php:162]
-#2  Challenges->updateChallenge(71, accepted) called at [C:\xampp\htdocs\connect4\controller\challenge\challenge.php:98]
-#3  Challenge->acceptChallenge(::1, a875e155d8912c0c65128-6b05f0xaea13a439f87a9d2583bf3e2f42990xaea23dba818)
-#4  call_user_func(Array ([0] => Challenge Object ([] => Game Arcade,[viewVars] => Array ()),[1] => acceptChallenge), ::1, a875e155d8912c0c65128-6b05f0xaea13a439f87a9d2583bf3e2f42990xaea23dba818) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:73]
-#5  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
-#6  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
-
-
-==========================================================================================================
-
-==========================================================================================================
-From : ::1
-Requested URL: /connect4/index.php?s=Challenge&action=acceptChallenge&type=json&challengeId=1
-Request Method: GET
-Access Time: 1352176567
-Request :s=Challenge&action=acceptChallenge&type=json&challengeId=1
-Error Type :DB Error
-Message :Wrong number of parameters for query#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
-#0  ErrorHandler::GetRequestDetail(DB Error, Wrong number of parameters for query) called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(DB Error, Wrong number of parameters for query) called at [C:\xampp\htdocs\connect4\dataAccess\challenges.php:162]
-#2  Challenges->updateChallenge(71, accepted) called at [C:\xampp\htdocs\connect4\controller\challenge\challenge.php:98]
-#3  Challenge->acceptChallenge(::1, a875e155d8912c0c65128-6b05f0xaea13a439f87a9d2583bf3e2f42990xaea23dba818)
-#4  call_user_func(Array ([0] => Challenge Object ([] => Game Arcade,[viewVars] => Array ()),[1] => acceptChallenge), ::1, a875e155d8912c0c65128-6b05f0xaea13a439f87a9d2583bf3e2f42990xaea23dba818) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:73]
-#5  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
-#6  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
-
-
-==========================================================================================================
-
-==========================================================================================================
-From : ::1
-Requested URL: /connect4/index.php?s=Challenge&type=json&partnerId=1&gameId=2
-Request Method: GET
-Access Time: 1352316817
-Request :s=Challenge&type=json&partnerId=1&gameId=2
-Error Type :DB Error
-Message :Column 'status' cannot be null#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
-#0  ErrorHandler::GetRequestDetail(DB Error, Column 'status' cannot be null) called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(DB Error, Column 'status' cannot be null) called at [C:\xampp\htdocs\connect4\dataAccess\challenges.php:46]
-#2  Challenges->createChallenge(71, 1, 2) called at [C:\xampp\htdocs\connect4\controller\challenge\challenge.php:41]
-#3  Challenge->index(::1, fa5770cc6621bd8153928-6b05f0xaea13a4dca754326659a6ed23ab390xaea23dcg94g)
-#4  call_user_func(Array ([0] => Challenge Object ([] => Game Arcade,[viewVars] => Array ()),[1] => index), ::1, fa5770cc6621bd8153928-6b05f0xaea13a4dca754326659a6ed23ab390xaea23dcg94g) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:73]
-#5  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
-#6  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
-
-
-==========================================================================================================
-
-==========================================================================================================
-From : ::1
-Requested URL: /connect4/index.php?s=Challenge&type=json&partnerId=1&gameId=2
-Request Method: GET
-Access Time: 1352316820
-Request :s=Challenge&type=json&partnerId=1&gameId=2
-Error Type :DB Error
-Message :Column 'status' cannot be null#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
-#0  ErrorHandler::GetRequestDetail(DB Error, Column 'status' cannot be null) called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(DB Error, Column 'status' cannot be null) called at [C:\xampp\htdocs\connect4\dataAccess\challenges.php:46]
-#2  Challenges->createChallenge(71, 1, 2) called at [C:\xampp\htdocs\connect4\controller\challenge\challenge.php:41]
-#3  Challenge->index(::1, fa5770cc6621bd8153928-6b05f0xaea13a4dca754326659a6ed23ab390xaea23dcg94g)
-#4  call_user_func(Array ([0] => Challenge Object ([] => Game Arcade,[viewVars] => Array ()),[1] => index), ::1, fa5770cc6621bd8153928-6b05f0xaea13a4dca754326659a6ed23ab390xaea23dcg94g) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:73]
-#5  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
-#6  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
-
-
-==========================================================================================================
-
-==========================================================================================================
-From : ::1
-Requested URL: /connect4/index.php?s=Challenge&type=json&partnerId=1&gameId=1
-Request Method: GET
-Access Time: 1352316829
-Request :s=Challenge&type=json&partnerId=1&gameId=1
-Error Type :DB Error
-Message :Column 'status' cannot be null#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
-#0  ErrorHandler::GetRequestDetail(DB Error, Column 'status' cannot be null) called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(DB Error, Column 'status' cannot be null) called at [C:\xampp\htdocs\connect4\dataAccess\challenges.php:46]
-#2  Challenges->createChallenge(71, 1, 1) called at [C:\xampp\htdocs\connect4\controller\challenge\challenge.php:41]
-#3  Challenge->index(::1, fa5770cc6621bd8153928-6b05f0xaea13a4dca754326659a6ed23ab390xaea23dcg94g)
-#4  call_user_func(Array ([0] => Challenge Object ([] => Game Arcade,[viewVars] => Array ()),[1] => index), ::1, fa5770cc6621bd8153928-6b05f0xaea13a4dca754326659a6ed23ab390xaea23dcg94g) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:73]
-#5  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
-#6  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
-
-
-==========================================================================================================
-
-==========================================================================================================
-From : ::1
-Requested URL: /connect4/index.php?s=Challenge&type=json&partnerId=73&gameId=1
-Request Method: GET
-Access Time: 1352316834
-Request :s=Challenge&type=json&partnerId=73&gameId=1
-Error Type :DB Error
-Message :Column 'status' cannot be null#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
-#0  ErrorHandler::GetRequestDetail(DB Error, Column 'status' cannot be null) called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(DB Error, Column 'status' cannot be null) called at [C:\xampp\htdocs\connect4\dataAccess\challenges.php:46]
-#2  Challenges->createChallenge(71, 73, 1) called at [C:\xampp\htdocs\connect4\controller\challenge\challenge.php:41]
-#3  Challenge->index(::1, fa5770cc6621bd8153928-6b05f0xaea13a4dca754326659a6ed23ab390xaea23dcg94g)
-#4  call_user_func(Array ([0] => Challenge Object ([] => Game Arcade,[viewVars] => Array ()),[1] => index), ::1, fa5770cc6621bd8153928-6b05f0xaea13a4dca754326659a6ed23ab390xaea23dcg94g) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:73]
-#5  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
-#6  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
-
-
-==========================================================================================================
-
-==========================================================================================================
-From : ::1
-Requested URL: /connect4/index.php?s=Challenge&type=json&partnerId=73&gameId=1
-Request Method: GET
-Access Time: 1352316837
-Request :s=Challenge&type=json&partnerId=73&gameId=1
-Error Type :DB Error
-Message :Column 'status' cannot be null#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
-#0  ErrorHandler::GetRequestDetail(DB Error, Column 'status' cannot be null) called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(DB Error, Column 'status' cannot be null) called at [C:\xampp\htdocs\connect4\dataAccess\challenges.php:46]
-#2  Challenges->createChallenge(71, 73, 1) called at [C:\xampp\htdocs\connect4\controller\challenge\challenge.php:41]
-#3  Challenge->index(::1, fa5770cc6621bd8153928-6b05f0xaea13a4dca754326659a6ed23ab390xaea23dcg94g)
-#4  call_user_func(Array ([0] => Challenge Object ([] => Game Arcade,[viewVars] => Array ()),[1] => index), ::1, fa5770cc6621bd8153928-6b05f0xaea13a4dca754326659a6ed23ab390xaea23dcg94g) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:73]
-#5  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
-#6  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
-
-
-==========================================================================================================
-
-==========================================================================================================
-From : ::1
-Requested URL: /connect4/index.php?s=Challenge&type=json&partnerId=73&gameId=1
-Request Method: GET
-Access Time: 1352316933
-Request :s=Challenge&type=json&partnerId=73&gameId=1
-Error Type :DB Error
-Message :Column 'status' cannot be null#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
-#0  ErrorHandler::GetRequestDetail(DB Error, Column 'status' cannot be null) called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(DB Error, Column 'status' cannot be null) called at [C:\xampp\htdocs\connect4\dataAccess\challenges.php:46]
-#2  Challenges->createChallenge(71, 73, 1) called at [C:\xampp\htdocs\connect4\controller\challenge\challenge.php:41]
-#3  Challenge->index(::1, fa5770cc6621bd8153928-6b05f0xaea13a4dca754326659a6ed23ab390xaea23dcg94g)
-#4  call_user_func(Array ([0] => Challenge Object ([] => Game Arcade,[viewVars] => Array ()),[1] => index), ::1, fa5770cc6621bd8153928-6b05f0xaea13a4dca754326659a6ed23ab390xaea23dcg94g) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:73]
-#5  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
-#6  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
-
-
-==========================================================================================================
-
-==========================================================================================================
-From : ::1
-Requested URL: /connect4/index.php?s=Challenge&type=json&partnerId=73&gameId=1
-Request Method: GET
-Access Time: 1352316987
-Request :s=Challenge&type=json&partnerId=73&gameId=1
-Error Type :DB Error
-Message :Column 'status' cannot be null#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
-#0  ErrorHandler::GetRequestDetail(DB Error, Column 'status' cannot be null) called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(DB Error, Column 'status' cannot be null) called at [C:\xampp\htdocs\connect4\dataAccess\challenges.php:46]
-#2  Challenges->createChallenge(71, 73, 1) called at [C:\xampp\htdocs\connect4\controller\challenge\challenge.php:41]
-#3  Challenge->index(::1, fa5770cc6621bd8153928-6b05f0xaea13a4dca754326659a6ed23ab390xaea23dcg94g)
-#4  call_user_func(Array ([0] => Challenge Object ([] => Game Arcade,[viewVars] => Array ()),[1] => index), ::1, fa5770cc6621bd8153928-6b05f0xaea13a4dca754326659a6ed23ab390xaea23dcg94g) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:73]
-#5  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
-#6  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
-
-
-==========================================================================================================
-
-==========================================================================================================
-From : ::1
-Requested URL: /connect4/index.php?s=getChallengeStatus
-Request Method: GET
-Access Time: 1352511582
-Request :s=getChallengeStatus
+Access Time: 1352984909
+Request :s=Challenge&action=getChallengeDetails&type=json&token=87082fbfa8aa987441b30-6b05f0xaea4ccaba810e1beac033fb887664a30xaea23e15161&__utma=129833870.934527589.1351945831.1352346805.1352636776.7&__utmz=129833870.1351945831.1.1.utmcsr%3D%28direct%29%7Cutmccn%3D%28direct%29%7Cutmcmd%3D%28none%29&PHPSESSID=n18vhtsd4esue67va829m8sof1
 Error Type :404
-Message :#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
-#0  ErrorHandler::GetRequestDetail(404, ) called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(404) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:101]
-#2  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
-#3  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
+Message :#-1  ErrorHandler::GetCallTrace() called at [/home7/saravan1/public_html/gamearcade/controller/common/ErrorHandler.php:30]
+#0  ErrorHandler::GetRequestDetail(404, ) called at [/home7/saravan1/public_html/gamearcade/controller/common/ErrorHandler.php:21]
+#1  ErrorHandler::HandleError(404) called at [/home7/saravan1/public_html/gamearcade/controller/common/controller.php:101]
+#2  Controller->RenderPage() called at [/home7/saravan1/public_html/gamearcade/controller/main.php:21]
+#3  Intialize() called at [/home7/saravan1/public_html/gamearcade/index.php:13]
 
 
 ==========================================================================================================
 
 ==========================================================================================================
-From : ::1
-Requested URL: /connect4/index.php?s=getChallengeStatus&type=json
-Request Method: GET
-Access Time: 1352511601
-Request :s=getChallengeStatus&type=json
-Error Type :404
-Message :#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
-#0  ErrorHandler::GetRequestDetail(404, ) called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(404) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:101]
-#2  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
-#3  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
-
-
-==========================================================================================================
-
-==========================================================================================================
-From : ::1
-Requested URL: /connect4/index.php?s=Challenge&action=cancelChallenge&type=json&challengeId=1
-Request Method: GET
-Access Time: 1352541984
-Request :s=Challenge&action=cancelChallenge&type=json&challengeId=1
-Error Type :DB Error
-Message :Wrong number of parameters for query#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
-#0  ErrorHandler::GetRequestDetail(DB Error, Wrong number of parameters for query) called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(DB Error, Wrong number of parameters for query) called at [C:\xampp\htdocs\connect4\dataAccess\challenges.php:248]
-#2  Challenges->deleteChallenge(1, 71) called at [C:\xampp\htdocs\connect4\controller\challenge\challenge.php:127]
-#3  Challenge->cancelChallenge(::1, d3997b98c1ef552557e28-6b05f0xaea13a4eeec0d63d5d62c2ed1a9c90xaea23df0b13)
-#4  call_user_func(Array ([0] => Challenge Object ([] => Game Arcade,[viewVars] => Array ()),[1] => cancelChallenge), ::1, d3997b98c1ef552557e28-6b05f0xaea13a4eeec0d63d5d62c2ed1a9c90xaea23df0b13) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:73]
-#5  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
-#6  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
-
-
-==========================================================================================================
-
-==========================================================================================================
-From : ::1
-Requested URL: /connect4/index.php?s=Challenge&action=cancelChallenge&type=json&challengeId=2
-Request Method: GET
-Access Time: 1352541988
-Request :s=Challenge&action=cancelChallenge&type=json&challengeId=2
-Error Type :DB Error
-Message :Wrong number of parameters for query#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
-#0  ErrorHandler::GetRequestDetail(DB Error, Wrong number of parameters for query) called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(DB Error, Wrong number of parameters for query) called at [C:\xampp\htdocs\connect4\dataAccess\challenges.php:248]
-#2  Challenges->deleteChallenge(2, 71) called at [C:\xampp\htdocs\connect4\controller\challenge\challenge.php:127]
-#3  Challenge->cancelChallenge(::1, d3997b98c1ef552557e28-6b05f0xaea13a4eeec0d63d5d62c2ed1a9c90xaea23df0b13)
-#4  call_user_func(Array ([0] => Challenge Object ([] => Game Arcade,[viewVars] => Array ()),[1] => cancelChallenge), ::1, d3997b98c1ef552557e28-6b05f0xaea13a4eeec0d63d5d62c2ed1a9c90xaea23df0b13) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:73]
-#5  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
-#6  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
-
-
-==========================================================================================================
-
-==========================================================================================================
-From : ::1
-Requested URL: /connect4/index.php?s=Challenge&action=cancelChallenge&type=json&challengeId=2
-Request Method: GET
-Access Time: 1352542023
-Request :s=Challenge&action=cancelChallenge&type=json&challengeId=2
-Error Type :DB Error
-Message :Wrong number of parameters for query#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
-#0  ErrorHandler::GetRequestDetail(DB Error, Wrong number of parameters for query) called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(DB Error, Wrong number of parameters for query) called at [C:\xampp\htdocs\connect4\dataAccess\challenges.php:248]
-#2  Challenges->deleteChallenge(2, 71) called at [C:\xampp\htdocs\connect4\controller\challenge\challenge.php:127]
-#3  Challenge->cancelChallenge(::1, d3997b98c1ef552557e28-6b05f0xaea13a4eeec0d63d5d62c2ed1a9c90xaea23df0b13)
-#4  call_user_func(Array ([0] => Challenge Object ([] => Game Arcade,[viewVars] => Array ()),[1] => cancelChallenge), ::1, d3997b98c1ef552557e28-6b05f0xaea13a4eeec0d63d5d62c2ed1a9c90xaea23df0b13) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:73]
-#5  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
-#6  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
-
-
-==========================================================================================================
-
-==========================================================================================================
-From : ::1
-Requested URL: /connect4/index.php?s=game&action=getGame&type=json&challengeId=13
-Request Method: GET
-Access Time: 1352611901
-Request :s=game&action=getGame&type=json&challengeId=13
-Error Type :DB Error
-Message :Duplicate entry '13' for key 'challenge_id'#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
-#0  ErrorHandler::GetRequestDetail(DB Error, Duplicate entry '13' for key 'challenge_id') called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(DB Error, Duplicate entry '13' for key 'challenge_id') called at [C:\xampp\htdocs\connect4\dataAccess\boards.php:41]
-#2  Boards->createBoard(13, 71) called at [C:\xampp\htdocs\connect4\controller\game\game.php:82]
-#3  Game->getGame(::1, 14e887c66d3722c8ec228-6b05f0xaea13a47ecc93cc6942437919c6f90xaea23dfcb6a)
-#4  call_user_func(Array ([0] => Game Object ([] => Game Arcade,[viewVars] => Array ()),[1] => getGame), ::1, 14e887c66d3722c8ec228-6b05f0xaea13a47ecc93cc6942437919c6f90xaea23dfcb6a) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:73]
-#5  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
-#6  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
-
-
-==========================================================================================================
-
-==========================================================================================================
-From : ::1
-Requested URL: /connect4/index.php?s=game&action=getGame&type=json&challengeId=13
-Request Method: GET
-Access Time: 1352611905
-Request :s=game&action=getGame&type=json&challengeId=13
-Error Type :DB Error
-Message :Duplicate entry '13' for key 'challenge_id'#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
-#0  ErrorHandler::GetRequestDetail(DB Error, Duplicate entry '13' for key 'challenge_id') called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(DB Error, Duplicate entry '13' for key 'challenge_id') called at [C:\xampp\htdocs\connect4\dataAccess\boards.php:41]
-#2  Boards->createBoard(13, 71) called at [C:\xampp\htdocs\connect4\controller\game\game.php:82]
-#3  Game->getGame(::1, 14e887c66d3722c8ec228-6b05f0xaea13a47ecc93cc6942437919c6f90xaea23dfcb6a)
-#4  call_user_func(Array ([0] => Game Object ([] => Game Arcade,[viewVars] => Array ()),[1] => getGame), ::1, 14e887c66d3722c8ec228-6b05f0xaea13a47ecc93cc6942437919c6f90xaea23dfcb6a) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:73]
-#5  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
-#6  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
-
-
-==========================================================================================================
-
-==========================================================================================================
-From : ::1
-Requested URL: /connect4/index.php?s=game&action=getGame&type=json&challengeId=13
-Request Method: GET
-Access Time: 1352611975
-Request :s=game&action=getGame&type=json&challengeId=13
-Error Type :DB Error
-Message :Duplicate entry '13' for key 'challenge_id'#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
-#0  ErrorHandler::GetRequestDetail(DB Error, Duplicate entry '13' for key 'challenge_id') called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(DB Error, Duplicate entry '13' for key 'challenge_id') called at [C:\xampp\htdocs\connect4\dataAccess\boards.php:41]
-#2  Boards->createBoard(13, 71) called at [C:\xampp\htdocs\connect4\controller\game\game.php:82]
-#3  Game->getGame(::1, 14e887c66d3722c8ec228-6b05f0xaea13a47ecc93cc6942437919c6f90xaea23dfcb6a)
-#4  call_user_func(Array ([0] => Game Object ([] => Game Arcade,[viewVars] => Array ()),[1] => getGame), ::1, 14e887c66d3722c8ec228-6b05f0xaea13a47ecc93cc6942437919c6f90xaea23dfcb6a) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:73]
-#5  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
-#6  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
-
-
-==========================================================================================================
-
-==========================================================================================================
-From : ::1
-Requested URL: /connect4/index.php?s=game&boardId=4
-Request Method: GET
-Access Time: 1352638750
-Request :s=game&boardId=4
-Error Type :404
-Message :#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
-#0  ErrorHandler::GetRequestDetail(404, ) called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(404) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:101]
-#2  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
-#3  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
-
-
-==========================================================================================================
-
-==========================================================================================================
-From : ::1
-Requested URL: /connect4/index.php?s=game&action=updateGame&type=json&boardId=7&challengeId=22&column=2
-Request Method: GET
-Access Time: 1352956449
-Request :s=game&action=updateGame&type=json&boardId=7&challengeId=22&column=2
-Error Type :DB Error
-Message :You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `challenges` WHERE `challenge_id` = ? AND (`player1_id`=?  OR `player2_id`=' at line 1#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
-#0  ErrorHandler::GetRequestDetail(DB Error, You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `challenges` WHERE `challenge_id` = ? AND (`player1_id`=?  OR `player2_id`=' at line 1) called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(DB Error, You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `challenges` WHERE `challenge_id` = ? AND (`player1_id`=?  OR `player2_id`=' at line 1) called at [C:\xampp\htdocs\connect4\dataAccess\challenges.php:289]
-#2  Challenges->updateWinner(22, 73) called at [C:\xampp\htdocs\connect4\controller\game\game.php:145]
-#3  Game->updateGame()
-#4  call_user_func(Array ([0] => Game Object ([] => Game Arcade,[viewVars] => Array ()),[1] => updateGame)) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:73]
-#5  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
-#6  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
-
-
-==========================================================================================================
-
-==========================================================================================================
-From : ::1
-Requested URL: /connect4/index.php?s=game&action=updateGame&type=json&boardId=7&challengeId=22&column=3
-Request Method: GET
-Access Time: 1352956453
-Request :s=game&action=updateGame&type=json&boardId=7&challengeId=22&column=3
-Error Type :DB Error
-Message :You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `challenges` WHERE `challenge_id` = ? AND (`player1_id`=?  OR `player2_id`=' at line 1#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
-#0  ErrorHandler::GetRequestDetail(DB Error, You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `challenges` WHERE `challenge_id` = ? AND (`player1_id`=?  OR `player2_id`=' at line 1) called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(DB Error, You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `challenges` WHERE `challenge_id` = ? AND (`player1_id`=?  OR `player2_id`=' at line 1) called at [C:\xampp\htdocs\connect4\dataAccess\challenges.php:289]
-#2  Challenges->updateWinner(22, 71) called at [C:\xampp\htdocs\connect4\controller\game\game.php:145]
-#3  Game->updateGame()
-#4  call_user_func(Array ([0] => Game Object ([] => Game Arcade,[viewVars] => Array ()),[1] => updateGame)) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:73]
-#5  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
-#6  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
-
-
-==========================================================================================================
-
-==========================================================================================================
-From : ::1
-Requested URL: /connect4/index.php?s=game&action=updateGame&type=json&boardId=7&challengeId=22&column=3
-Request Method: GET
-Access Time: 1352956535
-Request :s=game&action=updateGame&type=json&boardId=7&challengeId=22&column=3
-Error Type :DB Error
-Message :You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `challenges` WHERE `challenge_id` = ? AND (`player1_id`=?  OR `player2_id`=' at line 1#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
-#0  ErrorHandler::GetRequestDetail(DB Error, You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `challenges` WHERE `challenge_id` = ? AND (`player1_id`=?  OR `player2_id`=' at line 1) called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(DB Error, You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `challenges` WHERE `challenge_id` = ? AND (`player1_id`=?  OR `player2_id`=' at line 1) called at [C:\xampp\htdocs\connect4\dataAccess\challenges.php:289]
-#2  Challenges->updateWinner(22, 71) called at [C:\xampp\htdocs\connect4\controller\game\game.php:146]
-#3  Game->updateGame()
-#4  call_user_func(Array ([0] => Game Object ([] => Game Arcade,[viewVars] => Array ()),[1] => updateGame)) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:73]
-#5  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
-#6  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
-
-
-==========================================================================================================
-
-==========================================================================================================
-From : ::1
-Requested URL: /connect4/index.php?s=game&action=updateGame&type=json&boardId=7&challengeId=22&column=3
-Request Method: GET
-Access Time: 1352957003
-Request :s=game&action=updateGame&type=json&boardId=7&challengeId=22&column=3
-Error Type :DB Error
-Message :You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `challenges` WHERE `challenge_id` = ? AND (`player1_id`=?  OR `player2_id`=' at line 1#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
-#0  ErrorHandler::GetRequestDetail(DB Error, You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `challenges` WHERE `challenge_id` = ? AND (`player1_id`=?  OR `player2_id`=' at line 1) called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(DB Error, You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `challenges` WHERE `challenge_id` = ? AND (`player1_id`=?  OR `player2_id`=' at line 1) called at [C:\xampp\htdocs\connect4\dataAccess\challenges.php:289]
-#2  Challenges->updateWinner(22, 71) called at [C:\xampp\htdocs\connect4\controller\game\game.php:146]
-#3  Game->updateGame()
-#4  call_user_func(Array ([0] => Game Object ([] => Game Arcade,[viewVars] => Array ()),[1] => updateGame)) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:73]
-#5  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
-#6  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
-
-
-==========================================================================================================
-
-==========================================================================================================
-From : ::1
-Requested URL: /connect4/index.php?s=score&type=json&boardId=7&challengeId=22&column=3
-Request Method: GET
-Access Time: 1352958957
-Request :s=score&type=json&boardId=7&challengeId=22&column=3
-Error Type :404
-Message :#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
-#0  ErrorHandler::GetRequestDetail(404, ) called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(404) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:101]
-#2  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
-#3  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
-
-
-==========================================================================================================
-
-==========================================================================================================
-From : ::1
-Requested URL: /connect4/index.php?s=game&action=getGame&type=json
+From : 66.147.240.176
+Requested URL: /gamearcade/index.php?s=Challenge&action=getChallengeDetails&type=json
 Request Method: POST
-Access Time: 1352977891
-Request :s=game&action=getGame&type=json&challengeId=25
-Error Type :DB Error
-Message :Duplicate entry '25' for key 'challenge_id'#-1  ErrorHandler::GetCallTrace() called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:30]
-#0  ErrorHandler::GetRequestDetail(DB Error, Duplicate entry '25' for key 'challenge_id') called at [C:\xampp\htdocs\connect4\controller\common\ErrorHandler.php:21]
-#1  ErrorHandler::HandleError(DB Error, Duplicate entry '25' for key 'challenge_id') called at [C:\xampp\htdocs\connect4\dataAccess\boards.php:41]
-#2  Boards->createBoard(25, 73) called at [C:\xampp\htdocs\connect4\controller\game\game.php:108]
-#3  Game->getGame()
-#4  call_user_func(Array ([0] => Game Object ([] => Game Arcade,[viewVars] => Array ()),[1] => getGame)) called at [C:\xampp\htdocs\connect4\controller\common\controller.php:73]
-#5  Controller->RenderPage() called at [C:\xampp\htdocs\connect4\controller\main.php:21]
-#6  Intialize() called at [C:\xampp\htdocs\connect4\index.php:13]
+Access Time: 1352984930
+Request :s=Challenge&action=getChallengeDetails&type=json&token=87082fbfa8aa987441b30-6b05f0xaea4ccaba810e1beac033fb887664a30xaea23e15161&__utma=129833870.934527589.1351945831.1352346805.1352636776.7&__utmz=129833870.1351945831.1.1.utmcsr%3D%28direct%29%7Cutmccn%3D%28direct%29%7Cutmcmd%3D%28none%29&PHPSESSID=n18vhtsd4esue67va829m8sof1
+Error Type :404
+Message :#-1  ErrorHandler::GetCallTrace() called at [/home7/saravan1/public_html/gamearcade/controller/common/ErrorHandler.php:30]
+#0  ErrorHandler::GetRequestDetail(404, ) called at [/home7/saravan1/public_html/gamearcade/controller/common/ErrorHandler.php:21]
+#1  ErrorHandler::HandleError(404) called at [/home7/saravan1/public_html/gamearcade/controller/common/controller.php:101]
+#2  Controller->RenderPage() called at [/home7/saravan1/public_html/gamearcade/controller/main.php:21]
+#3  Intialize() called at [/home7/saravan1/public_html/gamearcade/index.php:13]
+
+
+==========================================================================================================
+
+==========================================================================================================
+From : 66.147.240.176
+Requested URL: /gamearcade/index.php?s=Challenge&action=getChallengeDetails&type=json
+Request Method: POST
+Access Time: 1352984949
+Request :s=Challenge&action=getChallengeDetails&type=json&token=87082fbfa8aa987441b30-6b05f0xaea4ccaba810e1beac033fb887664a30xaea23e15161&__utma=129833870.934527589.1351945831.1352346805.1352636776.7&__utmz=129833870.1351945831.1.1.utmcsr%3D%28direct%29%7Cutmccn%3D%28direct%29%7Cutmcmd%3D%28none%29&PHPSESSID=n18vhtsd4esue67va829m8sof1
+Error Type :404
+Message :#-1  ErrorHandler::GetCallTrace() called at [/home7/saravan1/public_html/gamearcade/controller/common/ErrorHandler.php:30]
+#0  ErrorHandler::GetRequestDetail(404, ) called at [/home7/saravan1/public_html/gamearcade/controller/common/ErrorHandler.php:21]
+#1  ErrorHandler::HandleError(404) called at [/home7/saravan1/public_html/gamearcade/controller/common/controller.php:101]
+#2  Controller->RenderPage() called at [/home7/saravan1/public_html/gamearcade/controller/main.php:21]
+#3  Intialize() called at [/home7/saravan1/public_html/gamearcade/index.php:13]
+
+
+==========================================================================================================
+
+==========================================================================================================
+From : 66.147.240.176
+Requested URL: /gamearcade/index.php?s=Challenge&action=getChallengeDetails&type=json
+Request Method: POST
+Access Time: 1352985109
+Request :s=Challenge&action=getChallengeDetails&type=json&token=87082fbfa8aa987441b30-6b05f0xaea4ccaba810e1beac033fb887664a30xaea23e15161&__utma=129833870.934527589.1351945831.1352346805.1352636776.7&__utmz=129833870.1351945831.1.1.utmcsr%3D%28direct%29%7Cutmccn%3D%28direct%29%7Cutmcmd%3D%28none%29&PHPSESSID=n18vhtsd4esue67va829m8sof1
+Error Type :404
+Message :#-1  ErrorHandler::GetCallTrace() called at [/home7/saravan1/public_html/gamearcade/controller/common/ErrorHandler.php:30]
+#0  ErrorHandler::GetRequestDetail(404, ) called at [/home7/saravan1/public_html/gamearcade/controller/common/ErrorHandler.php:21]
+#1  ErrorHandler::HandleError(404) called at [/home7/saravan1/public_html/gamearcade/controller/common/controller.php:101]
+#2  Controller->RenderPage() called at [/home7/saravan1/public_html/gamearcade/controller/main.php:21]
+#3  Intialize() called at [/home7/saravan1/public_html/gamearcade/index.php:13]
+
+
+==========================================================================================================
+
+==========================================================================================================
+From : 66.147.240.176
+Requested URL: /gamearcade/index.php?s=Challenge&action=getChallengeDetails&type=json
+Request Method: POST
+Access Time: 1352985124
+Request :s=Challenge&action=getChallengeDetails&type=json&token=d8605966fabbd72f3f830-6b05f0xaea4ccabe42414e97a96ea5838374a30xaea23e1525a&__utma=129833870.934527589.1351945831.1352346805.1352636776.7&__utmz=129833870.1351945831.1.1.utmcsr%3D%28direct%29%7Cutmccn%3D%28direct%29%7Cutmcmd%3D%28none%29&PHPSESSID=n18vhtsd4esue67va829m8sof1
+Error Type :404
+Message :#-1  ErrorHandler::GetCallTrace() called at [/home7/saravan1/public_html/gamearcade/controller/common/ErrorHandler.php:30]
+#0  ErrorHandler::GetRequestDetail(404, ) called at [/home7/saravan1/public_html/gamearcade/controller/common/ErrorHandler.php:21]
+#1  ErrorHandler::HandleError(404) called at [/home7/saravan1/public_html/gamearcade/controller/common/controller.php:101]
+#2  Controller->RenderPage() called at [/home7/saravan1/public_html/gamearcade/controller/main.php:21]
+#3  Intialize() called at [/home7/saravan1/public_html/gamearcade/index.php:13]
+
+
+==========================================================================================================
+
+==========================================================================================================
+From : 66.147.240.176
+Requested URL: /gamearcade/index.php?s=Challenge&action=getChallengeDetails&type=json
+Request Method: POST
+Access Time: 1352985204
+Request :s=Challenge&action=getChallengeDetails&type=json&token=d8605966fabbd72f3f830-6b05f0xaea4ccabe42414e97a96ea5838374a30xaea23e1525a&__utma=129833870.934527589.1351945831.1352346805.1352636776.7&__utmz=129833870.1351945831.1.1.utmcsr%3D%28direct%29%7Cutmccn%3D%28direct%29%7Cutmcmd%3D%28none%29&PHPSESSID=n18vhtsd4esue67va829m8sof1
+Error Type :404
+Message :#-1  ErrorHandler::GetCallTrace() called at [/home7/saravan1/public_html/gamearcade/controller/common/ErrorHandler.php:30]
+#0  ErrorHandler::GetRequestDetail(404, ) called at [/home7/saravan1/public_html/gamearcade/controller/common/ErrorHandler.php:21]
+#1  ErrorHandler::HandleError(404) called at [/home7/saravan1/public_html/gamearcade/controller/common/controller.php:101]
+#2  Controller->RenderPage() called at [/home7/saravan1/public_html/gamearcade/controller/main.php:21]
+#3  Intialize() called at [/home7/saravan1/public_html/gamearcade/index.php:13]
+
+
+==========================================================================================================
+
+==========================================================================================================
+From : 66.147.240.176
+Requested URL: /gamearcade/index.php?s=Challenge&action=getChallengeDetails&type=json
+Request Method: POST
+Access Time: 1352985212
+Request :s=Challenge&action=getChallengeDetails&type=json&token=f58f4b2ac33ef1ae0a932-6b05f0xaeaf66b00b77b23a64c2009881e4f43380xaea23e152ag&__utma=129833870.934527589.1351945831.1352346805.1352636776.7&__utmz=129833870.1351945831.1.1.utmcsr%3D%28direct%29%7Cutmccn%3D%28direct%29%7Cutmcmd%3D%28none%29&PHPSESSID=n18vhtsd4esue67va829m8sof1
+Error Type :404
+Message :#-1  ErrorHandler::GetCallTrace() called at [/home7/saravan1/public_html/gamearcade/controller/common/ErrorHandler.php:30]
+#0  ErrorHandler::GetRequestDetail(404, ) called at [/home7/saravan1/public_html/gamearcade/controller/common/ErrorHandler.php:21]
+#1  ErrorHandler::HandleError(404) called at [/home7/saravan1/public_html/gamearcade/controller/common/controller.php:101]
+#2  Controller->RenderPage() called at [/home7/saravan1/public_html/gamearcade/controller/main.php:21]
+#3  Intialize() called at [/home7/saravan1/public_html/gamearcade/index.php:13]
+
+
+==========================================================================================================
+
+==========================================================================================================
+From : 66.147.240.176
+Requested URL: /gamearcade/index.php?s=Challenge&action=getChallengeDetails&type=json
+Request Method: POST
+Access Time: 1352985224
+Request :s=Challenge&action=getChallengeDetails&type=json&token=f58f4b2ac33ef1ae0a932-6b05f0xaeaf66b00b77b23a64c2009881e4f43380xaea23e152ag&__utma=129833870.934527589.1351945831.1352346805.1352636776.7&__utmz=129833870.1351945831.1.1.utmcsr%3D%28direct%29%7Cutmccn%3D%28direct%29%7Cutmcmd%3D%28none%29&PHPSESSID=n18vhtsd4esue67va829m8sof1
+Error Type :404
+Message :#-1  ErrorHandler::GetCallTrace() called at [/home7/saravan1/public_html/gamearcade/controller/common/ErrorHandler.php:30]
+#0  ErrorHandler::GetRequestDetail(404, ) called at [/home7/saravan1/public_html/gamearcade/controller/common/ErrorHandler.php:21]
+#1  ErrorHandler::HandleError(404) called at [/home7/saravan1/public_html/gamearcade/controller/common/controller.php:101]
+#2  Controller->RenderPage() called at [/home7/saravan1/public_html/gamearcade/controller/main.php:21]
+#3  Intialize() called at [/home7/saravan1/public_html/gamearcade/index.php:13]
+
+
+==========================================================================================================
+
+==========================================================================================================
+From : 66.147.240.176
+Requested URL: /gamearcade/index.php?s=Challenge&action=getChallengeDetails&type=json
+Request Method: POST
+Access Time: 1352985232
+Request :s=Challenge&action=getChallengeDetails&type=json&token=f58f4b2ac33ef1ae0a932-6b05f0xaeaf66b00b77b23a64c2009881e4f43380xaea23e152ag&__utma=129833870.934527589.1351945831.1352346805.1352636776.7&__utmz=129833870.1351945831.1.1.utmcsr%3D%28direct%29%7Cutmccn%3D%28direct%29%7Cutmcmd%3D%28none%29&PHPSESSID=n18vhtsd4esue67va829m8sof1
+Error Type :404
+Message :#-1  ErrorHandler::GetCallTrace() called at [/home7/saravan1/public_html/gamearcade/controller/common/ErrorHandler.php:30]
+#0  ErrorHandler::GetRequestDetail(404, ) called at [/home7/saravan1/public_html/gamearcade/controller/common/ErrorHandler.php:21]
+#1  ErrorHandler::HandleError(404) called at [/home7/saravan1/public_html/gamearcade/controller/common/controller.php:101]
+#2  Controller->RenderPage() called at [/home7/saravan1/public_html/gamearcade/controller/main.php:21]
+#3  Intialize() called at [/home7/saravan1/public_html/gamearcade/index.php:13]
+
+
+==========================================================================================================
+
+==========================================================================================================
+From : 66.147.240.176
+Requested URL: /gamearcade/index.php?s=Challenge&action=getChallengeDetails&type=json
+Request Method: POST
+Access Time: 1352985323
+Request :s=Challenge&action=getChallengeDetails&type=json&token=f58f4b2ac33ef1ae0a932-6b05f0xaeaf66b00b77b23a64c2009881e4f43380xaea23e152ag&__utma=129833870.934527589.1351945831.1352346805.1352636776.7&__utmz=129833870.1351945831.1.1.utmcsr%3D%28direct%29%7Cutmccn%3D%28direct%29%7Cutmcmd%3D%28none%29&PHPSESSID=n18vhtsd4esue67va829m8sof1
+Error Type :404
+Message :#-1  ErrorHandler::GetCallTrace() called at [/home7/saravan1/public_html/gamearcade/controller/common/ErrorHandler.php:30]
+#0  ErrorHandler::GetRequestDetail(404, ) called at [/home7/saravan1/public_html/gamearcade/controller/common/ErrorHandler.php:21]
+#1  ErrorHandler::HandleError(404) called at [/home7/saravan1/public_html/gamearcade/controller/common/controller.php:101]
+#2  Controller->RenderPage() called at [/home7/saravan1/public_html/gamearcade/controller/main.php:21]
+#3  Intialize() called at [/home7/saravan1/public_html/gamearcade/index.php:13]
+
+
+==========================================================================================================
+
+==========================================================================================================
+From : 66.147.240.176
+Requested URL: /gamearcade/index.php?s=Challenge&action=getChallengeDetails&type=json
+Request Method: POST
+Access Time: 1352985506
+Request :s=Challenge&action=getChallengeDetails&type=json&token=f58f4b2ac33ef1ae0a932-6b05f0xaeaf66b00b77b23a64c2009881e4f43380xaea23e152ag&__utma=129833870.934527589.1351945831.1352346805.1352636776.7&__utmz=129833870.1351945831.1.1.utmcsr%3D%28direct%29%7Cutmccn%3D%28direct%29%7Cutmcmd%3D%28none%29&PHPSESSID=n18vhtsd4esue67va829m8sof1
+Error Type :404
+Message :#-1  ErrorHandler::GetCallTrace() called at [/home7/saravan1/public_html/gamearcade/controller/common/ErrorHandler.php:30]
+#0  ErrorHandler::GetRequestDetail(404, ) called at [/home7/saravan1/public_html/gamearcade/controller/common/ErrorHandler.php:21]
+#1  ErrorHandler::HandleError(404) called at [/home7/saravan1/public_html/gamearcade/controller/common/controller.php:101]
+#2  Controller->RenderPage() called at [/home7/saravan1/public_html/gamearcade/controller/main.php:21]
+#3  Intialize() called at [/home7/saravan1/public_html/gamearcade/index.php:13]
+
+
+==========================================================================================================
+
+==========================================================================================================
+From : 66.147.240.176
+Requested URL: /gamearcade/index.php?s=Challenge&action=getChallengeDetails&type=json
+Request Method: POST
+Access Time: 1352985522
+Request :s=Challenge&action=getChallengeDetails&type=json&token=f58f4b2ac33ef1ae0a932-6b05f0xaeaf66b00b77b23a64c2009881e4f43380xaea23e152ag&__utma=129833870.934527589.1351945831.1352346805.1352636776.7&__utmz=129833870.1351945831.1.1.utmcsr%3D%28direct%29%7Cutmccn%3D%28direct%29%7Cutmcmd%3D%28none%29&PHPSESSID=n18vhtsd4esue67va829m8sof1
+Error Type :404
+Message :#-1  ErrorHandler::GetCallTrace() called at [/home7/saravan1/public_html/gamearcade/controller/common/ErrorHandler.php:30]
+#0  ErrorHandler::GetRequestDetail(404, ) called at [/home7/saravan1/public_html/gamearcade/controller/common/ErrorHandler.php:21]
+#1  ErrorHandler::HandleError(404) called at [/home7/saravan1/public_html/gamearcade/controller/common/controller.php:101]
+#2  Controller->RenderPage() called at [/home7/saravan1/public_html/gamearcade/controller/main.php:21]
+#3  Intialize() called at [/home7/saravan1/public_html/gamearcade/index.php:13]
+
+
+==========================================================================================================
+
+==========================================================================================================
+From : 66.147.240.176
+Requested URL: /gamearcade/index.php?s=Challenge&action=getChallengeDetails&type=json
+Request Method: POST
+Access Time: 1352985568
+Request :s=Challenge&action=getChallengeDetails&type=json&__utma=129833870.934527589.1351945831.1352346805.1352636776.7&__utmz=129833870.1351945831.1.1.utmcsr%3D%28direct%29%7Cutmccn%3D%28direct%29%7Cutmcmd%3D%28none%29&PHPSESSID=n18vhtsd4esue67va829m8sof1
+Error Type :404
+Message :#-1  ErrorHandler::GetCallTrace() called at [/home7/saravan1/public_html/gamearcade/controller/common/ErrorHandler.php:30]
+#0  ErrorHandler::GetRequestDetail(404, ) called at [/home7/saravan1/public_html/gamearcade/controller/common/ErrorHandler.php:21]
+#1  ErrorHandler::HandleError(404) called at [/home7/saravan1/public_html/gamearcade/controller/common/controller.php:101]
+#2  Controller->RenderPage() called at [/home7/saravan1/public_html/gamearcade/controller/main.php:21]
+#3  Intialize() called at [/home7/saravan1/public_html/gamearcade/index.php:13]
+
+
+==========================================================================================================
+
+==========================================================================================================
+From : 66.147.240.176
+Requested URL: /gamearcade/index.php?s=Challenge&action=getChallengeDetails&type=json
+Request Method: POST
+Access Time: 1352985581
+Request :s=Challenge&action=getChallengeDetails&type=json&__utma=129833870.934527589.1351945831.1352346805.1352636776.7&__utmz=129833870.1351945831.1.1.utmcsr%3D%28direct%29%7Cutmccn%3D%28direct%29%7Cutmcmd%3D%28none%29&PHPSESSID=n18vhtsd4esue67va829m8sof1
+Error Type :404
+Message :#-1  ErrorHandler::GetCallTrace() called at [/home7/saravan1/public_html/gamearcade/controller/common/ErrorHandler.php:30]
+#0  ErrorHandler::GetRequestDetail(404, ) called at [/home7/saravan1/public_html/gamearcade/controller/common/ErrorHandler.php:21]
+#1  ErrorHandler::HandleError(404) called at [/home7/saravan1/public_html/gamearcade/controller/common/controller.php:101]
+#2  Controller->RenderPage() called at [/home7/saravan1/public_html/gamearcade/controller/main.php:21]
+#3  Intialize() called at [/home7/saravan1/public_html/gamearcade/index.php:13]
+
+
+==========================================================================================================
+
+==========================================================================================================
+From : 66.147.240.176
+Requested URL: /gamearcade/index.php?s=Challenge&action=getChallengeDetails&type=json
+Request Method: GET
+Access Time: 1352985617
+Request :s=Challenge&action=getChallengeDetails&type=json&__utma=129833870.934527589.1351945831.1352346805.1352636776.7&__utmz=129833870.1351945831.1.1.utmcsr%3D%28direct%29%7Cutmccn%3D%28direct%29%7Cutmcmd%3D%28none%29&PHPSESSID=n18vhtsd4esue67va829m8sof1
+Error Type :404
+Message :#-1  ErrorHandler::GetCallTrace() called at [/home7/saravan1/public_html/gamearcade/controller/common/ErrorHandler.php:30]
+#0  ErrorHandler::GetRequestDetail(404, ) called at [/home7/saravan1/public_html/gamearcade/controller/common/ErrorHandler.php:21]
+#1  ErrorHandler::HandleError(404) called at [/home7/saravan1/public_html/gamearcade/controller/common/controller.php:101]
+#2  Controller->RenderPage() called at [/home7/saravan1/public_html/gamearcade/controller/main.php:21]
+#3  Intialize() called at [/home7/saravan1/public_html/gamearcade/index.php:13]
 
 
 ==========================================================================================================

@@ -217,7 +217,7 @@ class Challenges extends DataAccess{
 	}
 	
 	/*
-	* Update  challenge status
+	* Delete challenge 
 	*
 	*/
 	public function deleteChallenge($challengeId ,$userId){
@@ -253,6 +253,46 @@ class Challenges extends DataAccess{
 		
 		return $data;
 	}
+	
+	
+	/*
+	* update challenge winner
+	*
+	*/
+	public function updateWinner($challengeId ,$userId){
+	
+		//array to hold the data retrieved
+		$data = array();
+	
+		$query = "UPDATE `challenges` SET `status`= ?,`winner_id`=?  WHERE `challenge_id` = ? AND (`player1_id`=?  OR `player2_id`= ?)";
+	
+		//build the vaariables array which holds the data to bind to the prepare statement.
+		$vars = array( self::$FINISHED,$userId,$challengeId,$userId,$userId);
+		
+		//specify the types of data to be binded 
+		$types = array("s","i","i","i","i");
+	
+		//excute the query 
+		$err = $this->database->doQuery($query,$vars,$types);
+		
+		//check if any error occurred 
+		if(empty($err)){
+			
+			$val = $this->database->getAffectedRows();
+			if($val < 1){
+				$data['error'] = "you don't have access to cancel the challenge or Challenge does not exist";
+			}else{
+				$data = "success";
+			}
+			
+		}else{
+				ErrorHandler::HandleError(DB_ERROR,$err);
+				$data['error'] = "Server error occurred";
+		}
+		
+		return $data;
+	}
+	
 }
 
 

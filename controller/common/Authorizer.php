@@ -30,7 +30,7 @@ class Authorizer{
 		$timeStamp =  time();
 		
 		//clean the ipadress by removing - or :
-		$ipAddress = preg_replace('/[:|-]*/i','',$ipAddress);
+		$ipAddress = preg_replace('/[:|-|.]*/i','',$ipAddress);
 	
 		//Get the cipher array of userId, ipAddress,, timestamp
 		$cipherArr = $this->Encrypt($userId,$ipAddress,$timeStamp);
@@ -75,7 +75,7 @@ class Authorizer{
 				
 					$ipAddress = $_SERVER["SERVER_ADDR"];
 					//clean ipaddress
-					$ipAddress = preg_replace('/[:|-]*/i','',$ipAddress);
+					$ipAddress = preg_replace('/[:|-|.]*/i','',$ipAddress);
 					
 					if( $data['ipAddress'] == $ipAddress){
 					

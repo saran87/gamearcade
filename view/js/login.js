@@ -115,6 +115,8 @@ function getLoginData(formToProcess,formObj, url){
 											 chat.updateChatPanel();
 											 //start updating challenges
 											game.getChallenges();
+											//getScore
+											game.getScore();
 										}
 									}
 									else{
