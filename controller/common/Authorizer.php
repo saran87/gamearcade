@@ -61,15 +61,14 @@ class Authorizer{
 	
 		$isVerified = false;
 		
-		if(isset($_COOKIE[$this->tokenName])){
-			$token = $_COOKIE[$this->tokenName];
+		if(isset($_REQUEST[$this->tokenName])){
+			$token = $_REQUEST[$this->tokenName];
+			
 			//parse the token into cipher arrays
 			$cipherArr = $this->ParseToken($token);
-			
 			if($cipherArr != false){
 				//decrypt the cipher array to data array
 				$data = $this->Decrypt($cipherArr['userId'],$cipherArr['ipAddress'],$cipherArr['timeStamp']);
-				
 			
 				if( intval($_SESSION['id']) === intval($data['userId'])){
 				
@@ -96,7 +95,6 @@ class Authorizer{
 	*
 	*/
 	public function SendTokenToClient($token){
-		
 		setcookie($this->tokenName, $token, time() + $this->timeOut);
 	}
 	
@@ -144,7 +142,7 @@ class Authorizer{
 	}
 	
 	private function ParseToken($token){
-		
+	
 		$checkSum = substr($token,0,19);
 		
 		$token =  substr($token,19);

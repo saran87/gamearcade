@@ -120,7 +120,7 @@
 			$home->index();
 			
 			//include all of the files in front page folder
-			foreach(glob(VIEW_PATH . FRONT_PAGE) as $filename){
+			foreach(glob(FRONT_PAGE) as $filename){
 				$isIncluded = true;
 				$home->renderView($filename);
 			}

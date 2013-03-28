@@ -86,6 +86,7 @@
 								$token = $authorizer->GenerateToken($data['id_users']);
 								//Send token to the client
 								$authorizer->SendTokenToClient($token);
+
 								//Set username and id to session
 								$_SESSION['name'] = $data['name'];
 								$_SESSION['id']   = $data['id_users'];
@@ -116,8 +117,8 @@
 		
 		private function verifyUser(){
 		
-			$email    = isset($_POST['email']) ? $_POST['email'] : '';
-			$password = isset($_POST['password']) ? $_POST['password'] : '';
+			$email    = isset($_REQUEST['email']) ? $_REQUEST['email'] : '';
+			$password = isset($_REQUEST['password']) ? $_REQUEST['password'] : '';
 			
 			
 			if($password != '' && $email != '' ){
@@ -136,7 +137,10 @@
 								//generate the token
 								$token = $authorizer->GenerateToken($data['id_users']);
 								//Send token to the client
-								$authorizer->SendTokenToClient($token);
+								//$authorizer->SendTokenToClient($token);
+								setcookie("token12", $token, time() + 6000,'/gamearcade', "saravananadar.com", 0, true);
+								$data["token"] = $token;
+								//var_dump($_COOKIE);
 								//Set username and id to session
 								$_SESSION['name'] = $data['name'];
 								$_SESSION['id']   = $data['id_users'];

@@ -18,7 +18,7 @@
 			6. Error handle
 
 ******************************************************/	
-   
+var token = "";//used for site authentication 
     
 function Site(){
 		this.baseURL = "http://saravananadar.com/gamearcade/";
@@ -296,7 +296,15 @@ Site.prototype = {
 	makeAjaxCall:function(data){
 		
 		var errorCallBack = (data.error) ? data.error: this.errorHandler;
-
+		if(token){
+			if(data.message){
+				data.message["token"] = token; 
+			}
+			else{
+				data.path += "&token=" + token;
+			}
+		}
+			
 		$.ajax({
 			type:data.type,
 			async:true,
@@ -322,6 +330,7 @@ Site.prototype = {
 								
 										});
 	},
+	//show game window 
 	showGameWindow:function(){
 				$("#gameWindow").removeClass("hide");
 				$("#online_users").addClass("hide");
@@ -339,6 +348,12 @@ Site.prototype = {
 			
 			$('.sidenav').find('.active').removeClass("active").end().find("li").first().addClass("active")
 			
+	},
+	setToken:function(value){
+		token = value;
+	},
+	getToken:function(value){
+		return token;
 	},
 	//function to handle error for the whole site
 	errorHandler:function(jqXHR, textStatus, errorThrown){	

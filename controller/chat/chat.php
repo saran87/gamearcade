@@ -127,7 +127,7 @@
 		
 
 			$data = array();
-			
+
 			if($this->authenticate()){
 				
 				$userId = $_SESSION['id'];

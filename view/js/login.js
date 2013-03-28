@@ -86,7 +86,6 @@ function getLoginData(formToProcess,formObj, url){
 							   message: formObj.serialize(),// serializes the form's elements.
 							   success: function(data)
 							   {
-								 
 								   $('#ajaxProgress').addClass('hide');	
 								   $(formToProcess).removeClass('hide');
 								   //if call success
@@ -98,7 +97,7 @@ function getLoginData(formToProcess,formObj, url){
 									   }else{
 											//on success
 											$('.userName').each( function(){
-																	if($(this).find("i")){
+																	if($(this).find("i").length>0){
 																		$(this).append(data.name);
 																	}
 																	else{
@@ -108,12 +107,14 @@ function getLoginData(formToProcess,formObj, url){
 											$('#userName').parent().removeClass('hide');
 											$('#loginButton').addClass('hide');
 											$("#loginModal").modal("hide");
-										
-											 //start getting the messages for the user
-											 chat.getMessages();
-											 //start updating online users
-											 chat.updateChatPanel();
-											 //start updating challenges
+											
+											site = new Site();
+											site.setToken(data.token);
+											//start getting the messages for the user
+											chat.getMessages();
+											//start updating online users
+											chat.updateChatPanel();
+											//start updating challenges
 											game.getChallenges();
 											//getScore
 											game.getScore();
