@@ -2,7 +2,7 @@
 
 // Getting the root excution  path
 define('OTHER_PATH',getcwd());
-define('ROOT_PATH',OTHER_PATH . '/../../gamearcade');
+define('ROOT_PATH',OTHER_PATH . '/');
 //banner file info constant
 define('BANNER_PATH',OTHER_PATH . '/banner/');
 //Modules file path
