@@ -303,9 +303,7 @@ Site.prototype = {
 			if(data.message){
 				data.message["token"] = token;
 			}
-			else{
-				data.path += "&token=" + token;
-			}
+			data.path += "&token=" + token;
 		}
 
 		$.ajax({
