@@ -166,7 +166,7 @@ Site.prototype = {
 	//function to validate email address
 	validateEmail: function(email){
 
-		var emailReq = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+		var emailReq = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 		return emailReq.test(email);
 	},
@@ -296,6 +296,9 @@ Site.prototype = {
 	makeAjaxCall:function(data){
 
 		var errorCallBack = (data.error) ? data.error: this.errorHandler;
+		if(!token){
+			token = getCookie("token");
+		}
 		if(token){
 			if(data.message){
 				data.message["token"] = token;
@@ -350,6 +353,7 @@ Site.prototype = {
 
 	},
 	setToken:function(value){
+		setCookie("token", value, 1);
 		token = value;
 	},
 	getToken:function(value){
@@ -377,4 +381,22 @@ Site.prototype = {
 		$("#error_message").text(errorMessage);
 		$("#errorModal").modal('show');
 	}
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1);
+        if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+    }
+    return false;
+}
+
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + "; " + expires;
 }
